@@ -1142,7 +1142,8 @@ header.nav-header {
   top: 50%;
   transform: none;
   position: relative;
-  left: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
   line-height: 26px;
   color: #fff; }
