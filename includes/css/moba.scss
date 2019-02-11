@@ -960,18 +960,22 @@ div#menu_toggle * {
 	z-index: 10000;
 }
 .topped {
-	#logo {
-		top: 27px;
-	}
-	#page-home.page.section {
-		margin-top: 55px;
-	}
+	 #logo {
+		 top: 27px;
+	 }
+ }
+#page-home.page.section {
+	margin-top: 55px;
 }
 #logo {
 	top: 27px;
 }
 #menu_toggle{
 	top: 15px;
+}
+
+@media screen  and (max-width: 640px){
+	
 }
 /*Text*/
 .menu-text {

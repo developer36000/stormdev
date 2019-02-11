@@ -795,7 +795,8 @@ div#menu_toggle * {
 
 .topped #logo {
   top: 27px; }
-.topped #page-home.page.section {
+
+#page-home.page.section {
   margin-top: 55px; }
 
 #logo {
