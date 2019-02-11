@@ -50,6 +50,8 @@ html.responsive.moba.js {
 		position: relative;
 		min-height: 200px;
 		& > video {
+			height: auto;
+			width: 100%;
 			position: absolute;
 			left: 0;
 			right: 0;

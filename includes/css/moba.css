@@ -46,6 +46,8 @@ html.responsive.moba.js {
       position: relative;
       min-height: 200px; }
       .responsive.moba .video_block > video {
+        height: auto;
+        width: 100%;
         position: absolute;
         left: 0;
         right: 0; } }
