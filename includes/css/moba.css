@@ -44,7 +44,7 @@ html.responsive.moba.js {
     .responsive.moba .video_block {
       max-height: 350px;
       position: relative;
-      min-height: 250px; }
+      min-height: 200px; }
       .responsive.moba .video_block > video {
         position: absolute;
         left: 0;
