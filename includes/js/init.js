@@ -7,8 +7,14 @@ $(document).ready(function () {
     });
 
     if ($(window).width() < 960) {
+	    $('html').addClass('moba');
         $('.philo_ei_vid > video').remove();
-        $('html').addClass('moba');
+      //  $('.philo_ei_vid').remove();
+	    $('.philo_ei_vid').each(function () {
+            var philo_img = $(this).data('philo_img');
+            $(this).find('video').remove();
+		    $(this).html('<img class="philo_image" src="'+philo_img+'" alt="Ei-STORMING" title="Ei-STORMING">');
+	    });
     }
 
     if ($(window).width() >= 960) {

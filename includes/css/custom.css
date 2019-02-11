@@ -1575,40 +1575,42 @@ header.nav-header {
   background-size: cover;
   background-color: #fff; }
 
+#philosophie div.philo_ei_vid * {
+  position: absolute;
+  /*Ei passt sich selbst an*/
+  top: 50%;
+  height: 75%;
+  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  /*extra end*/
+  /*old
+  		bottom: 2%;
+  	transform: unset;
+  	top: unset;
+  	*/ }
+
 /* video control no fullscreen*/
 #philosophie .philo_ei_vid {
   height: 75%;
   bottom: 2%;
   position: absolute; }
-  #philosophie .philo_ei_vid * {
-    position: absolute;
-    /*Ei passt sich selbst an*/
-    top: 50%;
-    height: 75%;
-    transform: translate(0%, -50%);
-    -webkit-transform: translate(0%, -50%);
-    -moz-transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    -o-transform: translate(0%, -50%);
-    /*extra end*/
-    /*old
-    		bottom: 2%;
-    	transform: unset;
-    	top: unset;
-    	*/ }
   #philosophie .philo_ei_vid .philo_image {
     display: none; }
-  #philosophie .philo_ei_vid video {
-    width: 40%;
-    height: auto;
-    /*position:absolute !important;
-    		max-height:1000px;
-    		top:50%;
-    		transform:translate(0%,-50%);
-    		-webkit-transform:translate(0%,-50%);
-    		-moz-transform:translate(0%,-50%);
-    		-ms-transform:translate(0%,-50%);
-    		-o-transform:translate(0%,-50%);*/ }
+
+#philosophie .philo_ei_vid video {
+  width: 40%;
+  height: auto;
+  /*position:absolute !important;
+  		max-height:1000px;
+  		top:50%;
+  		transform:translate(0%,-50%);
+  		-webkit-transform:translate(0%,-50%);
+  		-moz-transform:translate(0%,-50%);
+  		-ms-transform:translate(0%,-50%);
+  		-o-transform:translate(0%,-50%);*/ }
 
 #philosophie .accord_span_expander {
   padding: 0px;
@@ -1868,7 +1870,7 @@ header.nav-header {
     padding-bottom: 20px; } }
 @media screen and (max-height: 760px), screen and (max-width: 1350px) {
   #references .reference {
-    margin-top: 15px;
+    margin-top: px;
     margin-bottom: 15px; }
 
   #references .reference img {
@@ -1882,6 +1884,10 @@ header.nav-header {
 
   #references .ref_block {
     margin-top: 0; } }
+@media screen and (max-height: 720px), screen and (max-width: 1350px) {
+  #references .reference {
+    margin-top: 15px;
+    margin-bottom: 15px; } }
 @media screen and (max-width: 1350px) and (min-height: 1250px) {
   #references .reference_list {
     position: absolute;
