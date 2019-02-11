@@ -1225,7 +1225,8 @@ header.nav-header {
   right: 15%;
   width: 650px;
   height: 75%;
-  opacity: 1; }
+  opacity: 1;
+  z-index: 15; }
 
 .accordion ul.accord_listing li.accord_chooser .accord_textholder {
   opacity: 0;

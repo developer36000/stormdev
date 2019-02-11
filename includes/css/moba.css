@@ -755,9 +755,6 @@ img#logo {
   max-width: 175px;
   width: 100%; }
 
-.topped #logo {
-  top: 12px; }
-
 .nav-open #logo {
   color: #000; }
 
@@ -795,6 +792,17 @@ div#menu_toggle * {
   height: 50px;
   background-color: white;
   z-index: 10000; }
+
+.topped #logo {
+  top: 27px; }
+.topped #page-home.page.section {
+  margin-top: 55px; }
+
+#logo {
+  top: 27px; }
+
+#menu_toggle {
+  top: 15px; }
 
 /*Text*/
 .menu-text {
