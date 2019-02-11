@@ -214,6 +214,9 @@ body * {
 
 #philosophie .bp-header {
 	position: relative;
+	@media screen and (max-width: 640px) {
+		padding-bottom: 0;
+	}
 }
 
 #philosophie .bp-header__title {
@@ -222,10 +225,17 @@ body * {
 }
 
 /*Accord Vid*/
-.philo_ei_vid {
-	display: none;
-}
 
+#philosophie .philo_ei_vid {
+	display: block;
+	.philo_image {
+		display: block;
+		width: 80%;
+		max-width: 350px;
+		height: auto;
+		margin: 0 auto;
+	}
+}
 #philosophie .accord_text_button {
 	color: #fff;
 	background-color: #000;
@@ -281,6 +291,7 @@ body * {
 #creative_studios .accordion {
 	color: #fff;
 }
+
 
 /*Accord Bg Boxes*/
 #studios_1 .bg-box {
@@ -651,8 +662,15 @@ body * {
 }
 
 .accord_open .accordion_nav {
-	display: block;
+	//display: block;
 	position: relative;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media screen and (max-width: 640px) {
+		padding-bottom: 0;
+	}
 }
 
 .accord_button {
@@ -890,7 +908,10 @@ body * {
 	-moz-transition: color 0.25s;
 	-o-transition: color 0.25s;
 }
-
+img#logo {
+	max-width: 175px;
+	width: 100%;
+}
 .topped #logo {
 	top: 12px;
 }
@@ -1512,3 +1533,15 @@ header.nav-header {
 		margin-top: 20px;
 	}
 }
+@media screen and (max-width: 640px) {
+	body p {
+		font-size: 14px;
+		line-height: 28px;
+		* {
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+}
+
+

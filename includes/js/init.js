@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
     if ($(window).width() < 960) {
-        $('.philo_ei_vid').remove();
+        $('.philo_ei_vid > video').remove();
         $('html').addClass('moba');
     }
 
