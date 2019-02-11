@@ -2125,6 +2125,9 @@ header.nav-header {
     top: 50px; }
 
   .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+    width: 45%; } }
+@media screen and (max-width: 769px) {
+  .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
     width: 45%;
     left: 45px; } }
 
