@@ -146,7 +146,7 @@ body * {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	font-size: 100pt;
+	font-size: 70pt;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -184,7 +184,8 @@ body * {
 #making-of {
 	position: relative;
 	background-color: #fff;
-	padding: 0px;
+	padding: 0;
+	margin-top: 57px;
 }
 
 #making-of .bp-header {
@@ -202,14 +203,16 @@ body * {
 
 #plakat-text {
 	padding: 28px;
+	padding-bottom: 15px;
 }
 
 #plakat-text h3 {
 	font-weight: 600;
-	font-size: 2em;
+	font-size: 28px;
 	color: #000;
-	padding-top: 0px;
-	margin-top: -50px;
+	padding-top: 0;
+	line-height: 37px;
+	margin-top: -46px;
 }
 
 #plakat-text .accord_text_button {
@@ -230,13 +233,15 @@ body * {
 #philosophie .bp-header {
 	position: relative;
 	@media screen and (max-width: 640px) {
-		padding-bottom: 0;
+		padding-bottom: 1px;
+		padding-top: 74px;
 	}
 }
 
 #philosophie .bp-header__title {
 	color: #000;
-	margin-bottom: 50px; /* letter-spacing:8px; */
+	font-size: 16px;
+	margin-bottom: 69px; /* letter-spacing:8px; */
 }
 
 /*Accord Vid*/
@@ -249,6 +254,10 @@ body * {
 		max-width: 350px;
 		height: auto;
 		margin: 0 auto;
+		@media screen and (max-width: 640px) {
+			width: 100%;
+			max-width: 250px;
+		}
 	}
 }
 #philosophie .accord_text_button {
@@ -287,25 +296,40 @@ body * {
 	position: relative;
 	background-color: #000;
 	padding: 0px; /* min-height:860px; */
+	.accord_caption {
+		margin-bottom: 0;
+	}
 }
 
 #creative_studios .bp-header {
 	position: static;
+	.bp-header__title {
+		font-size: 17px;
+		letter-spacing: 2px;
+		line-height: 24px;
+		margin-top: 13px;
+	}
 }
 
 #creative_studios .accordion_pre_text {
 	//display: none;
 	text-align: center;
-	line-height: 28px;
+	line-height: 27px;
 	font-size: 14px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 800px;
 	padding: 0 15px;
+	* {
+		font-size: inherit;
+		line-height: inherit;
+		padding: inherit;
+	}
 }
 
 #creative_studios .accordion {
 	color: #fff;
+	margin-top: 35px;
 }
 
 
@@ -437,11 +461,15 @@ body * {
 
 #schwerpunkt .bp-header {
 	position: static;
+	padding-top: 76px;
+	padding-bottom: 15px;
 }
 
 #schwerpunkt .bp-header__title {
 	color: #000;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
+	font-size: 18px;
+	letter-spacing: 1px;
 }
 
 #schwerpunkt .schwerpunkt_text {
@@ -455,9 +483,15 @@ body * {
 
 @media screen and (max-width: 760px) {
 	#schwerpunkt .schwerpunkt_text {
-		line-height: 28px;
+		line-height: 26px;
 		font-size: 14px;
 		font-weight: 400;
+		margin-bottom: 0;
+		* {
+			font-size: inherit;
+			line-height: inherit;
+			font-weight: inherit;
+		}
 	}
 }
 
@@ -513,16 +547,24 @@ body * {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#2b2b2b', GradientType=1);
 }
 
+#references .reference_list {
+	margin-top: 19%;
+	display: block;
+}
 #references .bp-header.cf {
 	position: relative;
+	padding-top: 40px;
 }
 
 #references .bp-header__title {
 	margin-bottom: 25px;
+	font-size: 17px;
+	letter-spacing: 2px
 }
 
 #references .ref_block {
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 #references .ref_block p {
@@ -530,13 +572,21 @@ body * {
 }
 
 #references .reference {
-	margin-bottom: 42px;
+	margin-bottom: 13%;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
+#references .reference span {
+	font-size: 14px;
+	display: block;
+	line-height: 27px;
+}
 #references .reference img {
 	display: block;
 	margin: auto;
-	margin-bottom: 12px;
+	margin-bottom: 28px;
 }
 
 /*Page Reference END*/
@@ -545,7 +595,8 @@ body * {
 #kontakt {
 	position: relative;
 	background-color: #000;
-	padding-top: 0px;
+	padding-top: 0;
+	margin-top: 23px;
 }
 
 #kontakt * {
@@ -554,6 +605,11 @@ body * {
 
 #kontakt .bp-header {
 	position: static;
+	padding-top: 69px;
+	.bp-header__title {
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
 }
 
 #kontakt .kontakt_pre_text {
@@ -570,17 +626,27 @@ body * {
 
 #kontakt p.tel {
 	font-weight: 700;
-	font-size: 1.5em;
-	margin-bottom: 25px;
+	font-size: 23px;
+	margin-bottom: 27px;
+	line-height: 30px;
 }
 
+#kontakt p.street {
+	margin-bottom: 7px;
+}
+#kontakt .kontakt_text {
+	display: block;
+	margin-top: 45px;
+}
 #kontakt p.email {
 	font-weight: 700;
+	padding-bottom: 6px;
 }
 
 #kontakt .accord_text_button {
 	background-color: #fff;
 	color: #000;
+	padding: 17px 20px;
 }
 
 #kontakt .center .branch_block .accord_text_button a {
@@ -588,7 +654,11 @@ body * {
 }
 
 .branch_block {
-	margin: 50px 0px;
+	margin: 45px 0;
+	> a {
+		display: block;
+		margin-top: 35px;
+	}
 }
 
 #imprint_section * {
@@ -652,13 +722,17 @@ body * {
 /*buttons*/
 .accord_text_button {
 	width: 90%;
-	padding: 20px;
-	margin-top: 35px;
+	padding: 15px 20px;
+	margin-top: 27px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 99px;
 	text-align: center;
 	font-weight: 700;
+	letter-spacing: 1px;
+	@media screen and (max-width: 640px) {
+		width: 100%;
+	}
 }
 
 /*Accord*/
@@ -671,8 +745,9 @@ body * {
 	display: table;
 	table-layout: fixed;
 	list-style: none;
-	padding-left: 0px;
-	margin-bottom: 0px;
+	padding-left: 0;
+	margin-bottom: 0;
+	margin-top: 15px;
 }
 
 /*Accord Nav*/
@@ -735,15 +810,18 @@ body * {
 }
 
 .accord_button.active_accord_item {
-	font-size: 1.1em;
+	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
 	border-bottom: 2px solid #000;
+	letter-spacing: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
 }
 
 .accord_open .accord_chooser {
-	width: 0%;
-	display: table-cell;
+	width: 0;
+	//display: table-cell;
 	display: none;
 }
 
@@ -765,7 +843,7 @@ body * {
 }
 
 .accord_chooser {
-	height: 150px;
+	height: 134px;
 	position: relative;
 }
 
@@ -783,6 +861,7 @@ body * {
 	-o-transform: translate(0%, -50%);
 	width: 100%;
 	padding: 28px;
+	padding-bottom: 13px;
 }
 
 .accord_open .accord_pretext {
@@ -819,7 +898,10 @@ body * {
 /*Pre Open Textes*/
 .accord_caption {
 	font-weight: 600;
-	font-size: 2em;
+	font-size: 31px;
+	line-height: 27px;
+	margin-top: 9px;
+	margin-bottom: 31px;
 }
 
 .accord_caption_underline {
@@ -840,11 +922,11 @@ body * {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	/*Size*/
-	font-size: 50px;
+	font-size: 45px;
 	/*Pos*/
 	position: absolute;
 	right: 30px;
-	top: 50%;
+	top: 70%;
 	transform: translate(0%, -50%);
 	-webkit-transform: translate(0%, -50%);
 	-moz-transform: translate(0%, -50%);
@@ -928,7 +1010,7 @@ body * {
 	-o-transition: color 0.25s;
 }
 img#logo {
-	max-width: 175px;
+	max-width: 150px;
 	width: 100%;
 }
 
@@ -974,17 +1056,17 @@ div#menu_toggle * {
 	position: fixed;
 	top: 0px;
 	width: calc(100% - 48px);
-	height: 50px;
+	height: 60px;
 	background-color: rgba(255, 255, 255, 1);
 	z-index: 10000;
 }
 .topped {
 	 #logo {
-		 top: 27px;
+		 top: 35px;
 	 }
  }
 #page-home.page.section {
-	margin-top: 55px;
+	margin-top: 72px;
 }
 #logo {
 	top: 27px;
@@ -1037,7 +1119,7 @@ div#menu_toggle * {
 .menu-button {
 	position: absolute;
 	z-index: 1000;
-	top: 12px;
+	top: 17px;
 	right: 40px;
 	width: 30px;
 	height: 24px;
@@ -1570,7 +1652,7 @@ header.nav-header {
 @media screen and (max-width: 640px) {
 	body p {
 		font-size: 14px;
-		line-height: 28px;
+		line-height: 27px;
 		* {
 			font-size: inherit;
 			line-height: inherit;
