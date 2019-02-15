@@ -267,7 +267,7 @@ body * {
 }
 
 #philosophie .accord_span {
-	color: #7e7e7e;
+	color: #121212;
 }
 
 /*Accord Nav*/
@@ -477,7 +477,7 @@ body * {
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 35px;
-	color: #989898;
+	color: #121212;
 	text-align: center;
 }
 
@@ -565,6 +565,10 @@ body * {
 #references .ref_block {
 	text-align: center;
 	margin-bottom: 30px;
+	color: #fff;
+	p, span {
+		color: #fff;
+	}
 }
 
 #references .ref_block p {
@@ -582,6 +586,7 @@ body * {
 	font-size: 14px;
 	display: block;
 	line-height: 27px;
+	color: #fff;
 }
 #references .reference img {
 	display: block;
@@ -1064,15 +1069,18 @@ div#menu_toggle * {
 	 #logo {
 		 top: 35px;
 	 }
+	#menu_toggle{
+		top: 15px;
+	}
  }
 #page-home.page.section {
 	margin-top: 72px;
 }
 #logo {
-	top: 27px;
+	top: 19px;
 }
 #menu_toggle{
-	top: 15px;
+	top: 0;
 }
 
 @media screen  and (max-width: 640px){
@@ -1122,7 +1130,7 @@ div#menu_toggle * {
 	top: 17px;
 	right: 40px;
 	width: 30px;
-	height: 24px;
+	height: 16px;
 	padding: 0;
 	border: none;
 	outline: none;
@@ -1163,8 +1171,14 @@ div#menu_toggle * {
 	-moz-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
 	-ms-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
 	-o-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	opacity: 0;
 }
-
+.menu_open .menu-button {
+	height: 24px;
+}
+.menu_open .menu-button::before {
+	opacity: 1;
+}
 .menu-button::after {
 	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
 	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
@@ -1539,7 +1553,7 @@ header.nav-header {
 }
 
 .responsive .pages-nav__item--social {
-	font-size: 0.9em;
+	font-size: 2em;
 	position: absolute;
 	bottom: 10%;
 }

@@ -1781,7 +1781,7 @@ header.nav-header {
 
 #kontakt .center .branch_block .tel {
   margin-top: 5px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800; }
 
 #kontakt .center .branch_block .email {
@@ -1827,10 +1827,10 @@ header.nav-header {
 
 @media screen and (max-width: 1665px) {
   #kontakt .center .branch_block .tel {
-    font-size: 24px; } }
+    font-size: 16px; } }
 @media screen and (max-width: 1450px) {
   #kontakt .center .branch_block .tel {
-    font-size: 20px; } }
+    font-size: 14px; } }
 @media screen and (max-width: 1350px) {
   #kontakt .center .branch_block .tel {
     font-size: unset; } }
