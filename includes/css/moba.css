@@ -267,7 +267,8 @@ body * {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  padding: 0 15px; }
+  padding: 0 15px;
+  font-weight: 100; }
   #creative_studios .accordion_pre_text * {
     font-size: inherit;
     line-height: inherit;
@@ -475,9 +476,11 @@ body * {
 #references .ref_block {
   text-align: center;
   margin-bottom: 30px;
-  color: #fff; }
+  color: #fff;
+  font-weight: 100; }
   #references .ref_block p, #references .ref_block span {
-    color: #fff; }
+    color: #fff;
+    font-weight: 100; }
 
 #references .ref_block p {
   margin-bottom: 35px; }
