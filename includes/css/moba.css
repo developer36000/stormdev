@@ -223,7 +223,8 @@ body * {
   font-weight: 500; }
 
 #philosophie .accord_span {
-  color: #121212; }
+  color: #121212;
+  font-weight: 100; }
 
 /*Accord Nav*/
 #philosophie #prevbutton:after, #philosophie #nextbutton:after {
@@ -402,7 +403,7 @@ body * {
 #schwerpunkt .schwerpunkt_text {
   margin-bottom: 20px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 35px;
   color: #121212;
   text-align: center; }
@@ -411,7 +412,7 @@ body * {
   #schwerpunkt .schwerpunkt_text {
     line-height: 26px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 100;
     margin-bottom: 0; }
     #schwerpunkt .schwerpunkt_text * {
       font-size: inherit;
