@@ -1146,7 +1146,8 @@ header.nav-header {
   right: 0;
   text-align: center;
   line-height: 26px;
-  color: #fff; }
+  color: #fff;
+  font-weight: 100; }
 
 @media screen and (max-height: 920px) {
   .accordion .accordion_pre_text div {
@@ -1806,7 +1807,7 @@ header.nav-header {
 
 #kontakt .center .branch_block .accord_text_button {
   width: 100%;
-  margin-top: 0px; }
+  margin-top: 0; }
 
 #kontakt #imprint_section {
   position: absolute;
@@ -1849,7 +1850,11 @@ header.nav-header {
   margin: auto;
   text-align: center;
   line-height: 26px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-weight: 100; }
+
+#references .reference span {
+  font-weight: 100; }
 
 #references .reference {
   width: 22.5%;
