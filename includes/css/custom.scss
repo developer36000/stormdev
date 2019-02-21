@@ -145,7 +145,7 @@ html.js, .js body {
 	}
 }
 
-@media screen and (max-height: 800px) , screen and (max-width: 1100px) {
+@media screen and (max-height: 800px), screen and (max-width: 1100px) {
 	#schwerpunkt .schwerpunkt_page .schwerpunkt_text {
 		font-size: 1.9em;
 	}
@@ -1397,7 +1397,7 @@ header.nav-header {
 	//-moz-transform: translate(-50%, -50%);
 	//-ms-transform: translate(-50%, -50%);
 	//-o-transform: translate(-50%, -50%);
-//	position: absolute;
+	//	position: absolute;
 	transform: none;
 	position: relative;
 	//left: 50%;
@@ -1900,7 +1900,8 @@ header.nav-header {
 #philosophie .accord_button:after {
 	background: #000;
 }
-#philosophie .vjs-poster{
+
+#philosophie .vjs-poster {
 	background-image: url(includes/images/standbild_ei.jpg);
 	width: 40%;
 	height: 100%;
@@ -2248,9 +2249,11 @@ header.nav-header {
 	margin-bottom: 30px;
 	font-weight: 100;
 }
+
 #references .reference span {
 	font-weight: 100;
 }
+
 #references .reference {
 	width: 22.5%;
 	display: inline-block;
@@ -2274,7 +2277,7 @@ header.nav-header {
 	}
 }
 
-@media screen and (max-height: 760px) , screen and (max-width: 1350px) {
+@media screen and (max-height: 760px), screen and (max-width: 1350px) {
 	#references .reference {
 		margin-top: px;
 		margin-bottom: 15px;
@@ -2285,13 +2288,14 @@ header.nav-header {
 		max-height: 64px;
 		width: auto;
 	}
-	.reference_list{
+	.reference_list {
 		padding-top: 20px;
 	}
-	#references .ref_block{
+	#references .ref_block {
 		margin-top: 0;
 	}
 }
+
 @media screen and (max-height: 720px), screen and (max-width: 1350px) {
 	#references .reference {
 		margin-top: 15px;
@@ -2580,8 +2584,8 @@ header.nav-header {
 	}
 }
 
-#philo .vjs-loading-spinner{
-	display: none!important;
+#philo .vjs-loading-spinner {
+	display: none !important;
 	visibility: hidden;
 }
 
@@ -2589,24 +2593,24 @@ header.nav-header {
     display:none!important;
 } */
 
-@media screen and (max-width: 1200px),screen and (max-width: 1024px) {
-	.bp-header__title, .accordion ul.accord_listing li.accord_chooser div span .accord_pretext .accord_caption{
+@media screen and (max-width: 1200px), screen and (max-width: 1024px) {
+	.bp-header__title, .accordion ul.accord_listing li.accord_chooser div span .accord_pretext .accord_caption {
 		font-size: 2.1em;
 	}
-	.accordion .accordion_pre_text{
-		top:50px;
+	.accordion .accordion_pre_text {
+		top: 50px;
 	}
-	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder{
+	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
 		width: 45%;
 	}
 }
+
 @media screen and (max-width: 769px) {
-	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder{
+	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
 		width: 45%;
 		left: 45px;
 	}
 }
-
 
 #shareholder {
 	background-size: contain;
@@ -2614,6 +2618,7 @@ header.nav-header {
 	background-position: 50% 50%;
 	position: relative;
 }
+
 .shareholder-bg {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -2627,24 +2632,26 @@ header.nav-header {
 	width: 100%;
 	img {
 		display: block;
-		min-height: 100%;
+		min-height: initial;
 		height: auto;
 		position: absolute;
-		top: 0;
+		top: 50%;
 		bottom: 0;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
+		width: 100%;
 	}
 }
+
 #shareholders_mobile {
 	&.accord_open {
 		.accordion_nav {
 			display: none;
-				@media screen and (max-width: 767px) {
-					display: block;
-				}
+			@media screen and (max-width: 767px) {
+				display: block;
 			}
 		}
+		
 		.accordion_nav_points {
 			a.accord_button {
 				display: none;
@@ -2653,14 +2660,40 @@ header.nav-header {
 				}
 			}
 		}
-
+		
 		ul.accord_listing {
+			max-width: 75%;
+			margin: 0 auto;
+			width: 100%;
 			li.accord_chooser {
 				width: auto;
 				text-align: center;
+				padding-bottom: 70px;
+				.accord_image {
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					height: 100%;
+					width: 100%;
+					display: none;
+					img {
+						display: block;
+						min-height: initial;
+						height: auto;
+						position: absolute;
+						top: 50%;
+						bottom: 0;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+					}
+				}
 				&.active_accord {
 					width: auto;
-					
+					.accord_image {
+					}
 				}
 			}
 		}
