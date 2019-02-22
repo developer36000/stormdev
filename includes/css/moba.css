@@ -1541,7 +1541,7 @@ header.nav-header {
           left: 50%;
           transform: translate(-50%, 0);
           width: 100%; }
-          @media screen and (max-width: 481px) {
+          @media screen and (max-width: 482px) {
             #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image img {
               width: 150%; } }
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box {
