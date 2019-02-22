@@ -1413,5 +1413,160 @@ header.nav-header {
     body p * {
       font-size: inherit;
       line-height: inherit; } }
+#shareholder {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  padding: 0;
+  background: #000; }
+  #shareholder .bp-header {
+    position: relative;
+    z-index: 20; }
+    #shareholder .bp-header .bp-header__title {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 24px; }
+
+.shareholder-bg {
+  display: none; }
+
+#shareholders_mobile.accord_open {
+  position: relative; }
+  #shareholders_mobile.accord_open .accordion_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15; }
+    #shareholders_mobile.accord_open .accordion_nav #prevbutton:after,
+    #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      font-size: 45px;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      background: #fff;
+      border-radius: 99px;
+      color: #000;
+      width: 45px; }
+    #shareholders_mobile.accord_open .accordion_nav #prevbutton:after {
+      right: inherit;
+      left: 15px; }
+    #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
+      content: "\e907"; }
+  #shareholders_mobile.accord_open .accordion_nav_points {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    display: none; }
+    @media screen and (max-width: 481px) {
+      #shareholders_mobile.accord_open .accordion_nav_points {
+        display: flex; } }
+    #shareholders_mobile.accord_open .accordion_nav_points a.accord_button {
+      display: block;
+      font-size: 0;
+      position: relative;
+      line-height: 8px;
+      width: 8px;
+      height: 8px;
+      margin-bottom: 0; }
+      #shareholders_mobile.accord_open .accordion_nav_points a.accord_button:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        display: block;
+        background: transparent;
+        border: 3px solid #fff;
+        transition: all .3s;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+      #shareholders_mobile.accord_open .accordion_nav_points a.accord_button:not(:last-child) {
+        margin-right: 8px; }
+      #shareholders_mobile.accord_open .accordion_nav_points a.accord_button.active_accord_item {
+        display: block; }
+        #shareholders_mobile.accord_open .accordion_nav_points a.accord_button.active_accord_item:after {
+          background: #fff; }
+  #shareholders_mobile.accord_open ul.accord_listing {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%; }
+    #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+      width: 0;
+      text-align: center;
+      padding-bottom: 70px;
+      transition: all .6s;
+      opacity: 0; }
+      @media screen and (max-width: 769px) {
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+          padding-bottom: 35px; } }
+      @media screen and (max-width: 481px) {
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+          padding-bottom: 40px; } }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image {
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        opacity: 0;
+        transition: all .6s; }
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image img {
+          display: block;
+          min-height: initial;
+          height: auto;
+          position: relative;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          width: 100%; }
+          @media screen and (max-width: 481px) {
+            #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image img {
+              width: 150%; } }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box {
+        padding: 0 5px; }
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+          color: #fff;
+          font-size: 18px;
+          line-height: 48px;
+          margin: 0;
+          padding: 0;
+          letter-spacing: .25px; }
+          @media screen and (max-width: 769px) {
+            #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+              font-size: 24px; } }
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
+          font-size: 14px;
+          color: #fff;
+          line-height: 21px;
+          letter-spacing: .25px;
+          margin: 0;
+          padding: 0; }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord {
+        width: 100%;
+        opacity: 1; }
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord .accord_image {
+          opacity: 1; }
 
 /*# sourceMappingURL=moba.css.map */
