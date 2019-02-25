@@ -1430,6 +1430,11 @@ header.nav-header {
 .shareholder-bg {
   display: none; }
 
+#prevbutton.icon-prev-inactive,
+#nextbutton.icon-prev-inactive {
+  opacity: 0.5;
+  pointer-events: none; }
+
 #shareholders_mobile.accord_open {
   position: relative; }
   #shareholders_mobile.accord_open .accordion_nav {
@@ -1438,10 +1443,6 @@ header.nav-header {
     left: 0;
     right: 0;
     z-index: 15; }
-    #shareholders_mobile.accord_open .accordion_nav #prevbutton.icon-prev-inactive,
-    #shareholders_mobile.accord_open .accordion_nav #nextbutton.icon-prev-inactive {
-      opacity: 0.5;
-      pointer-events: none; }
     #shareholders_mobile.accord_open .accordion_nav #prevbutton:after,
     #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
       font-family: 'icomoon' !important;

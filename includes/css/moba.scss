@@ -1717,8 +1717,13 @@ header.nav-header {
 .shareholder-bg {
 	display: none;
 }
-
-
+#prevbutton,
+#nextbutton {
+	&.icon-prev-inactive {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
 #shareholders_mobile {
 	&.accord_open {
 		position: relative;
@@ -1731,10 +1736,6 @@ header.nav-header {
 			
 			#prevbutton,
 			#nextbutton {
-				&.icon-prev-inactive {
-					opacity: 0.5;
-					pointer-events: none;
-				}
 				&:after {
 					font-family: 'icomoon' !important;
 					speak: none;
