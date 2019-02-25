@@ -2146,7 +2146,6 @@ header.nav-header {
     z-index: 20; }
     #shareholder .bp-header .bp-header__title {
       font-size: 40px;
-      letter-spacing: 3px;
       text-transform: uppercase;
       line-height: 72px; }
       @media screen and (max-width: 1025px) {
@@ -2284,7 +2283,8 @@ header.nav-header {
         line-height: 21px;
         letter-spacing: .25px;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        font-weight: 100; }
         @media screen and (max-width: 1367px) {
           #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
             font-size: 12px; } }

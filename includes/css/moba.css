@@ -1425,7 +1425,6 @@ header.nav-header {
     z-index: 20; }
     #shareholder .bp-header .bp-header__title {
       font-size: 18px;
-      letter-spacing: 1px;
       line-height: 24px; }
 
 .shareholder-bg {
@@ -1439,6 +1438,10 @@ header.nav-header {
     left: 0;
     right: 0;
     z-index: 15; }
+    #shareholders_mobile.accord_open .accordion_nav #prevbutton.icon-prev-inactive,
+    #shareholders_mobile.accord_open .accordion_nav #nextbutton.icon-prev-inactive {
+      opacity: 0.5;
+      pointer-events: none; }
     #shareholders_mobile.accord_open .accordion_nav #prevbutton:after,
     #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
       font-family: 'icomoon' !important;
@@ -1562,7 +1565,8 @@ header.nav-header {
           line-height: 21px;
           letter-spacing: .25px;
           margin: 0;
-          padding: 0; }
+          padding: 0;
+          font-weight: 100; }
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord {
         width: 100%;
         opacity: 1; }

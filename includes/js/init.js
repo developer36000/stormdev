@@ -90,6 +90,29 @@ $(document).ready(function () {
             $('#menu_toggle').addClass('menu_open');
         }
     });
+   /* $('.accord_open').each(function () {
+        var nav = $(this).find('.accordion_nav'),
+            nav_el = $(this).find('.accord_tab_button'),
+            list = $(this).find('.accord_listing'),
+            list_el = list.find('.accord_chooser'),
+        active = 1;
+	    $(this).find('#prevbutton, #nextbutton').click(function () {
+            
+               console.log(active);
+               console.log(list_el.length);
+		       if ( active == list_el.length ) {
+			       $(this).addClass('icon-prev-inactive');
+			       console.log( 'icon-prev-inactive');
+			       active=1;
+               } else {
+			       $(this).removeClass('icon-prev-inactive');
+			       console.log( 'icon-prev-active');
+               }
+           
+		    active++;
+	    });
+    });*/
+    
 });
 
 /*Mobile Functions*/

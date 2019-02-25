@@ -1709,7 +1709,6 @@ header.nav-header {
 		z-index: 20;
 		.bp-header__title {
 			font-size: 18px;
-			letter-spacing: 1px;
 			line-height: 24px;
 		}
 	}
@@ -1732,6 +1731,10 @@ header.nav-header {
 			
 			#prevbutton,
 			#nextbutton {
+				&.icon-prev-inactive {
+					opacity: 0.5;
+					pointer-events: none;
+				}
 				&:after {
 					font-family: 'icomoon' !important;
 					speak: none;
@@ -1755,6 +1758,7 @@ header.nav-header {
 					color: #000;
 					width: 45px;
 				}
+				
 			}
 			#prevbutton {
 				&:after {
@@ -1876,6 +1880,7 @@ header.nav-header {
 						letter-spacing: .25px;
 						margin: 0;
 						padding: 0;
+						font-weight: 100;
 					}
 				}
 				&.active_accord {
