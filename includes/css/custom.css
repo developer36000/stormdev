@@ -692,11 +692,12 @@ header.nav-header {
   padding-bottom: 50px; }
 
 .pages-nav__item {
-  width: 33%;
+  width: 25%;
   padding: 30px; }
 
 .pages-nav__item--social {
-  padding-top: 50px; }
+  padding-top: 50px;
+  width: 100%; }
 
 .pages-nav .pages-nav__item--social .link--social {
   width: 100%; }
@@ -1142,10 +1143,12 @@ header.nav-header {
   top: 50%;
   transform: none;
   position: relative;
-  left: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
   line-height: 26px;
-  color: #fff; }
+  color: #fff;
+  font-weight: 100; }
 
 @media screen and (max-height: 920px) {
   .accordion .accordion_pre_text div {
@@ -1224,7 +1227,8 @@ header.nav-header {
   right: 15%;
   width: 650px;
   height: 75%;
-  opacity: 1; }
+  opacity: 1;
+  z-index: 15; }
 
 .accordion ul.accord_listing li.accord_chooser .accord_textholder {
   opacity: 0;
@@ -1596,6 +1600,8 @@ header.nav-header {
   height: 75%;
   bottom: 2%;
   position: absolute; }
+  #philosophie .philo_ei_vid .philo_image {
+    display: none; }
 
 #philosophie .philo_ei_vid video {
   width: 40%;
@@ -1763,7 +1769,7 @@ header.nav-header {
   margin-right: 0px; }
 
 #kontakt .center .branch_block {
-  width: 32%;
+  width: 24%;
   display: inline-block;
   text-align: left;
   font-weight: 100; }
@@ -1777,7 +1783,7 @@ header.nav-header {
 
 #kontakt .center .branch_block .tel {
   margin-top: 5px;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 800; }
 
 #kontakt .center .branch_block .email {
@@ -1802,7 +1808,7 @@ header.nav-header {
 
 #kontakt .center .branch_block .accord_text_button {
   width: 100%;
-  margin-top: 0px; }
+  margin-top: 0; }
 
 #kontakt #imprint_section {
   position: absolute;
@@ -1823,10 +1829,10 @@ header.nav-header {
 
 @media screen and (max-width: 1665px) {
   #kontakt .center .branch_block .tel {
-    font-size: 24px; } }
+    font-size: 16px; } }
 @media screen and (max-width: 1450px) {
   #kontakt .center .branch_block .tel {
-    font-size: 20px; } }
+    font-size: 14px; } }
 @media screen and (max-width: 1350px) {
   #kontakt .center .branch_block .tel {
     font-size: unset; } }
@@ -1845,7 +1851,11 @@ header.nav-header {
   margin: auto;
   text-align: center;
   line-height: 26px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-weight: 100; }
+
+#references .reference span {
+  font-weight: 100; }
 
 #references .reference {
   width: 22.5%;
@@ -1867,8 +1877,8 @@ header.nav-header {
     padding-bottom: 20px; } }
 @media screen and (max-height: 760px), screen and (max-width: 1350px) {
   #references .reference {
-    margin-top: 30px;
-    margin-bottom: 30px; }
+    margin-top: px;
+    margin-bottom: 15px; }
 
   #references .reference img {
     padding-top: 10px;
@@ -1881,6 +1891,10 @@ header.nav-header {
 
   #references .ref_block {
     margin-top: 0; } }
+@media screen and (max-height: 720px), screen and (max-width: 1350px) {
+  #references .reference {
+    margin-top: 15px;
+    margin-bottom: 15px; } }
 @media screen and (max-width: 1350px) and (min-height: 1250px) {
   #references .reference_list {
     position: absolute;
@@ -2118,7 +2132,173 @@ header.nav-header {
     top: 50px; }
 
   .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+    width: 45%; } }
+@media screen and (max-width: 769px) {
+  .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
     width: 45%;
     left: 45px; } }
+#shareholder {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative; }
+  #shareholder .bp-header {
+    z-index: 20; }
+    #shareholder .bp-header .bp-header__title {
+      font-size: 40px;
+      text-transform: uppercase;
+      line-height: 72px; }
+      @media screen and (max-width: 1025px) {
+        #shareholder .bp-header .bp-header__title {
+          font-size: 30px; } }
+
+.shareholder-bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .shareholder-bg {
+      display: none; } }
+  .shareholder-bg img {
+    display: block;
+    min-height: initial;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
+    @media screen and (max-width: 1025px) {
+      .shareholder-bg img {
+        width: 125%; } }
+
+@media screen and (max-width: 768px) {
+  #shareholders_mobile.accord_open {
+    position: relative; } }
+#shareholders_mobile.accord_open .accordion_nav {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    #shareholders_mobile.accord_open .accordion_nav {
+      display: block; } }
+  #shareholders_mobile.accord_open .accordion_nav #prevbutton:after,
+  #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 45px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    background: #fff;
+    border-radius: 99px;
+    color: #000;
+    width: 45px; }
+  #shareholders_mobile.accord_open .accordion_nav #prevbutton:after {
+    right: inherit;
+    left: 15px; }
+  #shareholders_mobile.accord_open .accordion_nav #nextbutton:after {
+    content: "\e907"; }
+#shareholders_mobile.accord_open .accordion_nav_points a.accord_button {
+  display: none; }
+  #shareholders_mobile.accord_open .accordion_nav_points a.accord_button.active_accord_item {
+    display: block; }
+#shareholders_mobile.accord_open ul.accord_listing {
+  max-width: 75%;
+  margin: 0 auto;
+  width: 100%; }
+  @media screen and (max-width: 1200px) {
+    #shareholders_mobile.accord_open ul.accord_listing {
+      max-width: 90%; } }
+  @media screen and (max-width: 1025px) {
+    #shareholders_mobile.accord_open ul.accord_listing {
+      max-width: 100%; } }
+  #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+    width: auto;
+    text-align: center;
+    padding-bottom: 70px; }
+    @media screen and (max-width: 768px) {
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+        width: 0; } }
+    @media screen and (max-width: 1025px) {
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+        padding-bottom: 60px; } }
+    #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      display: none; }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image img {
+        display: block;
+        min-height: initial;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; }
+    #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box {
+      padding: 0 5px; }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+        color: #fff;
+        font-size: 18px;
+        line-height: 48px;
+        margin: 0;
+        padding: 0;
+        letter-spacing: .25px; }
+        @media screen and (max-width: 1367px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+            font-size: 16px; } }
+        @media screen and (max-width: 1200px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+            font-size: 14px; } }
+        @media screen and (max-width: 1025px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
+            font-size: 12px; } }
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
+        font-size: 14px;
+        color: #fff;
+        line-height: 21px;
+        letter-spacing: .25px;
+        margin: 0;
+        padding: 0;
+        font-weight: 100; }
+        @media screen and (max-width: 1367px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
+            font-size: 12px; } }
+        @media screen and (max-width: 1200px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
+            font-size: 12px; } }
+        @media screen and (max-width: 1025px) {
+          #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box p {
+            font-size: 10px;
+            line-height: 18px; } }
+    #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord {
+      width: auto; }
+      @media screen and (max-width: 768px) {
+        #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord {
+          width: 100%; } }
 
 /*# sourceMappingURL=custom.css.map */
