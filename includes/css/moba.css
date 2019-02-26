@@ -44,7 +44,7 @@ html.responsive.moba.js {
     .responsive.moba .video_block {
       max-height: 350px;
       position: relative;
-      min-height: 200px; }
+      min-height: 183px; }
       .responsive.moba .video_block > video {
         height: auto;
         width: 100%;
@@ -153,7 +153,7 @@ body * {
   position: relative;
   background-color: #fff;
   padding: 0;
-  margin-top: 57px; }
+  margin-top: 24px; }
 
 #making-of .bp-header {
   display: none; }
@@ -1158,7 +1158,11 @@ header.nav-header {
   padding: 0px;
   padding-bottom: 50px;
   position: absolute;
-  top: 14%; }
+  top: 18%; }
+  
+.nav-header__title {
+  font-size: 2em;
+  line-height: 1.7; }
 
 .pages-nav__item {
   width: 33%;
@@ -1295,13 +1299,14 @@ header.nav-header {
 
 .moba-nav.ob {
   position: absolute;
-  top: 52%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%); }
+  -o-transform: translate(-50%, -50%); 
+  width: inherit; }
 
 .responsive .pages-nav {
   display: block;
