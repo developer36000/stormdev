@@ -22,6 +22,9 @@ $(document).ready(function() {
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
+				if ($(window).width() < 960) {
+					fullvid.pause();
+				}
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 			});
