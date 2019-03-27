@@ -9,6 +9,7 @@ $(document).ready(function() {
 	});
 	
 	function videofunc (fullvid_ob, fullvid){
+		$('#page-home .video_block').hide();
 		$(fullvid_ob).addClass('active');
 		$(fullvid_ob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob + ' video').attr('controls', '');
@@ -18,13 +19,12 @@ $(document).ready(function() {
 			this.on('ended', function() {
 				this.exitFullscreen();
 				$(fullvid_ob).removeClass('active');
+				$('#page-home .video_block').show();
 				$('.video_close_button').remove();
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
-				if ($(window).width() < 960) {
-					fullvid.pause();
-				}
+				$('#page-home .video_block').show();
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 			});
