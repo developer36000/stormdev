@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 	
 	function videofunc (fullvid_ob, fullvid){
-		$('#page-home .video_block').hide();
+		$('#page-home .video_block').removeClass('active');
 		$(fullvid_ob).addClass('active');
 		$(fullvid_ob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob + ' video').attr('controls', '');
@@ -19,12 +19,12 @@ $(document).ready(function() {
 			this.on('ended', function() {
 				this.exitFullscreen();
 				$(fullvid_ob).removeClass('active');
-				$('#page-home .video_block').show();
+				$('#page-home .video_block').addClass('active');
 				$('.video_close_button').remove();
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
-				$('#page-home .video_block').show();
+				$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 			});
