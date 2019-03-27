@@ -1159,7 +1159,7 @@ header.nav-header {
   padding-bottom: 50px;
   position: absolute;
   top: 18%; }
-  
+
 .nav-header__title {
   font-size: 2em;
   line-height: 1.7; }
@@ -1305,7 +1305,7 @@ header.nav-header {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%); 
+  -o-transform: translate(-50%, -50%);
   width: inherit; }
 
 .responsive .pages-nav {

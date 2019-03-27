@@ -2141,7 +2141,8 @@ header.nav-header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #shareholder .bp-header {
     z-index: 20; }
     #shareholder .bp-header .bp-header__title {
