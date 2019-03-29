@@ -105,9 +105,10 @@ body * {
 .video_block > video {
   height: 100%;
   object-fit: contain;
-  width: auto; }
+  width: auto;
+  display: none !important; }
 
-.video_block .show_mobile {
+.video_block #show_mobile {
   display: block !important; }
 
 .full_video_block {

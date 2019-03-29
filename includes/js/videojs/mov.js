@@ -29,6 +29,10 @@ $(document).ready(function() {
 			}
 		};
 		
+	} else {
+		$('.icon-play *').on('click tap', function(event) {
+			$('#show_mobile').play();
+		});
 	}
 	
 	
