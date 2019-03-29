@@ -8,7 +8,7 @@ $(document).ready(function() {
 		videofunc(fullvid_ob, fullvid);
 	});
 	
-	function videofunc (fullvid_ob, fullvid){
+	function videofunc (fullvid_ob, fullvid) {
 		$('#page-home .video_block').removeClass('active');
 		$(fullvid_ob).addClass('active');
 		$(fullvid_ob + ' video').attr('data-keepplaying', '');

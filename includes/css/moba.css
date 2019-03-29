@@ -120,10 +120,7 @@ body * {
 #fullvideo {
   height: inherit !important;
   width: inherit !important;
-  background-color: #000;
-  display: none; }
-  #fullvideo.mobile {
-    display: block; }
+  background-color: #000; }
 
 /*Playbutton*/
 #playbutton div {

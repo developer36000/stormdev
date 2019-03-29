@@ -145,10 +145,6 @@ body * {
 	height: inherit !important;
 	width: inherit !important;
 	background-color: #000;
-	display: none;
-	&.mobile {
-		display: block;
-	}
 }
 
 /*Playbutton*/
