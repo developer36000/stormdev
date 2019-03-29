@@ -29,7 +29,7 @@ html.responsive.moba.js {
 
 .responsive.moba body {
   height: 100% !important;
-  margin: 0px !important;
+  margin: 0 !important;
   overflow: unset;
   overflow-x: hidden;
   padding: 24px;
@@ -120,7 +120,10 @@ body * {
 #fullvideo {
   height: inherit !important;
   width: inherit !important;
-  background-color: #000; }
+  background-color: #000;
+  display: none; }
+  #fullvideo.mobile {
+    display: block; }
 
 /*Playbutton*/
 #playbutton div {
