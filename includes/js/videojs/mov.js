@@ -2,11 +2,36 @@
 $(document).ready(function() {			
 	/*Playbutton*/
 	var fullvid, fullscreen, fullvid_ob;
-	$('.icon-play *').on('click tap', function(event) {	
-		fullvid_ob = '.full_video_block';	
-		fullvid = videojs('fullvideo');
-		videofunc(fullvid_ob, fullvid);
-	});
+	if (window.width() < 992) {
+		$('.icon-play *').on('click tap', function(event) {
+			fullvid_ob = '.full_video_block';
+			fullvid = videojs('fullvideo');
+			videofunc(fullvid_ob, fullvid);
+		});
+		
+		/*Check if vidoe is still on fullscreen when windows resize*/
+		window.onresize = function () {
+			if (typeof fullvid !== 'undefined'){
+				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+					if (!fullscreen) {
+						fullscreen = true;
+						fullvid.play();
+					}
+				} else {
+					if (fullscreen) {
+						fullscreen = false;
+						fullvid.pause();
+						fullvid.currentTime(0);
+						$(fullvid_ob).removeClass('active');
+						//$('.video_close_button').remove();
+					}
+				}
+			}
+		};
+		
+	}
+	
+	
 	
 	function videofunc (fullvid_ob, fullvid) {
 		$('#page-home .video_block').removeClass('active');
@@ -19,12 +44,12 @@ $(document).ready(function() {
 			this.on('ended', function() {
 				this.exitFullscreen();
 				$(fullvid_ob).removeClass('active');
-				$('#page-home .video_block').addClass('active');
+				//$('#page-home .video_block').addClass('active');
 				$('.video_close_button').remove();
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
-				$('#page-home .video_block').addClass('active');
+				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 			});
@@ -33,23 +58,5 @@ $(document).ready(function() {
 		$('.full_video_block.active #fullvideo').append(xbutton);
 	}
 	
-	/*Check if vidoe is still on fullscreen when windows resize*/
-	window.onresize = function () {
-		if (typeof fullvid !== 'undefined'){
-			if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
-				if (!fullscreen) {
-					fullscreen = true;
-					fullvid.play();
-				}
-			} else {
-				if (fullscreen) {
-					fullscreen = false;
-					fullvid.pause();
-					fullvid.currentTime(0);
-					$(fullvid_ob).removeClass('active');
-					$('.video_close_button').remove();
-				}
-			}
-		}
-	};	
+
 });

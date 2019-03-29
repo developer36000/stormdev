@@ -122,18 +122,22 @@ body * {
 	padding: 0;
 }
 
-.video_block video {
+.video_block > video {
 	height: 100%;
 	object-fit: contain;
 	width: auto;
+	display: none !important;
 }
-
+.video_block .show_mobile {
+	display: block !important;
+}
 .full_video_block {
 	display: none;
 }
 
 .full_video_block.active {
-	display: block;
+//	display: block;
+	display: none !important;
 }
 
 .full_video_block video {
