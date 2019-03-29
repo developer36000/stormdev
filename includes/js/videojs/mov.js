@@ -33,6 +33,8 @@ $(document).ready(function() {
 		$('.icon-play *').on('click tap', function(event) {
 			$('#show_mobile').play();
 		});
+		$('.video_block > video').remove();
+		$('.full_video_block').remove();
 	}
 	
 	
