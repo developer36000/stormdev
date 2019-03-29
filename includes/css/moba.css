@@ -104,9 +104,10 @@ body * {
 
 .video_block.active {
   background: url("../mov/preview-fallback.jpg") no-repeat 50% 50%;
-  -webkit-background-size: vcover;
+  -webkit-background-size: cover;
   background-size: cover; }
 
+.icon-play
 .video_block > video {
   height: 100%;
   object-fit: contain;
