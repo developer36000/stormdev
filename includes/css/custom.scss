@@ -1084,6 +1084,10 @@ header.nav-header {
 	height: inherit !important;
 	width: inherit !important;
 	background-color: #000;
+	display: block;
+	&.mobile {
+		display: none;
+	}
 }
 
 .full_video_block .vjs-fullscreen video {

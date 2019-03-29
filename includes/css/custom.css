@@ -881,6 +881,8 @@ header.nav-header {
   height: inherit !important;
   width: inherit !important;
   background-color: #000; }
+  #fullvideo.mobile {
+    display: none; }
 
 .full_video_block .vjs-fullscreen video {
   display: block; }
