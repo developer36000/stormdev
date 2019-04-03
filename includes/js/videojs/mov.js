@@ -34,7 +34,7 @@ $(document).ready(function() {
 			$('#show_mobile').play();
 			$(this).fadeOut();
 		});
-		$('.video_block > video').remove();
+		$('.video_block #default').remove();
 		$('.full_video_block').remove();
 	}
 	
