@@ -29,7 +29,7 @@ html.responsive.moba.js {
 
 .responsive.moba body {
   height: 100% !important;
-  margin: 0px !important;
+  margin: 0 !important;
   overflow: unset;
   overflow-x: hidden;
   padding: 24px;
@@ -42,15 +42,20 @@ html.responsive.moba.js {
   max-height: 400px; }
   @media screen and (max-width: 640px) {
     .responsive.moba .video_block {
-      max-height: 350px;
-      position: relative;
-      min-height: 183px; }
-      .responsive.moba .video_block > video {
-        height: auto;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        right: 0; } }
+      min-height: 0;
+      max-height: 0;
+      height: 0; }
+      .responsive.moba .video_block.active {
+        max-height: 350px;
+        position: relative;
+        height: 100%;
+        min-height: 183px; }
+        .responsive.moba .video_block.active > video {
+          height: auto;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          right: 0; } }
 
 .responsive.moba .bp-header {
   transform: unset; }
@@ -97,16 +102,29 @@ body * {
   background-color: #000;
   padding: 0; }
 
-.video_block video {
+.video_block.active {
+  background: url("../mov/preview-fallback.jpg") no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+#playbutton {
+  display: none !important; }
+
+.video_block > video {
   height: 100%;
   object-fit: contain;
-  width: auto; }
+  width: auto;
+  display: none !important; }
+
+.video_block #show_mobile {
+  display: block !important;
+  position: relative; }
 
 .full_video_block {
   display: none; }
 
 .full_video_block.active {
-  display: block; }
+  display: none !important; }
 
 .full_video_block video {
   width: 100%; }
@@ -1159,7 +1177,7 @@ header.nav-header {
   padding-bottom: 50px;
   position: absolute;
   top: 18%; }
-  
+
 .nav-header__title {
   font-size: 2em;
   line-height: 1.7; }
@@ -1305,7 +1323,7 @@ header.nav-header {
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%); 
+  -o-transform: translate(-50%, -50%);
   width: inherit; }
 
 .responsive .pages-nav {
@@ -1424,7 +1442,8 @@ header.nav-header {
   background-position: 50% 50%;
   position: relative;
   padding: 0;
-  background: #000; }
+  background: #000;
+  overflow: hidden; }
   #shareholder .bp-header {
     position: relative;
     z-index: 20; }

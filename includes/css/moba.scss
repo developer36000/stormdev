@@ -33,7 +33,7 @@ html.responsive.moba.js {
 
 .responsive.moba body {
 	height: 100% !important;
-	margin: 0px !important;
+	margin: 0 !important;
 	overflow: unset;
 	overflow-x: hidden;
 	padding: 24px;
@@ -46,15 +46,21 @@ html.responsive.moba.js {
 	width: 100%;
 	max-height: 400px;
 	@media screen and (max-width: 640px) {
-		max-height: 350px;
-		position: relative;
-		min-height: 183px;
-		& > video {
-			height: auto;
-			width: 100%;
-			position: absolute;
-			left: 0;
-			right: 0;
+		min-height: 0;
+		max-height: 0;
+		height: 0;
+		&.active {
+			max-height: 350px;
+			position: relative;
+			height: 100%;
+			min-height: 183px;
+			& > video {
+				height: auto;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				right: 0;
+			}
 		}
 	}
 }
@@ -115,19 +121,31 @@ body * {
 	background-color: #000;
 	padding: 0;
 }
-
-.video_block video {
+.video_block.active {
+	background: url('../mov/preview-fallback.jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#playbutton {
+	display: none !important;
+}
+.video_block > video {
 	height: 100%;
 	object-fit: contain;
 	width: auto;
+	display: none !important;
 }
-
+.video_block #show_mobile {
+	display: block !important;
+	position: relative;
+}
 .full_video_block {
 	display: none;
 }
 
 .full_video_block.active {
-	display: block;
+//	display: block;
+	display: none !important;
 }
 
 .full_video_block video {
@@ -1710,6 +1728,7 @@ header.nav-header {
 	position: relative;
 	padding: 0;
 	background: #000;
+	overflow: hidden;
 	.bp-header {
 		position: relative;
 		z-index: 20;

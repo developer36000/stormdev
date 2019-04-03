@@ -118,10 +118,11 @@ if ($(window).width() < 960) {
         $('#mobilelogo').on('click tap', function () {
             if ($('body').hasClass('nav-open') !== true) {
                 $('html, body').animate({
-                    scrollTop: $('#fullpage').offset().top,
+                    scrollTop: $('#fullpage').offset().top
                 }, 2000);
             }
         });
+        $('#page-home .video_block > video').hide();
     });
 
 }
