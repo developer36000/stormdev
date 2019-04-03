@@ -2,7 +2,7 @@
 $(document).ready(function() {			
 	/*Playbutton*/
 	var fullvid, fullscreen, fullvid_ob;
-	if ($(window).width()  < 960 ) {
+	if ($(window).width() > 960 ) {
 		$('.icon-play *').on('click tap', function(event) {
 			fullvid_ob = '.full_video_block';
 			fullvid = videojs('fullvideo');
