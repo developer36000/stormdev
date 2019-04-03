@@ -29,7 +29,7 @@ $(document).ready(function() {
 			}
 		};
 		
-	} else {
+	} else if ($(window).width() < 960 ) {
 		$('.icon-play *').on('click tap', function(event) {
 			$('#show_mobile').play();
 			$(this).fadeOut();
