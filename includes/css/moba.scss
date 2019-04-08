@@ -6,6 +6,7 @@
 	-ms-transform: rotate3d(0, 0, 1, 45deg);
 	-o-transform: rotate3d(0, 0, 1, 45deg);
 	background-color: #fff;
+	opacity: 1 !important;
 }
 
 #page-home .video_close_button:after {
@@ -15,6 +16,7 @@
 	-ms-transform: rotate3d(0, 0, 1, -45deg);
 	-o-transform: rotate3d(0, 0, 1, -45deg);
 	background-color: #fff;
+	opacity: 1 !important;
 }
 
 #page-home .video_close_button {
@@ -157,6 +159,7 @@ body * {
 	width: 100%;
 	height: 250px;
 	min-height: 200px;
+	background: transparent !important;
 	#show_mobile_html5_api {
 		display: block !important;
 		width: 100%;
