@@ -93,7 +93,7 @@ $(document).ready(function() {
 		$('#page-home .video_block').removeClass('active');
 		$(fullvid_ob_mob).addClass('show_full');
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
-		//$(fullvid_ob_mob + ' video').attr('controls', '');
+		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
@@ -106,6 +106,7 @@ $(document).ready(function() {
 			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
 				fullvid_mob.pause();
+				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob_mob).removeClass('show_full');
 				$('.video_close_button').remove();
