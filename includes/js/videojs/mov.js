@@ -91,6 +91,11 @@ $(document).ready(function() {
 				$('.video_close_button').remove();
 			});
 		});
+		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+			fullvid.get(0).pause();
+			$(fullvid_ob).removeClass('active');
+			$('.video_close_button').remove();
+		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
 	}
@@ -119,6 +124,13 @@ $(document).ready(function() {
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
+		});
+		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+			fullvid_mob.get(0).pause();
+			$(fullvid_ob_mob).removeClass('show_full');
+			$(fullvid_ob_mob + ' video').removeAttr('controls');
+			$('.video_close_button').remove();
+			$(fullvid_ob_mob).removeClass('show_close');
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			console.log('iPhone');
