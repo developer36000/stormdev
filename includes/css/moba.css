@@ -131,7 +131,7 @@ body * {
   width: 100%;
   height: 200px; }
   .show_mobile-dimensions #show_mobile_html5_api {
-    display: block;
+    display: block !important;
     width: 100%; }
 
 /*.full_video_block.active video{object-fit:contain;}*/

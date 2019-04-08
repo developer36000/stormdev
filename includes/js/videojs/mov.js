@@ -86,7 +86,7 @@ $(document).ready(function() {
 			});
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
-		$('.full_video_block.active #fullvideo').append(xbutton);
+		fullvid_ob.find('#fullvideo').append(xbutton);
 	}
 	
 	function videofunc_mob (fullvid_ob_mob, fullvid_mob) {
@@ -104,14 +104,15 @@ $(document).ready(function() {
 				$('.video_close_button').remove();
 			});
 			$('.video_close_button').on("click tap", function() {
-				fullvid.exitFullscreen();
+				fullvid_mob.exitFullscreen();
+				fullvid_mob.pause();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob_mob).removeClass('show_full');
 				$('.video_close_button').remove();
 			});
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
-		$('.full_video_block.active #fullvideo').append(xbutton);
+		fullvid_ob_mob.find('#show_mobile').append(xbutton);
 	}
 	
 
