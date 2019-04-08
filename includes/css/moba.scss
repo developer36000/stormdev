@@ -167,12 +167,13 @@ body * {
 	height: 250px;
 	min-height: 200px;
 	background: transparent !important;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+
 	#show_mobile_html5_api {
 		display: block !important;
 		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 /*.full_video_block.active video{object-fit:contain;}*/
