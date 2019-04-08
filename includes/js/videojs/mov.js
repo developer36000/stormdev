@@ -36,7 +36,7 @@ $(document).ready(function() {
 			
 			//$('#show_mobile').play();
 			$(this).fadeOut();
-			videofunc(fullvid_ob_mob, fullvid_mob);
+			videofunc_mob(fullvid_ob_mob, fullvid_mob);
 		});
 		/*Check if vidoe is still on fullscreen when windows resize*/
 		window.onresize = function () {
@@ -82,6 +82,31 @@ $(document).ready(function() {
 				fullvid.exitFullscreen();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
+				$('.video_close_button').remove();
+			});
+		});
+		var xbutton = '<button class="menu-button  video_close_button"></button>';
+		$('.full_video_block.active #fullvideo').append(xbutton);
+	}
+	
+	function videofunc_mob (fullvid_ob, fullvid) {
+		$('#page-home .video_block').removeClass('active');
+		$(fullvid_ob).addClass('active');
+		$(fullvid_ob + ' video').attr('data-keepplaying', '');
+		$(fullvid_ob + ' video').attr('controls', '');
+		fullvid.requestFullscreen();
+		fullvid.play();
+		fullvid.ready(function(){
+			this.on('ended', function() {
+				this.exitFullscreen();
+			//	$(fullvid_ob).removeClass('active');
+				//$('#page-home .video_block').addClass('active');
+				$('.video_close_button').remove();
+			});
+			$('.video_close_button').on("click tap", function() {
+				fullvid.exitFullscreen();
+				//$('#page-home .video_block').addClass('active');
+				//$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 			});
 		});
