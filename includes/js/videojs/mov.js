@@ -52,7 +52,7 @@ $(document).ready(function() {
 				} else {
 					if (fullscreen) {
 						fullscreen = false;
-						fullvid_mob.pause();
+						fullvid_mob.get(0).pause();
 						fullvid_mob.currentTime(0);
 						$(fullvid_ob_mob).removeClass('show_full');
 					//	$(fullvid_ob_mob).removeClass('active');
@@ -103,7 +103,7 @@ $(document).ready(function() {
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
-				fullvid_mob.pause();
+				fullvid_mob.get(0).pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
@@ -111,7 +111,7 @@ $(document).ready(function() {
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
-				fullvid_mob.pause();
+				fullvid_mob.get(0).pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
