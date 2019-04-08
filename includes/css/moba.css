@@ -107,9 +107,6 @@ body * {
   -webkit-background-size: cover;
   background-size: cover; }
 
-#playbutton {
-  display: none !important; }
-
 .video_block > video {
   height: 100%;
   object-fit: contain;

@@ -30,10 +30,34 @@ $(document).ready(function() {
 		};
 		
 	} else if ($(window).width() < 960 ) {
+		var fullvid_ob_mob = '.video_block.active';
+		var fullvid_mob = videojs('show_mobile');
 		$('.icon-play *').on('click tap', function(event) {
-			$('#show_mobile').play();
+			
+			//$('#show_mobile').play();
 			$(this).fadeOut();
+			videofunc(fullvid_ob_mob, fullvid_mob);
 		});
+		/*Check if vidoe is still on fullscreen when windows resize*/
+		window.onresize = function () {
+			if (typeof fullvid !== 'undefined'){
+				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+					if (!fullscreen) {
+						fullscreen = true;
+						fullvid.play();
+					}
+				} else {
+					if (fullscreen) {
+						fullscreen = false;
+						fullvid.pause();
+						fullvid.currentTime(0);
+						$(fullvid_ob_mob).removeClass('active');
+						//$('.video_close_button').remove();
+					}
+				}
+			}
+		};
+		
 		$('.video_block #default').remove();
 		$('.full_video_block').remove();
 	}
