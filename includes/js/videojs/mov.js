@@ -99,7 +99,7 @@ $(document).ready(function() {
 		$('#page-home .video_block').removeClass('active');
 		$(fullvid_ob_mob).addClass('show_full');
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
-		//$(fullvid_ob_mob + ' video').attr('controls', '');
+		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
