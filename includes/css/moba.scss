@@ -153,6 +153,14 @@ body * {
 	width: 100%;
 }
 
+.show_mobile-dimensions {
+	width: 100%;
+	height: 200px;
+	#show_mobile_html5_api {
+		display: block;
+		width: 100%;
+	}
+}
 /*.full_video_block.active video{object-fit:contain;}*/
 #fullvideo {
 	height: inherit !important;
