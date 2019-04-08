@@ -2,6 +2,9 @@
 $(document).ready(function() {			
 	/*Playbutton*/
 	var fullvid, fullscreen, fullvid_ob;
+	
+	
+	
 	if ($(window).width() > 960 ) {
 		$('.icon-play *').on('click tap', function(event) {
 			fullvid_ob = '.full_video_block';
@@ -115,9 +118,15 @@ $(document).ready(function() {
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
 		});
-		var xbutton = '<button class="menu-button  video_close_button"></button>';
-		$(fullvid_ob_mob).find('#show_mobile').append(xbutton);
+		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+			console.log('iPhone');
+		} else {
+			var xbutton = '<button class="menu-button  video_close_button"></button>';
+			$(fullvid_ob_mob).find('#show_mobile').append(xbutton);
+		}
+		
 	}
+	
 	
 
 });
