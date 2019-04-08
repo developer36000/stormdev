@@ -51,8 +51,9 @@ $(document).ready(function() {
 						fullscreen = false;
 						fullvid_mob.pause();
 						fullvid_mob.currentTime(0);
+						$(fullvid_ob_mob).removeClass('show_full');
 					//	$(fullvid_ob_mob).removeClass('active');
-						//$('.video_close_button').remove();
+						$('.video_close_button').remove();
 					}
 				}
 			}
