@@ -86,7 +86,7 @@ $(document).ready(function() {
 			});
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
-		fullvid_ob.find('#fullvideo').append(xbutton);
+		$(fullvid_ob).find('#fullvideo').append(xbutton);
 	}
 	
 	function videofunc_mob (fullvid_ob_mob, fullvid_mob) {
@@ -112,7 +112,7 @@ $(document).ready(function() {
 			});
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
-		fullvid_ob_mob.find('#show_mobile').append(xbutton);
+		$(fullvid_ob_mob).find('#show_mobile').append(xbutton);
 	}
 	
 
