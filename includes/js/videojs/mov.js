@@ -96,6 +96,8 @@ $(document).ready(function() {
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
 			console.log(this);
+			console.log('----');
+			console.log(this['mozFullScreen']);
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
