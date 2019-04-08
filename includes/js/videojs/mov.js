@@ -9,6 +9,7 @@ $(document).ready(function() {
 		$('.icon-play *').on('click tap', function(event) {
 			fullvid_ob = '.full_video_block';
 			fullvid = videojs('fullvideo');
+			$(fullvid_ob).addClass('show_close');
 			videofunc(fullvid_ob, fullvid);
 		});
 		
@@ -26,7 +27,7 @@ $(document).ready(function() {
 						fullvid.get(0).pause();
 						fullvid.currentTime(0);
 						$(fullvid_ob).removeClass('active');
-						//$('.video_close_button').remove();
+						$('.video_close_button').remove();
 					}
 				}
 			}
@@ -82,6 +83,7 @@ $(document).ready(function() {
 				$(fullvid_ob).removeClass('active');
 				//$('#page-home .video_block').addClass('active');
 				$('.video_close_button').remove();
+				$(fullvid_ob).removeClass('show_close');
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
@@ -89,9 +91,11 @@ $(document).ready(function() {
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
+				$(fullvid_ob).removeClass('show_close');
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+			fullvid.exitFullscreen();
 			fullvid.get(0).pause();
 			$(fullvid_ob).removeClass('active');
 			$('.video_close_button').remove();
