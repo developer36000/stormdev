@@ -79,26 +79,16 @@ $(document).ready(function() {
 		fullvid.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
-				this.get(0).pause();
-				$(fullvid_ob).removeClass('active');
-				//$('#page-home .video_block').addClass('active');
-				$('.video_close_button').remove();
-				$(fullvid_ob).removeClass('show_close');
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
-				fullvid.get(0).pause();
-				//$('#page-home .video_block').addClass('active');
-				$(fullvid_ob).removeClass('active');
-				$('.video_close_button').remove();
-				$(fullvid_ob).removeClass('show_close');
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
-			fullvid.exitFullscreen();
 			fullvid.get(0).pause();
 			$(fullvid_ob).removeClass('active');
 			$('.video_close_button').remove();
+			$(fullvid_ob).removeClass('show_close');
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
