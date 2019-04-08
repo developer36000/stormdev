@@ -48,7 +48,7 @@ html.responsive.moba.js {
       max-height: 0;
       height: 0; }
       .responsive.moba .video_block.active_mob {
-        max-height: 200px;
+        max-height: 210px;
         overflow: hidden;
         position: relative;
         height: 100%;
