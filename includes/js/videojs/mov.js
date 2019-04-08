@@ -128,6 +128,8 @@ $(document).ready(function() {
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
 			console.log(this);
+			console.log('----');
+			console.log(this['mozFullScreen']);
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			console.log('iPhone');
