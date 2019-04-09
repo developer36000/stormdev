@@ -97,7 +97,7 @@ $(document).ready(function() {
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
 			console.log(this);
 			console.log('----');
-			console.log(this['mozFullScreen']);
+			console.log(this['fullscreen']);
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
@@ -131,7 +131,7 @@ $(document).ready(function() {
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
 			console.log(this);
 			console.log('----');
-			console.log(this['mozFullScreen']);
+			console.log(this['fullscreen']);
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			console.log('iPhone');

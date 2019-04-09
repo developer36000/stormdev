@@ -1346,13 +1346,16 @@ header.nav-header {
 
 .responsive .pages-nav {
   display: block;
-  padding: 0 0px 0 0px;
+  padding: 0;
   text-align: left; }
 
 .responsive .pages-nav__item {
   width: 100%;
   padding: 12px 0;
   text-align: center; }
+  @media screen and (max-height: 561px) {
+    .responsive .pages-nav__item {
+      padding: 5px 0; } }
 
 .responsive .pages-nav__item--small {
   display: inline-block;
@@ -1363,6 +1366,9 @@ header.nav-header {
   font-size: 2em;
   position: absolute;
   bottom: 10%; }
+  @media screen and (max-height: 601px) {
+    .responsive .pages-nav__item--social {
+      bottom: 20px; } }
 
 @media screen and (max-width: 25em) {
   .responsive .link {
