@@ -4,12 +4,7 @@ $(document).ready(function() {
 	var fullvid, fullscreen, fullvid_ob, fullvid_ob_mob;
 	fullvid_ob_mob = '.video_block.active_mob';
 	fullvid_ob = '.full_video_block';
-	
-	$('.video_close_button').on("click tap", function() {
-		$(fullvid_ob).removeClass('show_close');
-		$(fullvid_ob_mob).removeClass('show_close');
-		$(this).remove();
-	});
+	var default_v = videojs('default');
 	
 	if ($(window).width() > 960 ) {
 		$('.icon-play *').on('click tap', function(event) {
@@ -33,6 +28,7 @@ $(document).ready(function() {
 						fullvid.currentTime(0);
 						$(fullvid_ob).removeClass('active');
 						$('.video_close_button').remove();
+						default_v.play();
 					}
 				}
 			}
@@ -88,12 +84,17 @@ $(document).ready(function() {
 				//$('#page-home .video_block').addClass('active');
 				$('.video_close_button').remove();
 				$(fullvid_ob).removeClass('show_close');
+				default_v.play();
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid.exitFullscreen();
-				fullvid.get(0).pause();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
+				$(fullvid_ob).removeClass('show_close');
+				$(this).remove();
+				fullvid.get(0).pause();
+				default_v.play();
+				
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
@@ -123,9 +124,11 @@ $(document).ready(function() {
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
-				fullvid_mob.get(0).pause();
+				$(fullvid_ob_mob).removeClass('show_close');
+				$(this).remove();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
+				fullvid_mob.get(0).pause();
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
