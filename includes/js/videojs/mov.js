@@ -93,8 +93,8 @@ $(document).ready(function() {
 				fullvid.exitFullscreen();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
-				$(fullvid_ob).removeClass('show_close');
 				$('.video_close_button').remove();
+				$(fullvid_ob).removeClass('show_close');
 				def.play();
 				fullvid.currentTime(0);
 				fullvid.pause();
