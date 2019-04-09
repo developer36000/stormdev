@@ -19,8 +19,7 @@ $(document).ready(function() {
 				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
 					if (!fullscreen) {
 						fullscreen = true;
-						fullvid.currentTime(0);
-						fullvid.play();
+						fullvid.currentTime(0).play();
 					}
 				} else {
 					if (fullscreen) {
@@ -55,8 +54,7 @@ $(document).ready(function() {
 				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
 					if (!fullscreen) {
 						fullscreen = true;
-						fullvid.currentTime(0);
-						fullvid_mob.play();
+						fullvid_mob.currentTime(0).play();
 					}
 				} else {
 					if (fullscreen) {
@@ -116,8 +114,7 @@ $(document).ready(function() {
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
-		fullvid_mob.currentTime(0);
-		fullvid_mob.play();
+		fullvid_mob.currentTime(0).play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
