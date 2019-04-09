@@ -81,6 +81,7 @@ $(document).ready(function() {
 		$(fullvid_ob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob + ' video').attr('controls', '');
 		fullvid.requestFullscreen();
+		fullvid.currentTime(0);
 		fullvid.play();
 		fullvid.ready(function(){
 			this.on('ended', function() {
@@ -115,6 +116,7 @@ $(document).ready(function() {
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
+		fullvid_mob.currentTime(0);
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
