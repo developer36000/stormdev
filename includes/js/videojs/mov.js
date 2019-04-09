@@ -105,7 +105,7 @@ $(document).ready(function() {
 	
 	function videofunc_mob (fullvid_ob_mob, fullvid_mob) {
 		$('#page-home .video_block').removeClass('active');
-		$(fullvid_ob_mob).addClass('show_full');s
+		$(fullvid_ob_mob).addClass('show_full');
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
