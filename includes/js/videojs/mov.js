@@ -57,8 +57,8 @@ $(document).ready(function() {
 						fullscreen = false;
 						$(fullvid_ob_mob).removeClass('show_full');
 						$('.video_close_button').remove();
-						//fullvid_mob.currentTime(0);
-						fullvid_mob.get(0).pause();
+						fullvid_mob.currentTime(0);
+						fullvid_mob.pause();
 					}
 				}
 			}
@@ -124,8 +124,8 @@ $(document).ready(function() {
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
-				//this.currentTime(0);
-				this.get(0).pause();
+				this.currentTime(0);
+				this.pause();
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
@@ -133,8 +133,8 @@ $(document).ready(function() {
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
-				//fullvid_mob.currentTime(0);
-				fullvid_mob.get(0).pause();
+				fullvid_mob.currentTime(0);
+				fullvid_mob.pause();
 			});
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
