@@ -24,10 +24,12 @@ $(document).ready(function() {
 				} else {
 					if (fullscreen) {
 						fullscreen = false;
+						$(fullvid_ob).removeClass('active');
+						$(fullvid_ob_mob).removeClass('show_close');
+						$('.video_close_button').remove();
 						fullvid.get(0).pause();
 						fullvid.currentTime(0);
-						$(fullvid_ob).removeClass('active');
-						$('.video_close_button').remove();
+						
 					}
 				}
 			}
@@ -57,6 +59,7 @@ $(document).ready(function() {
 						fullvid_mob.currentTime(0);
 						$(fullvid_ob_mob).removeClass('show_full');
 						//	$(fullvid_ob_mob).removeClass('active');
+						$(fullvid_ob_mob).removeClass('show_close');
 						$('.video_close_button').remove();
 					}
 				}
