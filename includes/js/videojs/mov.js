@@ -1,7 +1,7 @@
 /*film init*/
 $(document).ready(function() {
 	/*Playbutton*/
-	var fullvid, fullscreen, fullvid_ob, fullvid_mob, fullvid_ob_mob;
+	var fullvid, fullscreen, fullvid_ob;
 	
 	
 	
@@ -24,30 +24,26 @@ $(document).ready(function() {
 				} else {
 					if (fullscreen) {
 						fullscreen = false;
-						$(fullvid_ob).removeClass('active');
-						$(fullvid_ob).removeClass('show_close');
-						$('.video_close_button').remove();
 						fullvid.get(0).pause();
 						fullvid.currentTime(0);
-						
+						$(fullvid_ob).removeClass('active');
+						$('.video_close_button').remove();
 					}
 				}
 			}
 		};
 		
 	} else if ($(window).width() < 960 ) {
-		
+		var fullvid_ob_mob = '.video_block.active_mob';
+		var fullvid_mob = videojs('show_mobile');
 		$('.icon-play *').on('click tap', function(event) {
-			fullvid_ob_mob = '.video_block.active_mob';
-			fullvid_mob = videojs('show_mobile');
+			
 			$(fullvid_ob_mob).addClass('show_close');
+			//$(this).fadeOut();
 			videofunc_mob(fullvid_ob_mob, fullvid_mob);
 		});
-		
 		/*Check if vidoe is still on fullscreen when windows resize*/
 		window.onresize = function () {
-			fullvid_ob_mob = '.video_block.active_mob';
-			fullvid_mob = videojs('show_mobile');
 			if (typeof fullvid_mob !== 'undefined'){
 				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
 					if (!fullscreen) {
@@ -57,12 +53,11 @@ $(document).ready(function() {
 				} else {
 					if (fullscreen) {
 						fullscreen = false;
-						$(fullvid_ob_mob).removeClass('show_full');
-						//	$(fullvid_ob_mob).removeClass('active');
-						$(fullvid_ob_mob).removeClass('show_close');
-						$('.video_close_button').remove();
 						fullvid_mob.get(0).pause();
 						fullvid_mob.currentTime(0);
+						$(fullvid_ob_mob).removeClass('show_full');
+						//	$(fullvid_ob_mob).removeClass('active');
+						$('.video_close_button').remove();
 					}
 				}
 			}
@@ -83,20 +78,20 @@ $(document).ready(function() {
 		fullvid.play();
 		fullvid.ready(function(){
 			this.on('ended', function() {
-				$(fullvid_ob).removeClass('active');
-				//$('#page-home .video_block').addClass('active');
-				$('.video_close_button').remove();
-				$(fullvid_ob).removeClass('show_close');
 				this.exitFullscreen();
 				this.get(0).pause();
+				$(fullvid_ob).removeClass('active');
+				//$('#page-home .video_block').addClass('active');
+				$('.video_close_button').remove();
+				$(fullvid_ob).removeClass('show_close');
 			});
 			$('.video_close_button').on("click tap", function() {
+				fullvid.exitFullscreen();
+				fullvid.get(0).pause();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 				$(fullvid_ob).removeClass('show_close');
-				fullvid.exitFullscreen();
-				fullvid.get(0).pause();
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
@@ -117,20 +112,20 @@ $(document).ready(function() {
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
-				$(fullvid_ob_mob).removeClass('show_full');
-				$(fullvid_ob_mob + ' video').removeAttr('controls');
-				$('.video_close_button').remove();
-				$(fullvid_ob_mob).removeClass('show_close');
 				this.exitFullscreen();
 				this.get(0).pause();
-			});
-			$('.video_close_button').on("click tap", function() {
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
+			});
+			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
 				fullvid_mob.get(0).pause();
+				$(fullvid_ob_mob).removeClass('show_full');
+				$(fullvid_ob_mob + ' video').removeAttr('controls');
+				$('.video_close_button').remove();
+				$(fullvid_ob_mob).removeClass('show_close');
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
