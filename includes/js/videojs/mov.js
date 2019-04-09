@@ -1,7 +1,7 @@
 /*film init*/
 $(document).ready(function() {			
 	/*Playbutton*/
-	var fullvid, fullscreen, fullvid_ob, fullvid_ob_mob, def, fullvid_mob;
+	var fullvid, fullscreen, fullvid_ob, fullvid_ob_mob, def;
 	
 	if ($(window).width() > 960 ) {
 		
@@ -37,9 +37,9 @@ $(document).ready(function() {
 		};
 		
 	} else if ($(window).width() < 960 ) {
-		
+		var fullvid_mob = videojs('show_mobile');
 		$('.icon-play *').on('click tap', function(event) {
-			fullvid_mob = videojs('show_mobile');
+			
 			fullvid_ob_mob = '.video_block.active_mob';
 			$(fullvid_ob_mob).addClass('show_close');
 			videofunc_mob(fullvid_ob_mob, fullvid_mob);
