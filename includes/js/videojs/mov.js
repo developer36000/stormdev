@@ -1,14 +1,14 @@
 /*film init*/
 $(document).ready(function() {			
 	/*Playbutton*/
-	var fullvid, fullscreen, fullvid_ob, fullvid_ob_mob, def;
+	var fullvid, fullscreen, fullvid_ob, fullvid_ob_mob, def, fullvid_mob;
 	
 	if ($(window).width() > 960 ) {
 		
 		$('.icon-play *').on('click tap', function(event) {
 			fullvid_ob = '.full_video_block';
 			fullvid = videojs('fullvideo');
-			def = videojs('default');
+			//def = videojs('default');
 			$(fullvid_ob).addClass('show_close');
 			videofunc(fullvid_ob, fullvid, def);
 		});
@@ -37,9 +37,9 @@ $(document).ready(function() {
 		};
 		
 	} else if ($(window).width() < 960 ) {
-		var fullvid_mob = videojs('show_mobile');
+		
 		$('.icon-play *').on('click tap', function(event) {
-			
+			fullvid_mob = videojs('show_mobile');
 			fullvid_ob_mob = '.video_block.active_mob';
 			$(fullvid_ob_mob).addClass('show_close');
 			videofunc_mob(fullvid_ob_mob, fullvid_mob);
@@ -77,15 +77,15 @@ $(document).ready(function() {
 		$(fullvid_ob + ' video').attr('controls', '');
 		fullvid.requestFullscreen();
 		fullvid.play();
-		def.currentTime(0);
-		def.pause();
+		//def.currentTime(0);
+		//def.pause();
 		fullvid.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 				$(fullvid_ob).removeClass('show_close');
-				def.play();
+				//def.play();
 				this.currentTime(0);
 				this.pause();
 			});
@@ -95,7 +95,7 @@ $(document).ready(function() {
 				$(fullvid_ob).removeClass('active');
 				$(fullvid_ob).removeClass('show_close');
 				$('.video_close_button').remove();
-				def.play();
+				//def.play();
 				fullvid.currentTime(0);
 				fullvid.pause();
 			});
@@ -119,21 +119,23 @@ $(document).ready(function() {
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
-				this.exitFullscreen();
+				
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
 				//this.currentTime(0);
+				this.exitFullscreen();
 				this.get(0).pause();
 			});
 			$('.video_close_button').on("click tap", function() {
-				fullvid_mob.exitFullscreen();
+			
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
 				//fullvid_mob.currentTime(0);
+				fullvid_mob.exitFullscreen();
 				fullvid_mob.get(0).pause();
 			});
 		});
