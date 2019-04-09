@@ -78,20 +78,20 @@ $(document).ready(function() {
 		fullvid.play();
 		fullvid.ready(function(){
 			this.on('ended', function() {
+				$(fullvid_ob).removeClass('active');
+				//$('#page-home .video_block').addClass('active');
+				$('.video_close_button').remove();
+				$(fullvid_ob).removeClass('show_close');
 				this.exitFullscreen();
 				this.get(0).pause();
-				$(fullvid_ob).removeClass('active');
-				//$('#page-home .video_block').addClass('active');
-				$('.video_close_button').remove();
-				$(fullvid_ob).removeClass('show_close');
 			});
 			$('.video_close_button').on("click tap", function() {
-				fullvid.exitFullscreen();
-				fullvid.get(0).pause();
 				//$('#page-home .video_block').addClass('active');
 				$(fullvid_ob).removeClass('active');
 				$('.video_close_button').remove();
 				$(fullvid_ob).removeClass('show_close');
+				fullvid.exitFullscreen();
+				fullvid.get(0).pause();
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
@@ -112,20 +112,20 @@ $(document).ready(function() {
 		fullvid_mob.play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
+				$(fullvid_ob_mob).removeClass('show_full');
+				$(fullvid_ob_mob + ' video').removeAttr('controls');
+				$('.video_close_button').remove();
+				$(fullvid_ob_mob).removeClass('show_close');
 				this.exitFullscreen();
 				this.get(0).pause();
-				$(fullvid_ob_mob).removeClass('show_full');
-				$(fullvid_ob_mob + ' video').removeAttr('controls');
-				$('.video_close_button').remove();
-				$(fullvid_ob_mob).removeClass('show_close');
 			});
 			$('.video_close_button').on("click tap", function() {
-				fullvid_mob.exitFullscreen();
-				fullvid_mob.get(0).pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
+				fullvid_mob.exitFullscreen();
+				fullvid_mob.get(0).pause();
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
