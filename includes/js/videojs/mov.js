@@ -102,11 +102,11 @@ $(document).ready(function() {
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
-		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+		/*$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
 			console.log(this);
 			console.log('----');
 			console.log(this['fullscreen']);
-		});
+		});*/
 		
 	}
 	
@@ -138,17 +138,11 @@ $(document).ready(function() {
 			});
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-			console.log('iPhone');
+			
 		} else {
 			var xbutton = '<button class="menu-button  video_close_button"></button>';
 			$(fullvid_ob_mob).find('#show_mobile').append(xbutton);
 		}
-		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
-			console.log(this);
-			console.log('----');
-			console.log(this['fullscreen']);
-		});
-		
 		
 	}
 	
