@@ -57,7 +57,7 @@ $(document).ready(function() {
 						fullscreen = false;
 						$(fullvid_ob_mob).removeClass('show_full');
 						$('.video_close_button').remove();
-						fullvid_mob.currentTime(0);
+						//fullvid_mob.currentTime(0);
 						fullvid_mob.get(0).pause();
 					}
 				}
@@ -120,21 +120,23 @@ $(document).ready(function() {
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
+				this.get(0).pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
-				this.currentTime(0);
-				this.get(0).pause();
+				//this.currentTime(0);
+				
 			});
 			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
+				fullvid_mob.get(0).pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
-				fullvid_mob.currentTime(0);
-				fullvid_mob.get(0).pause();
+				//fullvid_mob.currentTime(0);
+				
 			});
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
