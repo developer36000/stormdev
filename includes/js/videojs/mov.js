@@ -19,7 +19,8 @@ $(document).ready(function() {
 				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
 					if (!fullscreen) {
 						fullscreen = true;
-						fullvid.currentTime(0).play();
+						fullvid.currentTime(0);
+						fullvid.play();
 					}
 				} else {
 					if (fullscreen) {
@@ -40,10 +41,10 @@ $(document).ready(function() {
 		
 		
 	} else if ($(window).width() < 960 ) {
+		
 		var fullvid_ob_mob = '.video_block.active_mob';
 		var fullvid_mob = videojs('show_mobile');
 		$('.icon-play *').on('click tap', function(event) {
-			
 			$(fullvid_ob_mob).addClass('show_close');
 			//$(this).fadeOut();
 			videofunc_mob(fullvid_ob_mob, fullvid_mob);
@@ -54,7 +55,8 @@ $(document).ready(function() {
 				if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
 					if (!fullscreen) {
 						fullscreen = true;
-						fullvid_mob.currentTime(0).play();
+						fullvid_mob.currentTime(0);
+						fullvid_mob.play();
 					}
 				} else {
 					if (fullscreen) {
@@ -100,9 +102,9 @@ $(document).ready(function() {
 		});
 		
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
-			console.log(this);
-			console.log('----');
-			console.log(this['fullscreen']);
+		//	console.log(this);
+		//	console.log('----');
+		//	console.log(this['fullscreen']);
 		});
 		var xbutton = '<button class="menu-button  video_close_button"></button>';
 		$(fullvid_ob).find('#fullvideo').append(xbutton);
@@ -114,7 +116,8 @@ $(document).ready(function() {
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob_mob + ' video').attr('controls', '');
 		fullvid_mob.requestFullscreen();
-		fullvid_mob.currentTime(0).play();
+		fullvid_mob.currentTime(0);
+		fullvid_mob.play();
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
@@ -134,12 +137,9 @@ $(document).ready(function() {
 			});
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
-			console.log(this);
-			console.log('----');
-			console.log(this['fullscreen']);
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-			console.log('iPhone');
+			//console.log('iPhone');
 		} else {
 			var xbutton = '<button class="menu-button  video_close_button"></button>';
 			$(fullvid_ob_mob).find('#show_mobile').append(xbutton);
