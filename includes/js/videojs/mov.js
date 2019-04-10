@@ -128,12 +128,13 @@ $(document).ready(function() {
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
-			$('.video_close_button').on("click tap", function() {
+			$('.video_close_button, .vjs-fullscreen-control').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
 				fullvid_mob.pause();
 				$(fullvid_ob_mob).removeClass('show_full');
 				//$(fullvid_ob_mob + ' video').removeAttr('controls');
 				$('.video_close_button').remove();
+				$(fullvid_ob_mob + '> div').removeClass('vjs-controls-enabled').addClass('vjs-controls-disabled');
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
 		});
