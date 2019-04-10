@@ -178,7 +178,14 @@ body * {
 	
 	}
 }
-
+video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure {
+	display: flex !important;
+	opacity: 1 !important;
+}
+.custom-video-controls {
+	z-index: 2147483647;
+}
 
 .show_full {
 	.show_mobile-dimensions {
