@@ -41,9 +41,9 @@ $(document).ready(function() {
 		
 		
 	} else if ($(window).width() < 960 ) {
-		
+		var options = {};
 		var fullvid_ob_mob = '.video_block.active_mob';
-		var fullvid_mob = videojs('show_mobile');
+		var fullvid_mob = videojs('show_mobile', options);
 		$('.icon-play *').on('click tap', function(event) {
 			$(fullvid_ob_mob).addClass('show_close');
 			//$(this).fadeOut();
@@ -113,12 +113,12 @@ $(document).ready(function() {
 	function videofunc_mob (fullvid_ob_mob, fullvid_mob) {
 		$('#page-home .video_block').removeClass('active');
 		$(fullvid_ob_mob).addClass('show_full');
+		$(fullvid_ob_mob + '> div').removeClass('vjs-controls-disabled').addClass('vjs-controls-enabled');
 		$(fullvid_ob_mob + ' video').attr('data-keepplaying', '');
 		$(fullvid_ob_mob + ' video').attr('controls', 'controls');
 		fullvid_mob.requestFullscreen();
 		fullvid_mob.currentTime(0);
 		fullvid_mob.play();
-		
 		fullvid_mob.ready(function(){
 			this.on('ended', function() {
 				this.exitFullscreen();
