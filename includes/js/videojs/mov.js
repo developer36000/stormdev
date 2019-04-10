@@ -128,7 +128,7 @@ $(document).ready(function() {
 				$('.video_close_button').remove();
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
-			$('.video_close_button, .vjs-fullscreen-control').on("click tap", function() {
+			$('.video_close_button').on("click tap", function() {
 				fullvid_mob.exitFullscreen();
 				fullvid_mob.pause();
 				$(fullvid_ob_mob).removeClass('show_full');
@@ -137,8 +137,17 @@ $(document).ready(function() {
 				$(fullvid_ob_mob + '> div').removeClass('vjs-controls-enabled').addClass('vjs-controls-disabled');
 				$(fullvid_ob_mob).removeClass('show_close');
 			});
+			
 		});
 		$(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function() {
+				console.log(this['fullscreen']);
+				if (this['fullscreen'] == false) {
+					fullvid_mob.pause();
+					$(fullvid_ob_mob).removeClass('show_full');
+					$('.video_close_button').remove();
+					$(fullvid_ob_mob + '> div').removeClass('vjs-controls-enabled').addClass('vjs-controls-disabled');
+					$(fullvid_ob_mob).removeClass('show_close');
+				}
 		});
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			//console.log('iPhone');
