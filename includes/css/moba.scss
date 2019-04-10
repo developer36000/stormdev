@@ -186,11 +186,20 @@ video::-webkit-media-controls-enclosure {
 .custom-video-controls {
 	z-index: 2147483647;
 }
-
+.vjs-has-started .vjs-control-bar {
+	opacity: 0 !important;
+	display: none !important;
+	z-index: -1;
+}
 .show_full {
+	.vjs-has-started .vjs-control-bar {
+		opacity: 1 !important;
+		display: flex !important;
+		z-index: 200;
+	}
 	.show_mobile-dimensions {
 		#show_mobile_html5_api {
-			z-index: 1000;
+			z-index: 100;
 		}
 	}
 }
