@@ -1,4 +1,91 @@
 /*Init fp*/
+
+
+/*Menu Toggle bei click auf Nav section*/
+$(document).ready(function () {
+	$('.link').on('click tap', function (event) {
+		$('body').removeClass('nav-open');
+		$('#menu_toggle').removeClass('menu_open');
+	});
+    
+    /*Menu Toggle bei click auf menu button*/
+	$('#menu_toggle').on('click tap', function (event) {
+		if ($('#menu_toggle').hasClass('menu_open')) {
+			$('body').removeClass('nav-open');
+			$('#menu_toggle').removeClass('menu_open');
+		} else {
+			$('body').addClass('nav-open');
+			$('#menu_toggle').addClass('menu_open');
+		}
+	});
+	$(document).find('.accord_open').each(function () {
+		var nav = $(this).find('.accordion_nav'),
+			nav_el = $(this).find('.accord_button'),
+			list = $(this).find('.accord_listing'),
+			list_el = list.find('.accord_chooser'),
+			active = 1;
+		$(this).find('#prevbutton, #nextbutton').click(function () {
+			if ( active == list_el.length ) {
+				$(this).addClass('icon-prev-inactive');
+				console.log( 'icon-prev-inactive');
+				active=1;
+			} else if ( active != list_el.length ) {
+				$('#prevbutton, #nextbutton').removeClass('icon-prev-inactive');
+				console.log( 'icon-prev-active');
+			}
+			active++;
+		});
+	});
+	$(document).find('#studios').each(function () {
+	    console.log( $(this) );
+		var nav = $(this).find('.accordion_nav'),
+			nav_el = $(this).find('.accord_button'),
+			list = $(this).find('.accord_listing'),
+			list_el = list.find('.accord_chooser'),
+			active = 1;
+		$(this).find('#prevbutton').click(function () {
+			$(this).removeClass('icon-prev-inactive');
+			console.log(list_el.index());
+			if ( list_el.index() == 0 ) {
+				$(this).addClass('icon-prev-inactive');
+				$(this).parent().find('#nextbutton').removeClass('icon-prev-inactive');
+				console.log( 'icon-prev-inactive');
+				console.log( list_el.index() == 0 );
+				active=1;
+			} else if ( list_el.index() != 0)  {
+				$(this).removeClass('icon-prev-inactive');
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			} else  {
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				$(this).removeClass('icon-next-inactive');
+				console.log( 'icon-prev-active');
+			}
+			active++;
+		});
+		$(this).find('#nextbutton').click(function () {
+			$(this).removeClass('icon-prev-inactive');
+			console.log(list_el.index());
+			if ( list_el.index() == 0 ) {
+				$(this).addClass('icon-prev-inactive');
+				console.log( 'icon-next-inactive 12');
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				console.log( list_el.index() == 0 );
+				active=1;
+			} else if ( list_el.index() != 0)  {
+				$(this).removeClass('icon-prev-inactive');
+				$(this).parent().find('#prevbutton').removeClass('icon-next-inactive');
+			} else  {
+				$(this).parent().find('#prevbutton').removeClass('icon-next-inactive');
+				$(this).removeClass('icon-next-inactive');
+				console.log( 'icon-prev-active');
+			}
+			active++;
+		});
+	});
+
+	
+});
+
 $(document).ready(function () {
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -73,43 +160,7 @@ function end () {
     $('#loader').addClass('inactive');
 }
 
-/*Menu Toggle bei click auf Nav section*/
-$(document).ready(function () {
-    $('.link').on('click tap', function (event) {
-        $('body').removeClass('nav-open');
-        $('#menu_toggle').removeClass('menu_open');
-    });
 
-    /*Menu Toggle bei click auf menu button*/
-    $('#menu_toggle').on('click tap', function (event) {
-        if ($('#menu_toggle').hasClass('menu_open')) {
-            $('body').removeClass('nav-open');
-            $('#menu_toggle').removeClass('menu_open');
-        } else {
-            $('body').addClass('nav-open');
-            $('#menu_toggle').addClass('menu_open');
-        }
-    });
-    $('.accord_open').each(function () {
-        var nav = $(this).find('.accordion_nav'),
-            nav_el = $(this).find('.accord_tab_button'),
-            list = $(this).find('.accord_listing'),
-            list_el = list.find('.accord_chooser'),
-        active = 1;
-	    $(this).find('#prevbutton, #nextbutton').click(function () {
-		       if ( active == list_el.length ) {
-			       $(this).addClass('icon-prev-inactive');
-			       console.log( 'icon-prev-inactive');
-			       active=1;
-               } else if ( active != list_el.length ) {
-			       $('#prevbutton, #nextbutton').removeClass('icon-prev-inactive');
-			       console.log( 'icon-prev-active');
-               }
-		    active++;
-	    });
-    });
-    
-});
 
 /*Mobile Functions*/
 if ($(window).width() < 960) {
