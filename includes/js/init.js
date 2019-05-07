@@ -38,15 +38,19 @@ $(document).ready(function () {
 	});
 	/* Creative Studios */
 	var nav_el = $(document).find('#studios .accord_button'),
+		chooser_el = $(document).find('#studios .accord_chooser'),
         nav_el_active = $(document).find('#studios .accord_button.active_accord_item'),
 		active_el = 1;
+	
+	
 	$(document).on('click', '#studios #prevbutton', function () {
-		console.log(nav_el.length);
-		console.log(active_el);
-		if ( active_el == nav_el.length ) {
+		chooser_el.each(function () {
+			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
+		});
+		if ( active_el == 1 ) {
 			$(this).addClass('icon-prev-inactive');
 			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
-			active_el=1;
+			active_el = 1;
 		} else if ( active_el != nav_el.length )  {
 			$(this).removeClass('icon-prev-inactive');
 			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
@@ -59,12 +63,13 @@ $(document).ready(function () {
 		
 	});
 	$(document).on('click', '#studios #nextbutton', function () {
-		console.log(nav_el.length);
-		console.log(active_el);
+		chooser_el.each(function () {
+			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
+		});
 		if ( active_el == nav_el.length ) {
 			$(this).addClass('icon-next-inactive');
 			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
-			active_el=1;
+			active_el = 1;
 		} else if ( active_el != nav_el.length )  {
 			$(this).removeClass('icon-next-inactive');
 			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
@@ -74,6 +79,9 @@ $(document).ready(function () {
 			$(this).removeClass('icon-next-inactive');
 			active_el++;
 		}
+	});
+	chooser_el.on('click',function () {
+		$(this).hasClass('active_accord') ? active_el = $(this).index()+2 : '';
 	});
 
 	
