@@ -2824,3 +2824,17 @@ header.nav-header {
 		}
 	}
 }
+
+#studios {
+	.icon-next,
+	.icon-prev {
+		* {
+			pointer-events: none !important;
+		}
+		&.icon-next-inactive,
+		&.icon-prev-inactive {
+			opacity: 0.5;
+			pointer-events: none !important;
+		}
+	}
+}

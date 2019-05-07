@@ -403,7 +403,11 @@ video::-webkit-media-controls-enclosure {
 	color: #fff;
 	margin-top: 35px;
 }
-
+#creative_studios #studios.accord_open {
+	.accordion_pre_text {
+		display: none !important;
+	}
+}
 /*Accord Bg Boxes*/
 #studios_1 .bg-box {
 	background: url(../images/concepts-full-bg.png), #0a0a0a;
@@ -1799,13 +1803,7 @@ header.nav-header {
 .shareholder-bg {
 	display: none;
 }
-#prevbutton,
-#nextbutton {
-	&.icon-prev-inactive {
-		opacity: 0.5;
-		pointer-events: none;
-	}
-}
+
 #shareholders_mobile {
 	&.accord_open {
 		position: relative;
@@ -1977,5 +1975,34 @@ header.nav-header {
 				}
 			}
 		}
+	}
+}
+
+#prevbutton,
+#nextbutton {
+	&.icon-next-inactive,
+	&.icon-prev-inactive {
+		opacity: 0.5;
+		pointer-events: none !important;
+	}
+}
+#studios {
+	.icon-next,
+	.icon-prev {
+		* {
+			pointer-events: none !important;
+		}
+		&.icon-next-inactive,
+		&.icon-prev-inactive {
+			opacity: 0.5;
+			pointer-events: none !important;
+		}
+	}
+}
+
+#prevbutton,
+#nextbutton {
+	* {
+		pointer-events: none !important;
 	}
 }

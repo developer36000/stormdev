@@ -2310,4 +2310,13 @@ header.nav-header {
         #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser.active_accord {
           width: 100%; } }
 
+#studios .icon-next *,
+#studios .icon-prev * {
+  pointer-events: none !important; }
+#studios .icon-next.icon-next-inactive, #studios .icon-next.icon-prev-inactive,
+#studios .icon-prev.icon-next-inactive,
+#studios .icon-prev.icon-prev-inactive {
+  opacity: 0.5;
+  pointer-events: none !important; }
+
 /*# sourceMappingURL=custom.css.map */

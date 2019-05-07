@@ -36,51 +36,42 @@ $(document).ready(function () {
 			active++;
 		});
 	});
-	$(document).find('#studios').each(function () {
-	    console.log( $(this) );
-		var nav = $(this).find('.accordion_nav'),
-			nav_el = $(this).find('.accord_button'),
-			list = $(this).find('.accord_listing'),
-			list_el = list.find('.accord_chooser'),
-			active = 1;
-		$(this).find('#prevbutton').click(function () {
+	/* Creative Studios */
+	var nav_el = $(document).find('#studios .accord_button'),
+        nav_el_active = $(document).find('#studios .accord_button.active_accord_item'),
+		active_el = 1;
+	$(document).on('click', '#studios #prevbutton', function () {
+		if ( active_el == nav_el.length ) {
+			$(this).addClass('icon-prev-inactive');
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			active_el=1;
+		} else if ( active_el != nav_el.length )  {
 			$(this).removeClass('icon-prev-inactive');
-			console.log(list_el.index());
-			if ( list_el.index() == 0 ) {
-				$(this).addClass('icon-prev-inactive');
-				$(this).parent().find('#nextbutton').removeClass('icon-prev-inactive');
-				console.log( 'icon-prev-inactive');
-				console.log( list_el.index() == 0 );
-				active=1;
-			} else if ( list_el.index() != 0)  {
-				$(this).removeClass('icon-prev-inactive');
-				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
-			} else  {
-				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
-				$(this).removeClass('icon-next-inactive');
-				console.log( 'icon-prev-active');
-			}
-			active++;
-		});
-		$(this).find('#nextbutton').click(function () {
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			active_el++;
+		} else  {
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
 			$(this).removeClass('icon-prev-inactive');
-			console.log(list_el.index());
-			if ( list_el.index() == 0 ) {
-				$(this).addClass('icon-prev-inactive');
-				console.log( 'icon-next-inactive 12');
-				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
-				console.log( list_el.index() == 0 );
-				active=1;
-			} else if ( list_el.index() != 0)  {
-				$(this).removeClass('icon-prev-inactive');
-				$(this).parent().find('#prevbutton').removeClass('icon-next-inactive');
-			} else  {
-				$(this).parent().find('#prevbutton').removeClass('icon-next-inactive');
-				$(this).removeClass('icon-next-inactive');
-				console.log( 'icon-prev-active');
-			}
-			active++;
-		});
+			active_el++;
+		}
+		
+	});
+	$(document).on('click', '#studios #nextbutton', function () {
+		console.log(nav_el.length);
+		console.log(active_el);
+		if ( active_el == nav_el.length ) {
+			$(this).addClass('icon-next-inactive');
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			active_el=1;
+		} else if ( active_el != nav_el.length )  {
+			$(this).removeClass('icon-next-inactive');
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			active_el++;
+		} else  {
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			$(this).removeClass('icon-next-inactive');
+			active_el++;
+		}
 	});
 
 	
