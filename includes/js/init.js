@@ -41,6 +41,8 @@ $(document).ready(function () {
         nav_el_active = $(document).find('#studios .accord_button.active_accord_item'),
 		active_el = 1;
 	$(document).on('click', '#studios #prevbutton', function () {
+		console.log(nav_el.length);
+		console.log(active_el);
 		if ( active_el == nav_el.length ) {
 			$(this).addClass('icon-prev-inactive');
 			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
