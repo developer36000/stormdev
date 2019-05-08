@@ -416,6 +416,8 @@ video::-webkit-media-controls-enclosure {
   /* position:absolute; */
   /* transform:translate(0%,25%); */
   padding-right: 28px; }
+  #creative_studios .accord_text_pos ul {
+    list-style-type: circle; }
 
 #creative_studios .active_accord .accord_textholder {
   /* margin-top:150px; */ }

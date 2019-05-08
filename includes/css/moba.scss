@@ -495,6 +495,9 @@ video::-webkit-media-controls-enclosure {
 /*Accord Adjusts*/
 #creative_studios .accord_text_pos { /* position:absolute; *//* transform:translate(0%,25%); */
 	padding-right: 28px;
+	ul {
+		list-style-type: circle;
+	}
 }
 
 #creative_studios .active_accord .accord_textholder { /* margin-top:150px; */
