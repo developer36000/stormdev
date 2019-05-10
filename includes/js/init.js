@@ -18,32 +18,57 @@ $(document).ready(function () {
 			$('#menu_toggle').addClass('menu_open');
 		}
 	});
-	$(document).find('.accord_open').each(function () {
-		var nav = $(this).find('.accordion_nav'),
-			nav_el = $(this).find('.accord_button'),
-			list = $(this).find('.accord_listing'),
-			list_el = list.find('.accord_chooser'),
-			active = 1;
-		$(this).find('#prevbutton, #nextbutton').click(function () {
-			if ( active == list_el.length ) {
+	
+	var nav = $(this).find('.accordion_nav'),
+		nav_el = $(document).find('#studios .accord_button'),
+		chooser_el = $(document).find('#studios .accord_chooser'),
+		active_el = 1;
+	$(document).find('.accordion.accord_open').each(function () {
+		var nav_el_accord = $(this).find('.accord_button'),
+			active =1;
+		$(this).find('.accordion_nav #prevbutton').on('click tap', function () {
+			nav_el_accord.each(function () {
+				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
+			});
+			console.log(active);
+			if ( active == 1 ) {
 				$(this).addClass('icon-prev-inactive');
-				console.log( 'icon-prev-inactive');
-				active=1;
-			} else if ( active != list_el.length ) {
-				$('#prevbutton, #nextbutton').removeClass('icon-prev-inactive');
-				console.log( 'icon-prev-active');
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				active = 1;
+			} else if ( active_el != nav_el_accord.length )  {
+				$(this).removeClass('icon-prev-inactive');
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				active++;
+			} else  {
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				$(this).removeClass('icon-prev-inactive');
+				active++;
 			}
-			active++;
+		});
+		$(this).find('.accordion_nav #nextbutton').on('click tap',function () {
+			nav_el_accord.each(function () {
+				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
+			});
+			console.log(active);
+			if ( active == nav_el_accord.length ) {
+				$(this).addClass('icon-next-inactive');
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				active = 1;
+			} else if ( active != nav_el_accord.length )  {
+				$(this).removeClass('icon-next-inactive');
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				console.log('aaa');
+				active++;
+			} else  {
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				$(this).removeClass('icon-next-inactive');
+				active++;
+			}
 		});
 	});
+	
 	/* Creative Studios */
-	var nav_el = $(document).find('#studios .accord_button'),
-		chooser_el = $(document).find('#studios .accord_chooser'),
-        nav_el_active = $(document).find('#studios .accord_button.active_accord_item'),
-		active_el = 1;
-	
-	
-	$(document).on('click', '#studios #prevbutton', function () {
+	$(document).on('click tap', '#studios #prevbutton', function () {
 		chooser_el.each(function () {
 			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
 		});
@@ -62,7 +87,7 @@ $(document).ready(function () {
 		}
 		
 	});
-	$(document).on('click', '#studios #nextbutton', function () {
+	$(document).on('click tap', '#studios #nextbutton', function () {
 		chooser_el.each(function () {
 			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
 		});
