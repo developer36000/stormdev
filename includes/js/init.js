@@ -26,7 +26,7 @@ $(document).ready(function () {
 	$(document).find('.accordion.accord_open').each(function () {
 		var nav_el_accord = $(this).find('.accord_button'),
 			active =1;
-		$(this).find('.accordion_nav #prevbutton').on('click tap', function () {
+		$(this).find('.accordion_nav').on('click', '#prevbutton',  function () {
 			nav_el_accord.each(function () {
 				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
 			});
@@ -45,7 +45,7 @@ $(document).ready(function () {
 				active++;
 			}
 		});
-		$(this).find('.accordion_nav #nextbutton').on('click tap',function () {
+		$(this).find('.accordion_nav').on('click', '#nextbutton', function () {
 			nav_el_accord.each(function () {
 				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
 			});
@@ -68,7 +68,7 @@ $(document).ready(function () {
 	});
 	
 	/* Creative Studios */
-	$(document).on('click tap', '#studios #prevbutton', function () {
+	$(document).on('click', '#studios #prevbutton', function () {
 		chooser_el.each(function () {
 			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
 		});
@@ -87,7 +87,7 @@ $(document).ready(function () {
 		}
 		
 	});
-	$(document).on('click tap', '#studios #nextbutton', function () {
+	$(document).on('click', '#studios #nextbutton', function () {
 		chooser_el.each(function () {
 			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
 		});
