@@ -2242,10 +2242,7 @@ header.nav-header {
   #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
     width: auto;
     text-align: center;
-    padding-bottom: 70px; }
-    @media screen and (max-width: 768px) {
-      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
-        width: 0; } }
+    padding-bottom: 106px; }
     @media screen and (max-width: 1025px) {
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
         padding-bottom: 60px; } }
