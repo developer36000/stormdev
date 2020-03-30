@@ -609,17 +609,6 @@ video::-webkit-media-controls-enclosure {
       font-weight: 700;
       font-size: 14px;
       line-height: 0px; } }
-	  
-	  
-@media screen and (max-width: 320px) {
-#kontakt .tel a {
-    font-size: 14px;
-}}
-
-@media screen and (max-width: 320px) {
-#kontakt .kontakt_text .text_link {
-    font-size: 12px;
-}}
 
 #kontakt p.street {
   margin-bottom: 7px; }
@@ -662,20 +651,17 @@ video::-webkit-media-controls-enclosure {
     cursor: pointer;
     font-size: 14px;
     line-height: 6px;
-    font-weight: 600;
-	margin-right: 5%;	} }
+    font-weight: 600; } }
 
-@media screen and (max-width:480px) {
-	#kontakt .kontakt_text .text_link {
+.text_link {
   margin-left: 0; }
-  
-   #kontakt .kontakt_text .text_link:after {
+  .text_link :after {
     border-top: 2px solid;
     content: "";
     position: absolute;
     bottom: -6px;
     right: 0;
-width: 100%; }}
+    width: 100%; }
 
 #kontakt .accord_text_button {
   background-color: #fff;
@@ -694,14 +680,6 @@ width: 100%; }}
   .branch_block > a {
     display: block;
     margin-top: 35px; }
-	
-@media screen and (max-width: 480px) {
-	.branch_block {
-  margin: 20px 0; }
-  .branch_block > a {
-    display: block;
-    margin-top: 35px; }
-}
 
 @media screen and (max-width: 480px) {
   #kontakt .bewerbung_block {
@@ -731,7 +709,7 @@ width: 100%; }}
   font-weight: 600; }
 
 @media screen and (max-width: 480px) {
-  .flex_container {
+  .flex-container {
     display: flex;
     flex-flow: column; }
 
@@ -740,8 +718,6 @@ width: 100%; }}
 
   .bewerbung {
     order: -1; } }
-	
-
 #imprint_section * {
   color: #000; }
 
@@ -1780,8 +1756,5 @@ header.nav-header {
 #prevbutton *,
 #nextbutton * {
   pointer-events: none !important; }
-<<<<<<< HEAD
-=======
 
 /*# sourceMappingURL=moba.css.map */
->>>>>>> ffa1cc3c0dbdcb9d2842b4449bcdc11116ce800f
