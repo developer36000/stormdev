@@ -2478,9 +2478,12 @@ div.fullpage_block {
     width: auto;
     text-align: center;
     padding-bottom: 106px; }
+<<<<<<< HEAD
     @media screen and (max-width: 768px) {
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
         width: 0; } }
+=======
+>>>>>>> ffa1cc3c0dbdcb9d2842b4449bcdc11116ce800f
     @media screen and (max-width: 1025px) {
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
         padding-bottom: 60px; } }
