@@ -28,9 +28,9 @@
   })(window, document, 'script', 'dataLayer', 'GTM-MK2ZL35');</script>
 	<!-- End Google Tag Manager -->
 	
-	<script type="text/javascript" src="includes/js/jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="includes/js/jquery/jquery-3.4.1.js"></script>
 	<script type="text/javascript" class="custom" src="includes/js/fullpagescroll/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="includes/js/init.js"></script>
+
 	
 	<link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700">
@@ -47,7 +47,7 @@
 	<script type="text/javascript" src="includes/js/videojs/mov.js"></script>
 	<script type="text/javascript" src="includes/js/parallax/parallax.js"></script>
 	<script type="text/javascript" src="includes/js/cookie/js.cookie.min.js"></script>
-	
+	<script type="text/javascript" src="includes/js/init.js"></script>
 	<script type="text/javascript" class="custom"
 	        src="includes/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" class="custom" src="includes/js/videojs/ie8/videojs-ie8.min.js"></script>
@@ -71,7 +71,7 @@
 	</script>
 </head>
 
-<body onload="setTimeout( showPage, 500 );" ondragstart="return false;" ondrop="return false;">
+<body ondragstart="return false;" ondrop="return false;">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK2ZL35" height="0" width="0"
@@ -96,7 +96,7 @@
 		</div>
 		
 		<div class="popup-action">
-			<a href="datenschutz.html" target="_blank" class="button acceptCookies infos">Weitere Informationen</a>
+			<a href="datenschutz.html" target="_blank" rel="noreferrer noopener" class="button acceptCookies infos">Weitere Informationen</a>
 			<button type="button" class="button acceptCookies accept">OK, verstanden!</button>
 		</div>
 	</div>
@@ -176,16 +176,16 @@
 		</div>
 		<!--Mobile Items END-->
 		<div class="pages-nav__item pages-nav__item--social">
-			<a class="link link--social link--faded link-facebook" target="_blank"
+			<a class="link link--social link--faded link-facebook" target="_blank" rel="noreferrer noopener"
 			   href="https://www.facebook.com/Storming.CS/"><i class="fa fa-facebook"></i><span
 					class="text-hidden">Facebook</span></a>
-			<a class="link link--social link--faded link-instagram" target="_blank"
+			<a class="link link--social link--faded link-instagram" target="_blank" rel="noreferrer noopener"
 			   href="https://www.instagram.com/storming.creative.studios/"><i class="fa fa-instagram"></i><span
 					class="text-hidden">Instagram</span></a>
-			<a class="link link--social link--faded link-vimeo-play" target="_blank"
+			<a class="link link--social link--faded link-vimeo-play" target="_blank" rel="noreferrer noopener"
 			   href="https://vimeo.com/stormingpictures"><i class="fa fa-vimeo-square"></i><span
 					class="text-hidden">Vimeo</span></a>
-			<a class="link link--social link--faded link-xing" target="_blank"
+			<a class="link link--social link--faded link-xing" target="_blank" rel="noreferrer noopener"
 			   href="https://www.xing.com/companies/storminggmbhcreativestudios"><i class="fa fa-xing"></i><span
 					class="text-hidden">Xing</span></a>
 		</div>
@@ -201,12 +201,11 @@
 				<header class="bp-header cf">
 					<h1 class="bp-header__title"></h1>
 				</header>
-				<div class="video_block active">
-					<video autoplay muted loop playsinline data-keepplaying data-object-fit="cover" poster="includes/mov/preview-fallback.jpg">
-						<source src="includes/mov/ei_prev.mp4"
-						        data-src="includes/mov/ei_des_Kolumbus_mobile.mp4" type="video/mp4">
+				<div class="video_block active_mob">
+					<video id="default" autoplay muted loop playsinline data-keepplaying data-object-fit="cover" poster="includes/mov/preview-fallback.jpg">
+						<source src="includes/mov/ei_prev.mp4" type="video/mp4">
 					</video>
-					<video id="show_mobile" loop playsinline data-keepplaying controls data-object-fit="cover" poster="includes/mov/preview-fallback.jpg">
+					<video id="show_mobile" class="video-js vjs-default-skin" playsinline data-keepplaying data-object-fit="cover" poster="includes/mov/preview-fallback.jpg">
 						<source src="includes/mov/ei_des_Kolumbus_mobile.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -231,7 +230,11 @@
 					<h2 class="bp-header__title">Do it like Columbus!</h2>
 				</header>
 				<div id="make-it-off">
-					<img alt="Plakat" src="includes/images/das-ei-des-kolumbus-making-of.jpg"/>
+					<picture>
+						<source srcset="includes/images/das-ei-des-kolumbus-making-of.webp" type="image/webp">
+						<source srcset="includes/images/das-ei-des-kolumbus-making-of.jpg" type="image/jpeg">
+						<img alt="Plakat" src="includes/images/das-ei-des-kolumbus-making-of.jpg"/>
+					</picture>
 					<div id="plakat-text">
 						<h3>Was niemand glaubt und alle begeistert</h3>
 						<span>
@@ -595,7 +598,11 @@
 					<h2 class="bp-header__title">Shareholders</h2>
 				</header>
 				<div class="shareholder-bg">
-					<img src="includes/images/shareholders/STORMING-SHAREHOLDERS-min.jpg" alt="Shareholders">
+					<picture>
+						<source srcset="includes/images/shareholders/STORMING-SHAREHOLDERS-min.webp" type="image/webp">
+						<source srcset="includes/images/shareholders/STORMING-SHAREHOLDERS-min.jpg" type="image/jpeg">
+						<img src="includes/images/shareholders/STORMING-SHAREHOLDERS-min.jpg" alt="Shareholders">
+					<picture>
 				</div>
 				<div class="accordion accord_open" id="shareholders_mobile">
 					<div class="accordion_nav">
@@ -603,7 +610,7 @@
 							<div class="path1"></div>
 							<div class="path2"></div>
 						</div>
-						<div id="prevbutton" class="icon-prev">
+						<div id="prevbutton" class="icon-prev icon-prev-inactive">
 							<div class="path1"></div>
 							<div class="path2"></div>
 						</div>
@@ -619,7 +626,11 @@
 						<li class="accord_chooser active_accord" id="shareholder_1">
 							<div class="box">
 								<div class="accord_image">
-									<img src="includes/images/shareholders/Adrian-Saur.jpg" alt="Adrian Saur">
+									<picture>
+										<source srcset="includes/images/shareholders/Adrian-Saur.webp" type="image/webp">
+										<source srcset="includes/images/shareholders/Adrian-Saur.jpg" type="image/jpeg">
+										<img src="includes/images/shareholders/Adrian-Saur.jpg" alt="Adrian Saur">
+									</picture>
 								</div>
 								<div class="accord_box">
 									<h3>Adrian Saur</h3>
@@ -630,7 +641,11 @@
 						<li class="accord_chooser" id="shareholder_2">
 							<div class="box">
 								<div class="accord_image">
-									<img src="includes/images/shareholders/Catalin-Mortan.jpg" alt="Catalin Mortan">
+									<picture> 
+										<source srcset="includes/images/shareholders/Catalin-Mortan.webp" type="image/webp">
+										<source srcset="includes/images/shareholders/Catalin-Mortan.jpg" type="image/jpeg">
+										<img src="includes/images/shareholders/Catalin-Mortan.jpg" alt="Catalin Mortan">
+									</picture>
 								</div>
 								<div class="accord_box">
 									<h3>Catalin Mortan</h3>
@@ -641,7 +656,11 @@
 						<li class="accord_chooser" id="shareholder_3">
 							<div class="box">
 								<div class="accord_image">
+								<picture>
+									<source srcset="includes/images/shareholders/Arthur-Schenk.webp" type="image/webp">
+									<source srcset="includes/images/shareholders/Arthur-Schenk.jpg" type="image/jpeg">
 									<img src="includes/images/shareholders/Arthur-Schenk.jpg" alt="Arthur Schenk">
+								</picture>
 								</div>
 								<div class="accord_box">
 									<h3>Arthur Schenk</h3>
@@ -652,7 +671,11 @@
 						<li class="accord_chooser" id="shareholder_4">
 							<div class="box">
 								<div class="accord_image">
-									<img src="includes/images/shareholders/Marvin-Kirchner.jpg" alt="Marvin Kirchner">
+									<picture>
+										<source srcset="includes/images/shareholders/Marvin-Kirchner.webp" type="image/webp">
+										<source srcset="includes/images/shareholders/Marvin-Kirchner.jpg" type="image/jpeg">
+										<img src="includes/images/shareholders/Marvin-Kirchner.jpg" alt="Marvin Kirchner">
+									</picture>
 								</div>
 								<div class="accord_box">
 									<h3>Marvin Kirchner</h3>
@@ -663,8 +686,12 @@
 						<li class="accord_chooser" id="shareholder_5">
 							<div class="box">
 								<div class="accord_image">
-									<img src="includes/images/shareholders/Marc-Wankmueller.jpg" alt="Marc Wankmüller">
-								</div>
+									<picture>
+										<source srcset="includes/images/shareholders/Marc-Wankmueller.webp" type="image/webp">
+										<source srcset="includes/images/shareholders/Marc-Wankmueller.jpg" type="image/jpeg">
+										<img src="includes/images/shareholders/Marc-Wankmueller.jpg" alt="Marc Wankmüller">
+									</picture>
+																	</div>
 								<div class="accord_box">
 									<h3>Marc Wankmüller</h3>
 									<p>Head of Development<br> Partner</p>
@@ -696,51 +723,99 @@
 					<p><span>Unser Logbuch erinnert an wilde Zeiten: an Wettläufe mit der Uhr, an den Kampf um die besten Ideen und gegen die eigenen Ansprüche, an das große Gefühl, wenn Erwartungen übertroffen wurden. Und an das Schulterklopfen unserer Kunden: „Ihr könnt es halt immer noch!“</span></p>
 					<div class="reference_list">
 						<div class="reference ref-porsche">
-							<img src="includes/images/Porsche.png" alt="Porsche Referenz">
+							<picture>
+								<source src="includes/images/Porsche.webp" type="image/webp">
+								<source src="includes/images/Porsche.png" type="image/png">
+								<img src="includes/images/Porsche.png" alt="Porsche Referenz">
+							</picture>
 							<span>Dr. Ing. h.c. F. Porsche AG</span>
 						</div>
 						<div class="reference ref-hofmeister">
-							<img src="includes/images/hofmeister.png" alt="hofmeister Referenz">
+							<picture>
+								<source src="includes/images/hofmeister.webp" type="image/webp">
+								<source src="includes/images/hofmeister.png" type="image/png">
+								<img src="includes/images/hofmeister.png" alt="hofmeister Referenz">
+							</picture>
 							<span>Hofmeister Bietigheim GmbH &amp; Co. KG</span>
 						</div>
 						<div class="reference ref-DRK">
-							<img src="includes/images/DRK.png" alt="DRK Referenz">
+							<picture>
+								<source src="includes/images/DRK.webp" type="image/webp">
+								<source src="includes/images/DRK.png" type="image/png">
+								<img src="includes/images/DRK.png" alt="DRK Referenz">
+							</picture>
 							<span>Deutsches Rotes Kreuz e.V.</span>
 						</div>
 						<div class="reference ref-Granzow">
-							<img src="includes/images/GRANZOW.png" alt="GRANZOW Referenz">
+							<picture>
+								<source src="includes/images/GRANZOW.webp" type="image/webp">
+								<source src="includes/images/GRANZOW.png" type="image/png">
+								<img src="includes/images/GRANZOW.png" alt="GRANZOW Referenz">
+							</picture>
 							<span>Ernst GRANZOW GmbH &amp; Co. KG</span>
 						</div>
 						<div class="reference ref-DB">
-							<img src="includes/images/DB.png" alt="DB Referenz">
+							<picture>
+								<source src="includes/images/DB.webp" type="image/webp">
+								<source src="includes/images/DB.png" type="image/png">
+								<img src="includes/images/DB.png" alt="DB Referenz">
+							</picture>
 							<span>Deutsche Bahn AG</span>
 						</div>
 						<div class="reference ref-Belvedere">
-							<img src="includes/images/Belvedere.png" alt="Belvedere Referenz">
+							<picture>
+								<source src="includes/images/Belvedere.webp" type="image/webp">
+								<source src="includes/images/Belvedere.png" type="image/png">
+								<img src="includes/images/Belvedere.png" alt="Belvedere Referenz">
+							</picture>
 							<span>Belvedere Vodka</span>
 						</div>
 						<div class="reference ref-Clinique">
-							<img src="includes/images/Clinique.png" alt="Clinique Referenz">
+							<picture>
+								<source src="includes/images/Clinique.webp" type="image/webp">
+								<source src="includes/images/Clinique.png" type="image/png">
+								<img src="includes/images/Clinique.png" alt="Clinique Referenz">
+							</picture>
 							<span>Clinique</span>
 						</div>
 						<div class="reference ref-LBW">
-							<img src="includes/images/Land_Baden.png" alt="Land_Baden Referenz">
-							<span>Land Baden-Württemberg</span>
+							<picture>
+								<source src="includes/images/ferryporschestiftung.webp" type="image/webp">
+								<source src="includes/images/ferryporschestiftung.png" type="image/png">
+								<img src="includes/images/ferryporschestiftung.png" alt="Ferry Porsche Stiftung">
+							</picture>
+							<span>Ferry Porsche Stiftung</span>
 						</div>
 						<div class="reference ref-Sparkasse">
-							<img src="includes/images/Sparkasse.png" alt="Sparkasse Referenz">
-							<span>Sparkassen Finanzgruppe</span>
+							<picture>
+								<source src="includes/images/hugobossag.webp" type="image/webp">
+								<source src="includes/images/hugobossag.png" type="image/png">
+								<img src="includes/images/hugobossag.png" alt="HUGO BOSS">
+							</picture>
+							<span>HUGO BOSS AG</span>
 						</div>
 						<div class="reference ref-GEZE">
-							<img src="includes/images/GEZE.png" alt="GEZE Referenz">
+							<picture>
+								<source src="includes/images/GEZE.webp" type="image/webp">
+								<source src="includes/images/GEZE.png" type="image/png">
+								<img src="includes/images/GEZE.png" alt="GEZE Referenz">
+							</picture>
 							<span>GEZE GmbH</span>
 						</div>
 						<div class="reference ref-porsche_digital">
-							<img src="includes/images/Porsche_Digital.png" alt="Porsche_Digital Referenz">
+							<picture>
+								<source src="includes/images/Porsche_Digital.webp" type="image/webp">
+								<source src="includes/images/Porsche_Digital.png" type="image/png">
+								<img src="includes/images/Porsche_Digital.png" alt="Porsche_Digital Referenz">
+							</picture>
 							<span>Porsche Digital GmbH</span>
 						</div>
 						<div class="reference ref-Silberform">
-							<img src="includes/images/Silberform.png" alt="Silberform Referenz">
+							<picture>
+								<source src="includes/images/Silberform.webp" type="image/webp">
+								<source src="includes/images/Silberform.png" type="image/png">
+								<img src="includes/images/Silberform.png" alt="Silberform Referenz">
+							</picture>
 							<span>Silberform AG</span>
 						</div>
 					</div>
@@ -762,38 +837,98 @@
 							</h2>
 						</div>
 						<div class="center">
+							<div class="flex_container">
 							<div class="branch_block">
-								<div class="sideline">
-									<p class="head">Headquarter:</p>
-									<p class="tel"><a href="tel:071523199840">+49 (0) 7152 31 99 84 - 0</a></p>
+							<div class="sideline">
+								<div>
+									<p class="head">Kontakt:</p><br>
+									<p class="tel"><a href="tel:071523199840">T +49 (0) 7152 31 99 84 - 0</a></p>
+									<p class="tel" ><a href="tel:071523199840">F +49 (0) 7152 31 99 84 - 9</a></p>
 									<p class="email"><a href="mailto:info@storming-studios.de">info@storming-studios.de</a></p>
+								</div>
+								<p class="route_standort"><a class="text_link" href="tel:071523199840">Anrufen</a> <a class="text_link" href="mailto:info@storming-studios.de">E-Mail schreiben</a></p>
+							</div>	
+							</div>
+					
+							 <!--<div class="branch_block">
+								<div class="sideline">
+									<div class="kontakt_info">
+									<p class="head">Kontakt:</p> <br>
+									<p class="tel"><a href="tel:071523199840">T +49 (0) 7152 31 99 84 - 0</a></p>
+									<p class="tel"><a href="tel:071523199840">F +49 (0) 7152 31 99 84 - 9</a></p>
+									<p class="email"><a href="mailto:info@storming-studios.de">info@storming-studios.de</a></p>
+									<!-- <p class="street">Hauptstraße 40</p>
+									<p class="city">71229 Leonberg</p> -->
+									 <!--<a class="text_link" href="tel:071523199840">Anrufen</a> <a class="text_link" href="mailto:info@storming-studios.de">E-Mail schreiben</a>
+								</div>
+								</div>
+								<!--<a target="_blank" href="https://www.google.com/maps/dir/Current+Location/Hauptstrasse+40+Warmbronn+71229"><div class="accord_text_button">Route</div></a>-->
+							 <!--</div> -->
+							
+							
+							<div class="branch_block">
+							<div class="sideline">
+								<div>
+									<p class="head">Headquarter:</p><br>
+									<p class="standort">STORMING GmbH</p>
 									<p class="street">Hauptstraße 40</p>
 									<p class="city">71229 Leonberg</p>
 								</div>
-								<a target="_blank" href="https://www.google.com/maps/dir/Current+Location/Hauptstrasse+40+Warmbronn+71229"><div class="accord_text_button">Route</div></a>
+								<p class="route_standort"><a class="text_link" target="_blank" rel="noreferrer noopener" href="https://www.google.com/maps/dir/Current+Location/Hauptstrasse+40+Warmbronn+71229">Route</a></p>
+							</div>	
 							</div>
 							
 							<div class="branch_block">
+							<div class="sideline">
 								<div>
-									<p class="head">Branch:</p>
-									<p class="tel"><a href="tel:0715231998410">+49 (0) 7152 31 99 84 - 0</a></p>
-									<p class="email"><a href="mailto:info@storming-studios.de">info@storming-studios.de</a></p>
-									<p class="street">Planstraße 25</p>
+									<p class="head">Stuttgart:</p><br>
+									<p class="standort">STORMING GmbH</p>
+									<p class="street">Robert-Bosch-Straße 9</p>
 									<p class="city">71229 Leonberg</p>
 								</div>
-								<a target="_blank" href="https://www.google.com/maps/dir/Current+Location/Planstrasse+25+Warmbronn+71229"><div class="accord_text_button">Route</div></a>
+								<p class="route_standort"><a class="text_link" target="_blank" rel="noreferrer noopener" href="https://www.google.com/maps/dir//Robert-Bosch-Straße+9,+71229+Leonberg">Route</p></a>
 							</div>
+							</div>
+							
 							<div class="branch_block">
+							<div class="sideline">
 								<div>
-									<p class="head">Branch:</p>
-									<p class="tel"><a href="tel:0780417947730">+49 (0) 8041 79 47 73 - 0</a></p>
-									<p class="email"><a href="mailto:info@storming-studios.de">info@storming-studios.de</a></p>
+									<p class="head">München:</p><br>
+									<p class="standort">STORMING GmbH</p>
 									<p class="street">Tölzer Straße 1</p>
 									<p class="city">83674 Gaißach</p>
 								</div>
-								<a target="_blank" href="https://www.google.com/maps/dir/Current+Location/Tölzer+Straße+1+Gaißach+83674"><div class="accord_text_button">Route</div></a>
+								<p class="route_standort"><a class="text_link" target="_blank" rel="noreferrer noopener" href="https://www.google.com/maps/dir/Current+Location/Tölzer+Straße+1+Gaißach+83674">Route</p></a>
 							</div>
-							<div class="branch_block last">
+							</div>
+
+							<div class="branch_block">
+							<div class="sideline">
+								<div>
+									<p class="head">Berlin:</p><br>
+									<p class="standort">STORMING GmbH</p>
+									<p class="street">Akazienstraße 3A</p>
+									<p class="city">10823 Berlin</p>
+								</div>
+								<p class="route_standort"><a class="text_link" target="_blank" rel="noreferrer noopener" href="https://www.google.com/maps/dir/Current+Location/Akazienstraße+3A+Berlin+10823">Route</div></a>
+							</div>
+							
+							
+							
+							<div class="bewerbung">
+					<div class="bewerbung_block">
+							<p>
+								Du möchtest Teil von STORMING sein? <br class="mobile-break">Wir suchen immer nach guten Ideen und schlauen Köpfen. Sende uns deine Bewerbung an <a class="email_bewerbung" href="mailto:career@storming-studios.de">career@storming-studios.de</a> - je nach Fachgebiet gern mit Portfolio<br class="mobile-break"> oder einem 
+								kurzen Anschreiben. Bis bald! 		
+					</div>
+					<a href="mailto:career@storming-studios.de" class="bewerbung_button">Jetzt bewerben</a>
+					
+							</p>
+					</div>
+					</div>
+					
+					</div>
+							<!-- <div class="branch_block last">
 								<div class="sideline">
 									<p class="head">Bewerbungen:</p>
 									<p class="tel"><a href="tel:0715231998411">+49 (0) 7152 31 99 84 - 11</a></p>
@@ -802,9 +937,11 @@
 									<p class="city">&nbsp;</p>
 								</a></div><a>
 							</a><a href="mailto:career@storming-studios.de"><div class="accord_text_button">Bewerbung</div></a>
-							</div>
+							</div>-->
 							<div class="clear_both"></div>
+							
 						</div>
+						
 					</div>
 					<div id="imprint_section">
 						<div><a class="imprint" href="impressum.html">Impressum</a> | <a class="data_prot" href="datenschutz.html">Datenschutzerklärung</a></div>
@@ -818,6 +955,21 @@
 </div>
 <script src="includes/js/videojs/video.min.js"></script>
 <script src="includes/js/objectfit/objectFitPolyfill.basic.min.js"></script>
+<script type="text/javascript">
+_linkedin_partner_id = "1398753";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1398753&fmt=gif" />
+</noscript>
+
 </body>
 
 </html>

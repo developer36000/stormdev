@@ -1,0 +1,22 @@
+# This is a sample build configuration for Other.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: wagnerstephan/bitbucket-git-ftp
+
+pipelines:
+  custom:
+    develop:
+      - step:
+          script:
+            # - git ftp init --user $FTP_USER_DEV --passwd $FTP_PASS_DEV ftp://storming1.timmeserver.de
+            - git ftp push --user $FTP_USER_DEV --passwd $FTP_PASS_DEV ftp://storming1.timmeserver.de
+            - wget https://stormdev.storming-development.de/cache-buster.php
+
+    master:
+      - step:
+          script:
+            # - git ftp init --user $FTP_USER_PROD --passwd $FTP_PASS_PROD ftp://storming1.timmeserver.de --remote-root /web
+            - git ftp push --user $FTP_USER_PROD --passwd $FTP_PASS_PROD ftp://storming1.timmeserver.de --remote-root /web
+            - wget https://www.storming-studios.de/cache-buster.php

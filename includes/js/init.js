@@ -1,4 +1,117 @@
 /*Init fp*/
+
+
+/*Menu Toggle bei click auf Nav section*/
+$(document).ready(function () {
+	$('.link').on('click tap', function (event) {
+		$('body').removeClass('nav-open');
+		$('#menu_toggle').removeClass('menu_open');
+	});
+    
+    /*Menu Toggle bei click auf menu button*/
+	$('#menu_toggle').on('click tap', function (event) {
+		if ($('#menu_toggle').hasClass('menu_open')) {
+			$('body').removeClass('nav-open');
+			$('#menu_toggle').removeClass('menu_open');
+		} else {
+			$('body').addClass('nav-open');
+			$('#menu_toggle').addClass('menu_open');
+		}
+	});
+	
+	var nav = $(this).find('.accordion_nav'),
+		nav_el = $(document).find('#studios .accord_button'),
+		chooser_el = $(document).find('#studios .accord_chooser'),
+		active_el = 1;
+	$(document).find('.accordion.accord_open').each(function () {
+		var nav_el_accord = $(this).find('.accord_button'),
+			active =1;
+		$(this).find('.accordion_nav').on('click', '#prevbutton',  function () {
+			nav_el_accord.each(function () {
+				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
+			});
+			console.log(active);
+			if ( active == 1 ) {
+				$(this).addClass('icon-prev-inactive');
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				active = 1;
+			} else if ( active_el != nav_el_accord.length )  {
+				$(this).removeClass('icon-prev-inactive');
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				active++;
+			} else  {
+				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+				$(this).removeClass('icon-prev-inactive');
+				active++;
+			}
+		});
+		$(this).find('.accordion_nav').on('click', '#nextbutton', function () {
+			nav_el_accord.each(function () {
+				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
+			});
+			console.log(active);
+			if ( active == nav_el_accord.length ) {
+				$(this).addClass('icon-next-inactive');
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				active = 1;
+			} else if ( active != nav_el_accord.length )  {
+				$(this).removeClass('icon-next-inactive');
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				console.log('aaa');
+				active++;
+			} else  {
+				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+				$(this).removeClass('icon-next-inactive');
+				active++;
+			}
+		});
+	});
+	
+	/* Creative Studios */
+	$(document).on('click', '#studios #prevbutton', function () {
+		chooser_el.each(function () {
+			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
+		});
+		if ( active_el == 1 ) {
+			$(this).addClass('icon-prev-inactive');
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			active_el = 1;
+		} else if ( active_el != nav_el.length )  {
+			$(this).removeClass('icon-prev-inactive');
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			active_el++;
+		} else  {
+			$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
+			$(this).removeClass('icon-prev-inactive');
+			active_el++;
+		}
+		
+	});
+	$(document).on('click', '#studios #nextbutton', function () {
+		chooser_el.each(function () {
+			$(this).hasClass('active_accord') ? active_el = $(this).index()+1 : '';
+		});
+		if ( active_el == nav_el.length ) {
+			$(this).addClass('icon-next-inactive');
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			active_el = 1;
+		} else if ( active_el != nav_el.length )  {
+			$(this).removeClass('icon-next-inactive');
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			active_el++;
+		} else  {
+			$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
+			$(this).removeClass('icon-next-inactive');
+			active_el++;
+		}
+	});
+	chooser_el.on('click',function () {
+		$(this).hasClass('active_accord') ? active_el = $(this).index()+2 : '';
+	});
+
+	
+});
+
 $(document).ready(function () {
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -60,6 +173,7 @@ $(document).ready(function () {
 });
 
 /*Pageloader*/
+$(document).load(setTimeout(showPage(), 500));
 function showPage () {
     $('#loader').removeClass('active');
     $('#loader').addClass('animate');
@@ -73,43 +187,7 @@ function end () {
     $('#loader').addClass('inactive');
 }
 
-/*Menu Toggle bei click auf Nav section*/
-$(document).ready(function () {
-    $('.link').on('click tap', function (event) {
-        $('body').removeClass('nav-open');
-        $('#menu_toggle').removeClass('menu_open');
-    });
 
-    /*Menu Toggle bei click auf menu button*/
-    $('#menu_toggle').on('click tap', function (event) {
-        if ($('#menu_toggle').hasClass('menu_open')) {
-            $('body').removeClass('nav-open');
-            $('#menu_toggle').removeClass('menu_open');
-        } else {
-            $('body').addClass('nav-open');
-            $('#menu_toggle').addClass('menu_open');
-        }
-    });
-    $('.accord_open').each(function () {
-        var nav = $(this).find('.accordion_nav'),
-            nav_el = $(this).find('.accord_tab_button'),
-            list = $(this).find('.accord_listing'),
-            list_el = list.find('.accord_chooser'),
-        active = 1;
-	    $(this).find('#prevbutton, #nextbutton').click(function () {
-		       if ( active == list_el.length ) {
-			       $(this).addClass('icon-prev-inactive');
-			       console.log( 'icon-prev-inactive');
-			       active=1;
-               } else if ( active != list_el.length ) {
-			       $('#prevbutton, #nextbutton').removeClass('icon-prev-inactive');
-			       console.log( 'icon-prev-active');
-               }
-		    active++;
-	    });
-    });
-    
-});
 
 /*Mobile Functions*/
 if ($(window).width() < 960) {

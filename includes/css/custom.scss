@@ -28,6 +28,14 @@
 	width: 50px;
 	top: 30px;
 	right: 20px;
+	display: none;
+}
+
+.show_close {
+	.video_close_button {
+		display: block !important;
+	}
+	
 }
 
 /*Shadow on philo*/
@@ -2116,82 +2124,272 @@ header.nav-header {
 	width: 72%;
 }
 
+@media screen and (max-width: 1366px) {
+  #kontakt .kontakt_text {
+	width: 99%;
+}}
+
+@media screen and (max-width: 1366px) {
+  #kontakt .kontakt_text.fullcenter {
+	position: absolute;
+    top: -24%;
+    left: 51.5%;
+}}
+	
+@media screen and (max-width: 1366px) and (min-height: 970px) {
+#kontakt .kontakt_text.fullcenter {
+    position: absolute;
+    top: -10%;
+    left: 51.5%;
+}}
+	
+@media screen and (max-width: 1024px) {
+	#kontakt .kontakt_text.fullcenter {
+		top: 0%;
+}}
+
 #kontakt .kontakt_text h2 {
 	font-size: 38px;
 	margin-top: 0px;
 }
 
 #kontakt .kontakt_text .kontakt_pre_text {
-	font-weight: 100;
+  font-weight: 100;
+  margin-left: 20px; }
+  
+@media screen and (max-width: 1366px){
+  #kontakt .kontakt_text .kontakt_pre_text {
+	visibility: hidden;
+	} }
+  
+@media screen and (max-width: 480px){
+  #kontakt .kontakt_text .kontakt_pre_text {
+	visibility: visible;
+}}
+
+@media screen and (max-width: 480px){
+  #kontakt .kontakt_text h2{
+	width: 293px;
+	font-size: 40px;
+}}
+
+#kontakt .center {
+	text-align: left;
 	margin-left: 20px;
 }
 
+@media screen and (max-width: 1366px) {
+	#kontakt .center {
+		margin-top: 75%;
+}}
+
+@media screen and (max-width: 1024px) {
 #kontakt .center {
-	text-align: center;
-}
+    margin-top: 70%;
+    margin-left: -9px;
+}}
+
+#kontakt .center .branch_block:first-child{
+	width: 26%;
+	}
+	
+@media screen and (max-width: 1024px) {
+	#kontakt .center .branch_block:first-child {
+    width: 38%;
+    margin-right: -9%;
+}}
 
 #kontakt .center .sideline {
 	border-left: 1px solid #fff;
 }
 
-#kontakt .center .branch_block.last {
-	margin-right: 0px;
+#kontakt .center .branch_block {
+	width: 18%;
+  display: inline-block;
+  text-align: left;
 }
 
-#kontakt .center .branch_block {
-	width: 24%;
-	display: inline-block;
-	text-align: left;
+ #kontakt .center .branch_block p.tel {
+	font-weight: 600;
+}
+  
+#kontakt .center .branch_block p.email {
+	font-weight: 100;
+	/*margin-bottom: 10%;*/
+}
+
+#kontakt .center .branch_block p.city {
+	font-weight: 100;
+	/*margin-bottom: 10%;*/
+}
+
+#kontakt .center .branch_block p.street {
 	font-weight: 100;
 }
+  
+@media screen and (max-width: 1024px) {
+	#kontakt .center .branch_block:nth-child(3) {
+		display: none; 
+}}
+
+@media screen and (max-width: 1024px) {
+	#kontakt .center .branch_block:nth-child(2),
+	#kontakt .center .branch_block:nth-child(3)	{
+		width: 18%;
+}}
+
+@media screen and (max-width: 1024px) {
+	#kontakt .center .branch_block {
+		width: 20%;
+}}
 
 #kontakt .center .branch_block div {
-	padding: 20px;
+	padding-left: 3%;
+	padding-bottom: 1%;
 }
+
+@media screen and (max-width: 1024px) {
+	#kontakt .center .branch_block div {
+	padding-right: 0px;
+	margin-right: -1px;
+}}
 
 #kontakt .center .branch_block .head {
-	margin-bottom: 5px;
-	margin-top: 0px;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 0%;
+	padding-top: 3%;  
 }
 
-#kontakt .center .branch_block .tel {
-	margin-top: 5px;
-	font-size: 21px;
-	font-weight: 800;
+#kontakt .center .branch_block .standort {
+	font-weight: 600;
 }
 
-#kontakt .center .branch_block .email {
-	font-weight: 800;
+.text_link {
+  position: relative;
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
+  margin-left: 24px;
+  cursor: pointer;
 }
 
-#kontakt .center .branch_block .city {
-	margin-bottom: 0px;
+.text_link:first-child {
+  margin-left: 0;
 }
+
+.text_link:after {
+  border-top: 2px solid;
+  content: "";
+  position: absolute;
+    bottom: -6px;
+    right: 0;
+  width: 100%;
+}
+
+.text_link:hover:after {
+  animation: text_link_animation 0.6s linear;
+}
+
+@keyframes text_link_animation {
+  50% {
+   width: 0;
+  }
+  
+  100% {
+   width: 100%;
+   left: 0;
+  } 
+}
+
+#kontakt .route_standort {
+	padding-left: 4%;
+	padding-bottom: 3%;
+	}
 
 #kontakt .center .branch_block a {
 	color: #fff;
 }
 
-#kontakt .center .branch_block > a {
-	margin-top: 30px;
-	display: block;
-	width: 58%;
+#kontakt .bewerbung_block {
+    border-left: 1px solid #fff;
+    margin-right: 394px;
+    padding-left: 1%;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 5%;
+    text-align: left;
+    font-weight: 300;
+    line-height: 32px;
 }
 
-@media screen and (max-width: 1450px) {
-	#kontakt .center .branch_block > a {
-		width: 80%;
+@media screen and (min-width: 481px) {
+	.mobile-break {
+		display: none;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+#kontakt .bewerbung_block {
+    margin-right: 20px;
+}}
+
+@media screen and (max-width: 1366px) {
+	#kontakt .bewerbung_block {
+		margin-right: 338px;
+		margin-top: 2px;
+		margin-top: 54px;
+}}
+
+@media screen and (max-width: 1024px) {
+	#kontakt .bewerbung_block {
+		margin-right: 148px;
+		margin-left: 46px;
+		margin-top: 22px;
+		padding-left: 20px;
+}}
+
+#kontakt .email_bewerbung {
+	color: #ffffff;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#kontakt  .bewerbung_button {
+    font-weight: 600;
+    line-height: 50px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 99px;
+    margin-top: -6%;
+    margin-right: 7%;
+    float: right;
+    width: 260px;
+    cursor: pointer;
+    text-align: center; }
+	
+@media screen and (max-width: 1366px) {
+  #kontakt  .bewerbung_button {
+   	margin-right: 6%;
+    width: 200px;	} }
+	
+@media screen and (max-width: 1024px) {
+	#kontakt .bewerbung_button {
+		display: none; 
+}}
+
+@media screen and (max-width: 1450px) {
+  #kontakt .center .branch_block > a {
+    width: 80%; 
+}}
 
 #kontakt .center .branch_block .clear_both {
 	clear: both;
 }
 
 #kontakt .center .branch_block .accord_text_button {
-	width: 100%;
-	margin-top: 0;
-}
+  width: 100%;
+  margin-top: 0; }
 
 #kontakt #imprint_section {
 	position: absolute;
@@ -2213,6 +2411,7 @@ header.nav-header {
 #kontakt #imprint_section a.data_prot {
 	margin-left: 6px;
 }
+
 
 @media screen and (max-width: 1665px) {
 	#kontakt .center .branch_block .tel {
@@ -2737,7 +2936,7 @@ header.nav-header {
 			li.accord_chooser {
 				width: auto;
 				text-align: center;
-				padding-bottom: 70px;
+				padding-bottom: 106px;
 				@media screen and (max-width: 768px) {
 					width: 0;
 				}
@@ -2813,6 +3012,20 @@ header.nav-header {
 					}
 				}
 			}
+		}
+	}
+}
+
+#studios {
+	.icon-next,
+	.icon-prev {
+		* {
+			pointer-events: none !important;
+		}
+		&.icon-next-inactive,
+		&.icon-prev-inactive {
+			opacity: 0.5;
+			pointer-events: none !important;
 		}
 	}
 }
