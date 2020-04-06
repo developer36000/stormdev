@@ -1,0 +1,129 @@
+/*Page Home*/
+
+.bp-header {
+	position: absolute;
+	top: 0;
+	z-index: 99;
+	left: 50%;
+	-webkit-transform: translate(-50%, -0%);
+	-ms-transform: translate(-50%, -0%);
+	transform: translate(-50%, -0%);
+}
+
+.icon-play {
+	* {
+		cursor: pointer;
+	}
+	.path1:before {
+		content: "\e901";
+		color: rgb(255, 255, 255);
+	}
+	.path2:before {
+		content: "\e902";
+		color: rgb(255, 255, 255);
+		opacity: 0.2;
+	}
+	.path3:before {
+		content: "\e903";
+		color: rgb(0, 0, 0);
+	}
+}
+
+
+
+#playbutton div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 100pt;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+/*#fullvideo {
+	width: 100%;
+	height: 100%;
+}*/
+#show_mobile {
+	display: none !important;
+}
+.full_video_block {
+	display: none;
+	&.active {
+		display: block;
+		overflow: hidden;
+		height: calc(100vh - 96px);
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	video {
+		width: 100%;
+		display: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		-webkit-transform: translate(0, -50%);
+		-moz-transform: translate(0, -50%);
+		-ms-transform: translate(0, -50%);
+		-o-transform: translate(0, -50%);
+	}
+}
+
+/*.full_video_block.active video{object-fit:contain;}*/
+#fullvideo {
+	height: inherit !important;
+	width: inherit !important;
+	background-color: #000;
+	display: block;
+}
+
+.full_video_block {
+	.vjs-fullscreen video {
+		display: block;
+	}
+	video::-webkit-media-controls-fullscreen-button {
+		display: none;
+	}
+}
+
+
+.video_block {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	video {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+}
+
+#page-home {
+	&.page {
+		z-index: -2;
+	}
+	.hometext {
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		font-size: 28px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+/*Page Home END*/

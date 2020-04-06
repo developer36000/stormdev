@@ -1,0 +1,711 @@
+/*Video Block*/
+#page-home {
+	.video_close_button {
+		cursor: pointer !important;
+		z-index: 9999999999;
+		width: 50px;
+		top: 30px;
+		right: 20px;
+		display: none;
+		&:before {
+			transform: rotate3d(0, 0, 1, 45deg);
+			-webkit-transform: rotate3d(0, 0, 1, 45deg);
+			-moz-transform: rotate3d(0, 0, 1, 45deg);
+			-ms-transform: rotate3d(0, 0, 1, 45deg);
+			-o-transform: rotate3d(0, 0, 1, 45deg);
+		}
+		&:after {
+			transform: rotate3d(0, 0, 1, -45deg);
+			-webkit-transform: rotate3d(0, 0, 1, -45deg);
+			-moz-transform: rotate3d(0, 0, 1, -45deg);
+			-ms-transform: rotate3d(0, 0, 1, -45deg);
+			-o-transform: rotate3d(0, 0, 1, -45deg);
+		}
+	}
+}
+
+.show_close {
+	.video_close_button {
+		display: block !important;
+	}
+}
+
+/*Shadow on philo*/
+#philosophie {
+	.mCSB_container {
+		position: relative;
+		top: -519px;
+		left: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		line-height: 28px;
+	}
+	.expand {
+		.mCustomScrollBox {
+			&:before {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 20px;
+				-webkit-box-shadow: #fff 0 5px 49px 8px;
+				box-shadow: #fff 0 5px 49px 8px;
+				z-index: 9999;
+				top: -21px;
+			}
+			&:after {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 20px;
+				left: 0;
+				-webkit-box-shadow: #fff 0px -5px 49px 8px;
+				box-shadow: #fff 0px -5px 49px 8px;
+				z-index: 9999;
+				bottom: -21px;
+			}
+		}
+	}
+	#philo {
+		.mCSB_scrollTools_vertical {
+			z-index: 99999;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+}
+/* TEST SECTION END */
+
+body {
+	height: calc(100% - 96px) !important;
+	margin: 48px !important;
+	font-size: 14px;
+}
+
+.page {
+	background-color: black;
+}
+
+html.js,
+.js body {
+	overflow: hidden;
+	background-color: #f3f3f3;
+}
+
+.displaynone {
+	display: none;
+}
+
+/*Button*/
+.button {
+	padding: 18px;
+	width: 35%;
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border-radius: 99px;
+	border: 0;
+}
+
+/*Full Center align Blocks*/
+.fullcenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+/*Button End*/
+/*Schwerpunkt page*/
+#schwerpunkt {
+	background-color: #fff;
+	.bp-header {
+		&__title {
+			color: #000;
+		}
+	}
+	.schwerpunkt_page {
+		height: calc(100% + 58px);
+		.schwerpunkt_text {
+			text-align: center;
+			font-weight: bold;
+			font-size: 2.4em;
+			color: #b6b6b6;
+			width: 80%;
+			margin-top: 3%;
+			@media screen and (max-height: 800px), screen and (max-width: 1100px) {
+				font-size: 1.9em;
+			}
+			@media screen and (max-height: 700px) {
+				font-size: 1.7em;
+			}
+			span {
+				line-height: 72px;
+				@media screen and (max-height: 1000px) {
+					line-height: 50px;
+				}
+			}
+		}
+	}
+}
+
+
+/*Scrollable text
+	.active_accord#studios_1 .accord_textholder	{
+		overflow-y:scroll;
+	}
+
+	.accord_textholder::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius:90px;
+		background-color:rgba(60, 60, 60, 0.5);
+	}
+
+	.accord_textholder::-webkit-scrollbar
+	{
+		width:10px;
+		background-color:rgba(60, 60, 60, 0.5);
+	}
+
+	.accord_textholder::-webkit-scrollbar-thumb
+	{
+		border-radius:90px;
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+		background-color:#000;
+	}*/
+
+/*
+ *
+ * Header
+ *
+ */
+/*Logo*/
+/*init*/
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/storming-iconfont/icomoon.eot?orwprk');
+	src: url('../fonts/storming-iconfont/icomoon.eot?orwprk#iefix') format('embedded-opentype'),
+	url('../fonts/storming-iconfont/icomoon.ttf?orwprk') format('truetype'),
+	url('../fonts/storming-iconfont/icomoon.woff?orwprk') format('woff'),
+	url('../fonts/storming-iconfont/icomoon.svg?orwprk#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Better Font Rendering for Mac */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-storming-logo:before {
+	content: "\e900";
+}
+
+#logo {
+	position: absolute;
+	color: #fff;
+	z-index: 99999;
+	font-size: 50pt;
+	left: 100px;
+	top: 100px;
+	transition: color 0.25s;
+	-webkit-transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-o-transition: color 0.25s;
+}
+
+.nav-open #logo {
+	color: #000;
+}
+
+/*Header END*/
+
+/*Button*/
+.accord_text_button {
+	padding: 18px;
+	width: 35%;
+	text-align: center;
+	background-color: #fff;
+	color: #000;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border-radius: 99px;
+	margin-top: 80px;
+	cursor: pointer;
+}
+
+/*
+ *
+ * Navigation
+ *
+ */
+/*Hide mobile*/
+.moba-nav {
+	display: none;
+}
+
+#mobilelogo {
+	display: none;
+}
+
+/* Menu Button Design */
+div#accordion_toggle_close,
+div#accordion_toggle_close *,
+div#menu_toggle,
+div#menu_toggle * {
+	cursor: pointer;
+}
+
+/*Text*/
+.menu-text {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 4px;
+	position: absolute;
+	z-index: 1000;
+	top: 128px;
+	right: 170px;
+	transition: opacity 0.25s;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	color: #fff;
+}
+
+/*Farbschema*/
+.menu-text-open {
+	color: #fff;
+	opacity: 1;
+}
+
+.menu_open {
+	.menu-text-open {
+		opacity: 0;
+	}
+	.menu-text-close {
+		color: #000;
+		opacity: 1;
+		
+	}
+}
+
+.menu-text-close {
+	opacity: 0;
+}
+
+/*Button Stripes*/
+.menu-button {
+	position: absolute;
+	z-index: 1000;
+	top: 120px;
+	right: 120px;
+	width: 30px;
+	height: 24px;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+/*Farbschema*/
+.menu-button::before,
+.menu-button::after,
+.menu-button span {
+	background: #fff;
+}
+
+/*stripes oben unten*/
+.menu-button::before,
+.menu-button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 110%;
+	height: 2px;
+	pointer-events: none;
+	transition: transform 0.25s, -ms-transform 0.25s, background-color 0.25s;
+	-webkit-transition: -webkit-transform 0.25s, background-color 0.25s;
+	-moz-transition: -moz-transform 0.25s, background-color 0.25s;
+	-o-transition: -o-transform 0.25s, background-color 0.25s;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+}
+
+.menu-button::before {
+	transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	-webkit-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	-moz-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	-ms-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	-o-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+}
+
+.menu-button::after {
+	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	-moz-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	-ms-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	-o-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+}
+
+/*Stripe mitte*/
+.menu-button span {
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 2px;
+	text-indent: 200%;
+	transition: opacity 0.25s;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+}
+
+/*Changes on Open*/
+/*Mid*/
+.fp-viewing-Creative.studio_accord_open .menu-button span,
+.menu_open .menu-button span {
+	opacity: 0;
+}
+
+/*Upper*/
+.fp-viewing-Creative.studio_accord_open .menu-button::before,
+.menu_open .menu-button::before {
+	transform: rotate3d(0, 0, 1, 45deg);
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	-moz-transform: rotate3d(0, 0, 1, 45deg);
+	-ms-transform: rotate3d(0, 0, 1, 45deg);
+	-o-transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.fp-viewing-Creative.studio_accord_open .menu-button::before {
+	background-color: #fff;
+}
+
+.menu_open .menu-button::before {
+	background-color: #000;
+}
+
+/*Lower*/
+.fp-viewing-Creative.studio_accord_open .menu-button::after,
+.menu_open .menu-button::after {
+	transform: rotate3d(0, 0, 1, -45deg);
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	-moz-transform: rotate3d(0, 0, 1, -45deg);
+	-ms-transform: rotate3d(0, 0, 1, -45deg);
+	-o-transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.fp-viewing-Creative.studio_accord_open .menu-button::after {
+	background-color: #fff;
+}
+
+.menu_open .menu-button::after {
+	background-color: #000;
+}
+
+/*Changes on white pages*/
+.fp-viewing-Makingof,
+.fp-viewing-compass,
+.fp-viewing-About,
+.fp-viewing-Leuchtfeuer {
+	.menu-button {
+		&:before,
+		&:after {
+			background: #000;
+		}
+		span {
+			background: #000;
+		}
+	}
+	.menu-text-open,
+	.menu-text-close,
+	#logo {
+		color: #000;
+	}
+}
+
+
+.menu-text-open, .menu-text-close, #logo {
+	transition: color 0.25s;
+	-webkit-transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-o-transition: color 0.25s;
+}
+
+/*Changes on Accord Open*/
+.fp-viewing-Creative.studio_accord_open div#menu_toggle, div#accordion_toggle_close {
+	display: none;
+}
+
+.fp-viewing-Creative.studio_accord_open div#accordion_toggle_close {
+	display: block;
+}
+
+.fp-viewing-Creative.studio_accord_open .menu-text-close.accord_close {
+	opacity: 1;
+}
+
+/*move down the content
+	  when menu open setted in fullpage_block area in css Z. 1 */
+.nav-open {
+	div.fullpage_block {
+		transform: translate3d(0px, calc(0vh + 350px + 120px), 0px) !important;
+		-webkit-transform: translate3d(0px, calc(0vh + 350px + 120px), 0px) !important;
+		-moz-transform: translate3d(0px, calc(0vh + 350px + 120px), 0px) !important;
+		-ms-transform: translate3d(0px, 470px, 0px) !important;
+		-o-transform: translate3d(0px, calc(0vh + 350px + 120px), 0px) !important;
+	}
+}
+
+div.fullpage_block {
+	transition: transform 0.5s, -ms-transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	-o-transition: -o-transform 0.5s;
+	overflow: hidden;
+}
+
+/*Menu Button ENDE*/
+/* Nav design */
+.pages-nav {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 20px;
+	text-align: center;
+	background: transparent;
+}
+
+.pages-nav {
+	position: fixed;
+	top: 120px;
+	left: 48px;
+	right: 48px;
+	width: calc(100% - 96px);
+	height: 350px;
+	padding: 0;
+	pointer-events: none;
+	opacity: 0;
+	background: transparent;
+	transition: transform 1.2s, -ms-transform 1.2s, opacity 1.2s;
+	-webkit-transition: -webkit-transform 1.2s, opacity 1.2s;
+	-moz-transition: -moz-transform 1.2s, opacity 1.2s;
+	-o-transition: -o-transform 1.2s, opacity 1.2s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-moz-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-o-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transform: translate3d(0, 150px, 0);
+	-webkit-transform: translate3d(0, 150px, 0);
+	-moz-transform: translate3d(0, 150px, 0);
+	-ms-transform: translate3d(0, 150px, 0);
+	-o-transform: translate3d(0, 150px, 0);
+	header.nav-header {
+		padding: 0;
+		padding-bottom: 50px;
+	}
+	.pages-nav-wrapper {
+		max-width: 80%;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	&__item {
+		width: 25%;
+		padding: 30px 0;
+		@media screen and (max-width: 60em) {
+			width: 50%;
+			min-height: 20px;
+		}
+	}
+}
+
+.pages-nav .pages-nav__item--social .link--social .fa {
+	opacity: 0;
+	transition: transform 1.2s, -ms-transform 1.2s, opacity 0.5s;
+	-webkit-transition: -webkit-transform 1.2s, opacity 1.2s;
+	-moz-transition: -moz-transform 1.2s, opacity 1.2s;
+	-o-transition: -o-transform 1.2s, opacity 1.2s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-moz-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	-o-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transform: translate3d(0, 20px, 0);
+	-webkit-transform: translate3d(0, 20px, 0);
+	-moz-transform: translate3d(0, 20px, 0);
+	-ms-transform: translate3d(0, 20px, 0);
+	-o-transform: translate3d(0, 20px, 0);
+}
+
+.nav-open {
+	.pages-nav {
+		pointer-events: auto;
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		&__item {
+			&--social {
+				padding-top: 50px;
+				width: 100%;
+				.link--social {
+					width: 100%;
+					.fa {
+						opacity: 1;
+						transform: translate3d(0, 0, 0);
+						-webkit-transform: translate3d(0, 0, 0);
+						-moz-transform: translate3d(0, 0, 0);
+						-ms-transform: translate3d(0, 0, 0);
+						-o-transform: translate3d(0, 0, 0);
+						transition: all .3s;
+					}
+					.fa-xing {
+						transition-delay: 0.75s;
+						-webkit-transition-delay: 0.75s;
+						-moz-transition-delay: 0.75s;
+						-o-transition-delay: 0.75s;
+						transition: all .3s;
+					}
+					.fa-vimeo-square {
+						transition-delay: 0.60s;
+						-webkit-transition-delay: 0.60s;
+						-moz-transition-delay: 0.60s;
+						-o-transition-delay: 0.60s;
+						transition: all .3s;
+					}
+					.fa-instagram {
+						transition-delay: 0.50s;
+						-webkit-transition-delay: 0.50s;
+						-moz-transition-delay: 0.50s;
+						-o-transition-delay: 0.50s;
+						transition: all .3s;
+					}
+					.fa-facebook {
+						transition-delay: 0.35s;
+						-webkit-transition-delay: 0.35s;
+						-moz-transition-delay: 0.35s;
+						-o-transition-delay: 0.35s;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+.link {
+	font-size: 0.85em;
+	font-weight: bold;
+	position: relative;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #000;
+	&:hover,
+	&:focus {
+		color: #000;
+		text-decoration: underline;
+	}
+	&--page {
+		display: block;
+		color: #000;
+		@media screen and (max-width: 60em) {
+			overflow: hidden;
+			white-space: nowrap;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+		}
+		&.link--faded {
+			font-size: 0.65em;
+		}
+		.menu_underline {
+			&:after {
+				content: '';
+				background: #000;
+				display: block;
+				height: 2px;
+				width: 0;
+				margin-top: 4px;
+				transition: width .5s ease;
+				-webkit-transition: width .5s ease;
+				-moz-transition: width .5s ease;
+				-o-transition: width .5s ease;
+			}
+		}
+		&:hover,
+		&:focus {
+			.menu_underline:after {
+				width: 100%;
+			}
+		}
+	}
+	&--faded {
+		color: #dadada;
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+	}
+	&--social {
+		font-size: 1.5em;
+		margin: 0 0.75em;
+	}
+}
+
+
+.text-hidden {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+
+/*Underline*/
+.menu_underline {
+	display: inline-block;
+}
+
+
+/*Nav Design END*/
+/*Navigation END*/

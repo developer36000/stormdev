@@ -1,0 +1,188 @@
+
+/*Page Philosophie*/
+#philosophie {
+	background-color: #fff;
+	.mCSB_container {
+		position: relative;
+		top: -519px;
+		left: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		line-height: 28px;
+	}
+	.expand {
+		.mCustomScrollBox {
+			&:before {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 20px;
+				-webkit-box-shadow: #fff 0 5px 49px 8px;
+				box-shadow: #fff 0 5px 49px 8px;
+				z-index: 9999;
+				top: -21px;
+			}
+			&:after {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 20px;
+				left: 0;
+				-webkit-box-shadow: #fff 0px -5px 49px 8px;
+				box-shadow: #fff 0px -5px 49px 8px;
+				z-index: 9999;
+				bottom: -21px;
+			}
+		}
+	}
+	#philo {
+		.mCSB_scrollTools_vertical {
+			z-index: 99999;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+	.bp-header {
+		&__title {
+			color: #000;
+		}
+	}
+	.icon-prev-inactive,
+	.icon-next-inactive {
+		.path1:before {
+			color: rgb(0, 0, 0);
+		}
+		.path2:before {
+			color: rgb(226, 226, 228);
+		}
+	}
+	.icon-next,
+	.icon-prev {
+		.path1:before {
+			color: rgb(0, 0, 0);
+		}
+		.path2:before {
+			color: rgb(226, 226, 228);
+		}
+	}
+	.accordion_nav_points {
+		div {
+			color: #000;
+		}
+	}
+	.accordion {
+		ul.class_listing {
+			li.accord_chooser {
+				div {
+					span {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+	.accord_span {
+		max-height: 300px;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+	}
+	.accord_text_button {
+		background-color: #000;
+		color: #fff;
+		width: 35%;
+		margin-top: 80px;
+	}
+	.accord_span_expander {
+		padding: 0;
+		height: auto;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 2s;
+		-webkit-transition: max-height 2s;
+		-moz-transition: max-height 2s;
+		-o-transition: max-height 2s;
+	}
+	.accord_button {
+		&:after {
+			background: #000;
+		}
+	}
+	.vjs-poster {
+		background-image: url('../images/standbild_ei.jpg');
+		width: 40%;
+		height: 100%;
+		background-size: cover;
+		background-color: #fff;
+	}
+	/* video control no fullscreen*/
+	.philo_ei_vid {
+		height: 75%;
+		bottom: 2%;
+		position: absolute;
+		.philo_image {
+			display: none;
+		}
+		video {
+			width: 40%;
+			height: auto;
+			/*position:absolute !important;
+					max-height:1000px;
+					top:50%;
+					transform:translate(0%,-50%);
+					-webkit-transform:translate(0%,-50%);
+					-moz-transform:translate(0%,-50%);
+					-ms-transform:translate(0%,-50%);
+					-o-transform:translate(0%,-50%);*/
+		}
+		* {
+			position: absolute;
+			/*Ei passt sich selbst an*/
+			top: 50%;
+			height: 75%;
+			transform: translate(0%, -50%);
+			-webkit-transform: translate(0%, -50%);
+			-moz-transform: translate(0%, -50%);
+			-ms-transform: translate(0%, -50%);
+			-o-transform: translate(0%, -50%);
+			/*extra end*/
+			/*old
+					bottom: 2%;
+				transform: unset;
+				top: unset;
+				*/
+		}
+	}
+	.expand {
+		.accord_text_pos {
+			a {
+				div {
+					-webkit-transition: padding 0.35s 0.35s, margin 0.35s 0.35s, opacity 0.35s;
+					-o-transition: padding 0.35s 0.35s, margin 0.35s 0.35s, opacity 0.35s;
+					transition: padding 0.35s 0.35s, margin 0.35s 0.35s, opacity 0.35s
+				}
+				.accord_text_button {
+					margin-top: 0;
+					opacity: 0;
+					padding: 0;
+				}
+			}
+		}
+		.accord_span_expander {
+			max-height: 99999999px;
+		}
+	}
+	.accord_text_pos {
+		color: #000;
+		span {
+			color: #000;
+		}
+		ul {
+			padding-left: 20px;
+			li {
+				list-style: disc;
+			}
+		}
+	}
+}
+
+/*Page Philosophie END*/

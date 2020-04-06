@@ -1,0 +1,99 @@
+
+/*Page Reference*/
+#references {
+	background: linear-gradient(210deg, #232323 0%, #000000 100%),
+	linear-gradient(225deg, #FEFEFE 0%, #FFFFFF 100%);
+	box-shadow: 0 0 60px 0 rgba(0,1,1,0.1);
+	.bp-header {
+		position: relative;
+	}
+	.ref_block {
+		max-width: 1340px;
+		margin: auto;
+		margin-top: 50px;
+		p {
+			max-width: 800px;
+			margin: auto;
+			text-align: center;
+			line-height: 26px;
+			margin-bottom: 30px;
+			font-weight: 100;
+		}
+	}
+	.reference {
+		width: 22.5%;
+		display: inline-block;
+		text-align: center;
+		margin: 0 1%;
+		span {
+			font-weight: 100;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			margin: auto;
+			display: block;
+			@media screen and (max-height: 950px) {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-height: 760px), screen and (max-width: 1350px) {
+	#references .reference {
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+	#references .reference img {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		max-height: 64px;
+		width: auto;
+	}
+	.reference_list {
+		padding-top: 20px;
+	}
+	#references .ref_block {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-height: 720px), screen and (max-width: 1350px) {
+	#references .reference {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	@media screen and (min-height: 1250px) {
+		#references .reference_list {
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translate(0%, -50%);
+			-ms-transform: translate(0%, -50%);
+			transform: translate(0%, -50%);
+			left: 0;
+		}
+	}
+	@media screen and (min-height: 1050px) {
+		#references .reference {
+			width: 33%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+@media screen and (max-height: 768px) {
+	#references .ref_block p {
+		margin-bottom: 0;
+	}
+}
+
+/*Page Reference END*/

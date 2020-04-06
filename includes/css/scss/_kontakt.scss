@@ -1,0 +1,344 @@
+
+/*Page Kontakt*/
+#kontakt,
+#references {
+	background: #000000;
+	background: -webkit-linear-gradient(45deg, #000000 0%, #191919 56%, #2b2b2b 99%);
+	background: -o-linear-gradient(45deg, #000000 0%, #191919 56%, #2b2b2b 99%);
+	background: linear-gradient(45deg, #000000 0%, #191919 56%, #2b2b2b 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#2b2b2b', GradientType=1);
+}
+
+#kontakt {
+	background: linear-gradient(225deg, #2A2A2A 0%, #000000 100%);
+	background: -o-linear-gradient(225deg, #2A2A2A 0%, #000000 100%);
+	background: -webkit-linear-gradient(225deg, #2A2A2A 0%, #000000 100%);
+	color: #fff;
+	@media screen and (max-width: 980px){
+		position: relative;
+		background-color: #000;
+		padding-top: 0;
+		margin-top: 23px;
+	}
+	.kontakt_pre_text {
+		font-weight: 100;
+		margin-left: 0;
+		@media screen and (max-width: 1366px){
+			visibility: hidden;
+		}
+		@media screen and (max-width: 480px){
+			visibility: visible;
+		}
+	}
+	.kontakt_text {
+		width: 100%;
+		max-width: 1247px;
+		@media screen and (max-width: 1366px) {
+			max-width: 1145px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h2 {
+			font-size: 2.86em;
+			margin-top: 0;
+			margin-bottom: 60px;
+		}
+		
+		&.fullcenter {
+			@media screen and (max-width: 1366px) {
+				position: absolute;
+				top: 43%;
+				left: 50%;
+			}
+			@media screen and (max-width: 1280px) {
+				padding: 0 30px;
+			}
+			@media screen and (max-width: 1366px) and (min-height: 970px) {
+				position: absolute;
+				top: -10%;
+				left: 50%;
+			}
+			@media screen and (max-width: 1024px) {
+				top: 43%;
+			}
+		}
+	}
+	.center {
+		width: 100%;
+		text-align: left;
+		@media screen and (max-width: 1366px) {
+			margin-top: 0;
+		}
+		.flex_container,
+		.flex_container_modile {
+			display: flex;
+			@media screen and (max-width: 1280px) {
+				flex-wrap: wrap;
+			}
+		}
+		.flex_container_modile {
+			display: none;
+			@media screen and (max-width: 768px) {
+				display: flex;
+			}
+			.branch_block {
+				flex: 1;
+			}
+		}
+		.branch_block {
+			width: auto;
+			flex: 1;
+			display: inline-block;
+			text-align: left;
+			max-width: max-content;
+			@media screen and (max-width: 1024px) {
+				width: 20%;
+			}
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+			&:not(:last-of-type) {
+				margin-right: 4%;
+			}
+			&:not(:first-child) {
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+			}
+			&:first-child {
+				flex: auto;
+				width: auto;
+				max-width: 388px;
+				margin-right: 0;
+				@media screen and (max-width: 1366px) {
+					margin-right: 0;
+					max-width: 350px;
+				}
+				@media screen and (max-width: 1280px) {
+					max-width: max-content;
+					margin-right: 4%;
+				}
+				@media screen and (max-width: 1024px) {
+					width: auto;
+				}
+			}
+			&:last-child {
+				max-width: max-content;
+			}
+			&:nth-child(2),
+			&:nth-child(3)	{
+				@media screen and (max-width: 1024px) {
+					width: auto;
+				}
+			}
+			&:nth-child(3) {
+				@media screen and (max-width: 1230px) {
+					display: none;
+				}
+			}
+			a {
+				color: #fff;
+			}
+			> a {
+				@media screen and (max-width: 1450px) {
+					width: 80%;
+				}
+			}
+		
+			.head {
+				font-size: 24px;
+				line-height: 29px;
+				font-weight: 600;
+				padding-top: 14px;
+				margin-top: 0;
+				margin-bottom: 44px;
+			}
+			.email,
+			.standort,
+			.city,
+			.street,
+			.tel {
+				font-weight: 100;
+				margin-top: 0;
+				margin-bottom: 0;
+				line-height: 29px;
+			}
+			.standort {
+				font-weight: 600;
+			}
+			.tel {
+				font-weight: 600;
+				@media screen and (max-width: 1665px) {
+					font-size: 16px;
+				}
+				@media screen and (max-width: 1450px) {
+					font-size: 14px;
+				}
+				@media screen and (max-width: 1350px) {
+					font-size: unset;
+				}
+			}
+			.clear_both {
+				clear: both;
+			}
+			.accord_text_button {
+				width: 100%;
+				margin-top: 0;
+			}
+		} // -- .branch_block 
+		.sideline {
+			border-left: 1px solid #fff;
+			padding-left: 24px;
+			height: 100%;
+			@media screen and (max-width: 1024px) {
+				padding-right: 0;
+			}
+			> div {
+				
+			}
+		}
+	}
+
+	.bewerbung {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		//flex-wrap: wrap;
+	}
+	.bewerbung_block {
+		border-left: 1px solid #fff;
+		margin-right: 35px;
+		padding-left: 1%;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		margin-top: 5%;
+		text-align: left;
+		font-weight: 300;
+		line-height: 29px;
+		@media screen and (max-width: 1366px) {
+			margin-right: 23px;
+			margin-top: 38px;
+		}
+	}
+	.route_standort {
+		margin-bottom: 19px;
+		padding-bottom: 5px;
+	}
+	.email_bewerbung {
+		color: #ffffff;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	.bewerbung_button {
+		font-weight: 600;
+		line-height: 50px;
+		background-color: transparent;
+		border: 2px solid transparent;
+		color: #000;
+		border-radius: 99px;
+		max-width: 260px;
+		width: 100%;
+		cursor: pointer;
+		text-align: center;
+		transition: all .3s;
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+		min-height: 54px;
+		@media screen and (max-width: 1366px) {
+			margin-right: 0;
+			max-width: 200px;
+			width: 100%;
+		}
+		@media screen and (max-width: 1025px) {
+			display: none !important;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: -2px;
+			right: -2px;
+			top: -2px;
+			bottom: -2px;
+			background-color: #fff;
+			transition: all .3s;
+			z-index: -1;
+		}
+		&:hover,
+		&:focus {
+			border: 2px solid #fff;
+			background: transparent;
+			color: #fff;
+			&:before {
+				top: 100%;
+				bottom: 0;
+			}
+		}
+		
+	}
+	#imprint_section {
+		position: absolute;
+		bottom: 50px;
+		left: 50px;
+		text-transform: uppercase;
+		font-size: 12px;
+		color: #666;
+		a {
+			color: #666;
+			&.imprint {
+				margin-right: 6px;
+			}
+			&.data_prot {
+				margin-left: 6px;
+			}
+		}
+	}
+}
+
+
+.text_link {
+	position: relative;
+	margin-bottom: 48px;
+	letter-spacing: 0.5px;
+	margin-left: 24px;
+	cursor: pointer;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:after {
+		border-top: 2px solid;
+		content: "";
+		position: absolute;
+		bottom: -6px;
+		right: 0;
+		width: 100%;
+	}
+	&:hover,
+	&:focus {
+		&:after {
+			animation: text_link_animation 0.6s linear;
+		}
+	}
+}
+
+@keyframes text_link_animation {
+	50% {
+		width: 0;
+	}
+	
+	100% {
+		width: 100%;
+		left: 0;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.mobile-break {
+		display: none;
+	}
+}
+
+
+/*Page Kontakt END*/

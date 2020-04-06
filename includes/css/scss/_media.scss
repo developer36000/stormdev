@@ -1,0 +1,212 @@
+/*Extra Pages*/
+
+
+/*EDGE HACK
+@supports (-ms-ime-align:auto) {
+	.fp-enabled body	{height:100% !important;margin:0px !important;}
+}*/
+
+@media screen and (max-width: 60em) {
+	
+	.link--page {
+		overflow: hidden;
+		white-space: nowrap;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	}
+	
+	.link--social {
+		margin: 0 0.1em;
+	}
+}
+
+@media screen and (max-width: 40em) {
+	.responsive body {
+		height: calc(100% - 48px) !important;
+		margin: 24px !important;
+	}
+	
+	/*Adjust content out of the view when menu is open*/
+	.responsive body.nav-open div.fullpage_block {
+		transform: translate3d(0px, 100vh, 0px) !important;
+		-webkit-transform: translate3d(0px, 100vh, 0px) !important;
+		-moz-transform: translate3d(0px, 100vh, 0px) !important;
+		-ms-transform: translate3d(0px, 100vh, 0px) !important;
+		-o-transform: translate3d(0px, 100vh, 0px) !important;
+	}
+	
+	/*Ajust Menu when open cause of the content which is out of view*/
+	.responsive {
+		.nav-open .pages-nav {
+			position: absolute;
+			transform: translate3d(0px, -50%, 0px);
+			-webkit-transform: translate3d(0px, -50%, 0px);
+			-moz-transform: translate3d(0px, -50%, 0px);
+			-ms-transform: translate3d(0px, -50%, 0px);
+			-o-transform: translate3d(0px, -50%, 0px);
+			padding: 0;
+			top: 50%;
+		}
+		.pages-nav {
+			display: block;
+			padding: 0;
+			text-align: left;
+			&__item {
+				width: 100%;
+				padding: 12px 0;
+				text-align: center;
+				&--small {
+					display: inline-block;
+					width: auto;
+					margin-right: 5px;
+				}
+				&--social {
+					font-size: 0.9em;
+				}
+			}
+		}
+		.menu-button {
+			top: 48px;
+			right: 48px;
+			left: auto;
+		}
+		#logo {
+			font-size: 20pt;
+			left: 48px;
+			top: 48px;
+		}
+	}
+	
+	.responsive .menu-text-close, .menu-text-open {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 25em) {
+	.responsive {
+		.link {
+			font-size: 0.75em;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	/*Menu Position adjustments*/
+	.responsive .nav-open div#fullpage.pages-stack {
+		transform: translate3d(0px, calc(0vh + 450px + 120px), 0px) !important;
+		-webkit-transform: translate3d(0px, calc(0vh + 450px + 120px), 0px) !important;
+		-moz-transform: translate3d(0px, calc(0vh + 450px + 120px), 0px) !important;
+		-ms-transform: translate3d(0px, calc(0vh + 450px + 120px), 0px) !important;
+		-o-transform: translate3d(0px, calc(0vh + 450px + 120px), 0px) !important;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.responsive {
+		.menu-text {
+			display: none;
+		}
+		.pages-nav {
+			left: 5%;
+			width: 90%;
+		}
+	}
+}
+
+.popup-wrapper {
+	width: 100%;
+	z-index: 9999;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.popup {
+	position: relative;
+	z-index: 9999;
+	background-color: #fff;
+	color: #000;
+	margin: 0 90px;
+	padding: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	bottom: -94px;
+	-webkit-transition: 1s bottom;
+	-o-transition: 1s bottom;
+	transition: 1s bottom;
+}
+
+.popup.show {
+	bottom: 0;
+}
+
+.popup-text {
+	width: 55%;
+	font-size: 12px;
+	line-height: 1.5;
+	color: gray;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	font-weight: 200;
+}
+
+.popup-action {
+	width: 45%;
+	text-align: right;
+}
+
+.acceptCookies {
+	font-size: 12px;
+	padding: 15px 24px;
+	margin-left: 10px;
+	cursor: pointer;
+	width: auto;
+}
+
+.accept {
+	background: #000;
+	color: #fff;
+	font-weight: 600;
+}
+
+.infos {
+	background: lightgray;
+	color: #000;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#making-of #make-it-off img {
+		height: auto !important;
+	}
+}
+
+#philo .vjs-loading-spinner {
+	display: none !important;
+	visibility: hidden;
+}
+
+/* .vjs-poster{
+    display:none!important;
+} */
+
+@media screen and (max-width: 1200px), screen and (max-width: 1024px) {
+	.bp-header__title, .accordion ul.accord_listing li.accord_chooser div span .accord_pretext .accord_caption {
+		font-size: 2.1em;
+	}
+	.accordion .accordion_pre_text {
+		top: 50px;
+	}
+	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+		width: 45%;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+		width: 45%;
+		left: 45px;
+	}
+}
