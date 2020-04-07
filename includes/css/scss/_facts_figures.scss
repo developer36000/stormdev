@@ -22,7 +22,7 @@
 		width: 100%;
 		margin: 0 auto;
 		display: block;
-		@media screen and (max-width: 1367px) {
+		@media screen and (max-width: 1580px) {
 			 max-width: 964px;
 		}
 	}
@@ -31,6 +31,12 @@
 		max-width: 1587px;
 		width: 100%;
 		margin: 0 auto;
+		@media screen and (max-width: 1680px ) {
+			max-width: 1300px;
+		}
+		@media screen and (max-width: 1441px ) {
+			max-width: 1200px;
+		}
 		@media screen and (max-width: 1367px ) {
 			max-width: 1143px;
 		}
@@ -38,11 +44,39 @@
 	}
 	.facts-list {
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: space-between;
 		margin: 0 auto;
 		padding: 0;
 		width: 100%;
+		position: relative;
+		min-height: 152px;
+		@media screen and (max-width: 1680px ) {
+			min-height: 110px;
+		}
+		@media screen and (max-width: 1025px ) {
+			min-height: 85px;
+		}
+		&:before {
+			content: '';
+			background: url("../images/mitdenkend.png") no-repeat 50% 50%;
+			background-size: contain;
+			display: block;
+			max-width: 1153px;
+			width: 100%;
+			min-height: inherit;
+			margin: 0 auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@media screen and (max-width: 1367px ) {
+				max-width: 762px;
+			}
+			@media screen and (max-width: 1025px ) {
+				max-width: 643px;
+			}
+		}
 		.list-item {
 			list-style: none;
 			opacity: 0.4;
@@ -51,14 +85,13 @@
 			font-size: 70px;
 			font-weight: 600;
 			letter-spacing: 0;
-			line-height: 142px;
+			line-height: 1.5;
 			text-align: center;
-			@media screen and (max-width: 1367px ) {
+			@media screen and (max-width: 1680px ) {
 				font-size: 46px;
 			}
 			@media screen and (max-width: 1024px ) {
 				font-size: 39px;
-				line-height: 79px;
 			}
 		}
 	}
@@ -109,9 +142,8 @@
 				align-items: flex-start;
 				justify-content: flex-end;
 				min-width: 173px;
-				@media screen and (max-width: 1367px ) {
+				@media screen and (max-width: 1441px ) {
 					font-size: 74px;
-					
 				}
 				@media screen and (max-width: 1024px ) {
 					font-size: 52px;

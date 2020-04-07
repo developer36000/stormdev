@@ -275,38 +275,47 @@
 /*Accordion Chooser Text End*/
 
 /*Accordion Text active one*/
-.accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_caption_underline {
-	text-transform: uppercase;
-	padding-bottom: 15px;
-	font-weight: lighter;
-}
-
-.accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_caption {
-	padding-bottom: 50px;
-	font-size: 32px;
-}
-
-.accordion ul.accord_listing li.accord_chooser div span .accord_textholder p {
-	line-height: 26px;
-	font-weight: 300;
-}
-
-.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder .accord_text_pos {
-	position: absolute;
-	top: 50%;
-	transform: translate(0%, -50%) translateX(0);
-	-webkit-transform: translate(0%, -50%) translateX(0);
-	-moz-transform: translate(0%, -50%) translateX(0);
-	-ms-transform: translate(0%, -50%) translateX(0);
-	-o-transform: translate(0%, -50%) translateX(0);
-	ul {
-		padding-left: 17px;
-		li {
-			list-style: disc;
-			line-height: 2em;
+.accordion ul.accord_listing li.accord_chooser div span .accord_textholder {
+	.accord_caption_underline {
+		text-transform: uppercase;
+		padding-bottom: 15px;
+		font-weight: lighter;
+	}
+	.accord_caption {
+		padding-bottom: 50px;
+		font-size: 32px;
+		@media screen and (max-width: 1025px) {
+			padding-bottom: 28px;
+			font-size: 28px;
+		}
+	}
+	p {
+		line-height: 26px;
+		font-weight: 300;
+		@media screen and (max-width: 1025px) {
+			line-height: 18px;
+		}
+	}
+	.accord_text_pos {
+		position: absolute;
+		top: 50%;
+		transform: translate(0%, -50%) translateX(0);
+		-webkit-transform: translate(0%, -50%) translateX(0);
+		-moz-transform: translate(0%, -50%) translateX(0);
+		-ms-transform: translate(0%, -50%) translateX(0);
+		-o-transform: translate(0%, -50%) translateX(0);
+		ul {
+			padding-left: 17px;
+			li {
+				list-style: disc;
+				line-height: 2em;
+			}
 		}
 	}
 }
+
+
+
 
 .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
 	position: absolute;

@@ -1354,16 +1354,20 @@ body.loaded {
   text-transform: uppercase;
   padding-bottom: 15px;
   font-weight: lighter; }
-
 .accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_caption {
   padding-bottom: 50px;
   font-size: 32px; }
-
+  @media screen and (max-width: 1025px) {
+    .accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_caption {
+      padding-bottom: 28px;
+      font-size: 28px; } }
 .accordion ul.accord_listing li.accord_chooser div span .accord_textholder p {
   line-height: 26px;
   font-weight: 300; }
-
-.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder .accord_text_pos {
+  @media screen and (max-width: 1025px) {
+    .accordion ul.accord_listing li.accord_chooser div span .accord_textholder p {
+      line-height: 18px; } }
+.accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_text_pos {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%) translateX(0);
@@ -1371,9 +1375,9 @@ body.loaded {
   -moz-transform: translate(0%, -50%) translateX(0);
   -ms-transform: translate(0%, -50%) translateX(0);
   -o-transform: translate(0%, -50%) translateX(0); }
-  .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder .accord_text_pos ul {
+  .accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_text_pos ul {
     padding-left: 17px; }
-    .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder .accord_text_pos ul li {
+    .accordion ul.accord_listing li.accord_chooser div span .accord_textholder .accord_text_pos ul li {
       list-style: disc;
       line-height: 2em; }
 
@@ -1952,7 +1956,7 @@ body.loaded {
     @media screen and (max-width: 1280px) {
       #kontakt .kontakt_text.fullcenter {
         padding: 0 30px; } }
-    @media screen and (max-width: 1366px) and (min-height: 970px) {
+    @media screen and (max-width: 1366px) and (min-height: 1025px) {
       #kontakt .kontakt_text.fullcenter {
         position: absolute;
         top: -10%;
@@ -2186,6 +2190,9 @@ body.loaded {
     max-width: 1340px;
     margin: auto;
     margin-top: 50px; }
+    @media screen and (max-width: 1366px) and (min-height: 760px) {
+      #references .ref_block {
+        margin-top: 0; } }
     #references .ref_block p {
       max-width: 800px;
       margin: auto;
@@ -2484,7 +2491,7 @@ body.loaded {
   width: 100%;
   margin: 0 auto;
   display: block; }
-  @media screen and (max-width: 1367px) {
+  @media screen and (max-width: 1580px) {
     #facts_figures .top-section-row {
       max-width: 964px; } }
 #facts_figures .bottom-section-row {
@@ -2492,16 +2499,49 @@ body.loaded {
   max-width: 1587px;
   width: 100%;
   margin: 0 auto; }
+  @media screen and (max-width: 1680px) {
+    #facts_figures .bottom-section-row {
+      max-width: 1300px; } }
+  @media screen and (max-width: 1441px) {
+    #facts_figures .bottom-section-row {
+      max-width: 1200px; } }
   @media screen and (max-width: 1367px) {
     #facts_figures .bottom-section-row {
       max-width: 1143px; } }
 #facts_figures .facts-list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  min-height: 152px; }
+  @media screen and (max-width: 1680px) {
+    #facts_figures .facts-list {
+      min-height: 110px; } }
+  @media screen and (max-width: 1025px) {
+    #facts_figures .facts-list {
+      min-height: 85px; } }
+  #facts_figures .facts-list:before {
+    content: '';
+    background: url("../images/mitdenkend.png") no-repeat 50% 50%;
+    background-size: contain;
+    display: block;
+    max-width: 1153px;
+    width: 100%;
+    min-height: inherit;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+    @media screen and (max-width: 1367px) {
+      #facts_figures .facts-list:before {
+        max-width: 762px; } }
+    @media screen and (max-width: 1025px) {
+      #facts_figures .facts-list:before {
+        max-width: 643px; } }
   #facts_figures .facts-list .list-item {
     list-style: none;
     opacity: 0.4;
@@ -2510,15 +2550,14 @@ body.loaded {
     font-size: 70px;
     font-weight: 600;
     letter-spacing: 0;
-    line-height: 142px;
+    line-height: 1.5;
     text-align: center; }
-    @media screen and (max-width: 1367px) {
+    @media screen and (max-width: 1680px) {
       #facts_figures .facts-list .list-item {
         font-size: 46px; } }
     @media screen and (max-width: 1024px) {
       #facts_figures .facts-list .list-item {
-        font-size: 39px;
-        line-height: 79px; } }
+        font-size: 39px; } }
 #facts_figures .figures-list {
   display: flex;
   align-items: flex-start;
@@ -2565,7 +2604,7 @@ body.loaded {
       align-items: flex-start;
       justify-content: flex-end;
       min-width: 173px; }
-      @media screen and (max-width: 1367px) {
+      @media screen and (max-width: 1441px) {
         #facts_figures .figures-list .list-item .left-text {
           font-size: 74px; } }
       @media screen and (max-width: 1024px) {
@@ -2586,6 +2625,61 @@ body.loaded {
       font-size: 14px;
       font-weight: 300;
       line-height: 28.51px; }
+
+.popup-wrapper {
+  width: 100%;
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+
+.popup {
+  position: relative;
+  z-index: 9999;
+  background-color: #fff;
+  color: #000;
+  margin: 0 90px;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: -135px;
+  -webkit-transition: 1s bottom;
+  -o-transition: 1s bottom;
+  transition: 1s bottom; }
+  .popup.show {
+    bottom: 0; }
+
+.popup-text {
+  width: 55%;
+  font-size: 12px;
+  line-height: 1.5;
+  color: gray;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  font-weight: 200; }
+
+.popup-action {
+  width: 45%;
+  text-align: right; }
+
+.acceptCookies {
+  font-size: 12px;
+  padding: 15px 24px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: auto;
+  margin-top: 25px; }
+
+.accept {
+  background: #000;
+  color: #fff;
+  font-weight: 600; }
+
+.infos {
+  background: lightgray;
+  color: #000; }
 
 /*Extra Pages*/
 /*EDGE HACK
@@ -2666,61 +2760,6 @@ body.loaded {
   .responsive .pages-nav {
     left: 5%;
     width: 90%; } }
-.popup-wrapper {
-  width: 100%;
-  z-index: 9999;
-  position: fixed;
-  bottom: 0;
-  left: 0; }
-
-.popup {
-  position: relative;
-  z-index: 9999;
-  background-color: #fff;
-  color: #000;
-  margin: 0 90px;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: -94px;
-  -webkit-transition: 1s bottom;
-  -o-transition: 1s bottom;
-  transition: 1s bottom; }
-
-.popup.show {
-  bottom: 0; }
-
-.popup-text {
-  width: 55%;
-  font-size: 12px;
-  line-height: 1.5;
-  color: gray;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  font-weight: 200; }
-
-.popup-action {
-  width: 45%;
-  text-align: right; }
-
-.acceptCookies {
-  font-size: 12px;
-  padding: 15px 24px;
-  margin-left: 10px;
-  cursor: pointer;
-  width: auto; }
-
-.accept {
-  background: #000;
-  color: #fff;
-  font-weight: 600; }
-
-.infos {
-  background: lightgray;
-  color: #000; }
-
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   #making-of #make-it-off img {
     height: auto !important; } }
@@ -2731,7 +2770,7 @@ body.loaded {
 /* .vjs-poster{
     display:none!important;
 } */
-@media screen and (max-width: 1200px), screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .bp-header__title, .accordion ul.accord_listing li.accord_chooser div span .accord_pretext .accord_caption {
     font-size: 2.1em; }
 
@@ -2740,6 +2779,15 @@ body.loaded {
 
   .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
     width: 45%; } }
+@media screen and (max-width: 1025px) {
+  .bp-header__title, .accordion ul.accord_listing li.accord_chooser div span .accord_pretext .accord_caption {
+    font-size: 2.1em; }
+
+  .accordion .accordion_pre_text {
+    top: 50px; }
+
+  .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+    width: 80%; } }
 @media screen and (max-width: 769px) {
   .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
     width: 45%;

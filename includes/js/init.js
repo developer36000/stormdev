@@ -30,7 +30,7 @@ $(document).ready(function () {
 			nav_el_accord.each(function () {
 				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
 			});
-			console.log(active);
+			//console.log(active);
 			if ( active == 1 ) {
 				$(this).addClass('icon-prev-inactive');
 				$(this).parent().find('#nextbutton').removeClass('icon-next-inactive');
@@ -49,7 +49,7 @@ $(document).ready(function () {
 			nav_el_accord.each(function () {
 				$(this).hasClass('active_accord_item') ? active = $(this).index()+1 : '';
 			});
-			console.log(active);
+			//console.log(active);
 			if ( active == nav_el_accord.length ) {
 				$(this).addClass('icon-next-inactive');
 				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
@@ -57,7 +57,7 @@ $(document).ready(function () {
 			} else if ( active != nav_el_accord.length )  {
 				$(this).removeClass('icon-next-inactive');
 				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
-				console.log('aaa');
+				//console.log('aaa');
 				active++;
 			} else  {
 				$(this).parent().find('#prevbutton').removeClass('icon-prev-inactive');
