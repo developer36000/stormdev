@@ -148,8 +148,11 @@
 	.accordion .accordion_pre_text {
 		top: 50px;
 	}
-	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+	#creative_studios .accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
 		width: 80%;
+	}
+	.accordion ul.accord_listing li.accord_chooser.active_accord .accord_textholder {
+		width: 45%;
 	}
 }
 
