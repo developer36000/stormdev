@@ -984,7 +984,8 @@ video::-webkit-media-controls-enclosure {
   display: none; }
 
 .accord_span {
-  line-height: 28px; }
+  line-height: 28px;
+  max-height: max-content !important; }
 
 .accord_chooser {
   height: 134px;
