@@ -205,6 +205,9 @@
 		align-items: center;
 		justify-content: space-between;
 		//flex-wrap: wrap;
+		@media screen and (max-width: 1366px) {
+			margin-top: 38px;
+		}
 	}
 	.bewerbung_block {
 		border-left: 1px solid #fff;
@@ -218,7 +221,7 @@
 		line-height: 29px;
 		@media screen and (max-width: 1366px) {
 			margin-right: 23px;
-			margin-top: 38px;
+			margin-top: 0;
 		}
 	}
 	.route_standort {
@@ -232,7 +235,7 @@
 		font-weight: 600;
 	}
 	.bewerbung_button {
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 50px;
 		background-color: transparent;
 		border: 2px solid transparent;
@@ -304,6 +307,8 @@
 	letter-spacing: 0.5px;
 	margin-left: 24px;
 	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
 	&:first-child {
 		margin-left: 0;
 	}

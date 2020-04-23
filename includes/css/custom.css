@@ -1757,7 +1757,12 @@ body.loaded {
   #philosophie .icon-prev .path2:before {
     color: #e2e2e4; }
   #philosophie .accordion_nav_points div {
-    color: #000; }
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 21.51px;
+    color: rgba(0, 0, 0, 0.5); }
+    #philosophie .accordion_nav_points div.active_accord_item {
+      color: #000; }
   #philosophie .accordion ul.class_listing li.accord_chooser div span {
     color: #000; }
   #philosophie .accord_span {
@@ -2092,6 +2097,9 @@ body.loaded {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media screen and (max-width: 1366px) {
+      #kontakt .bewerbung {
+        margin-top: 38px; } }
   #kontakt .bewerbung_block {
     border-left: 1px solid #fff;
     margin-right: 35px;
@@ -2105,7 +2113,7 @@ body.loaded {
     @media screen and (max-width: 1366px) {
       #kontakt .bewerbung_block {
         margin-right: 23px;
-        margin-top: 38px; } }
+        margin-top: 0; } }
   #kontakt .route_standort {
     margin-bottom: 19px;
     padding-bottom: 5px; }
@@ -2115,7 +2123,7 @@ body.loaded {
     font-size: 14px;
     font-weight: 600; }
   #kontakt .bewerbung_button {
-    font-weight: 600;
+    font-weight: 400;
     line-height: 50px;
     background-color: transparent;
     border: 2px solid transparent;
@@ -2174,7 +2182,9 @@ body.loaded {
   margin-bottom: 48px;
   letter-spacing: 0.5px;
   margin-left: 24px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600; }
   .text_link:first-child {
     margin-left: 0; }
   .text_link:after {
@@ -2255,6 +2265,10 @@ body.loaded {
 @media screen and (max-height: 720px), screen and (max-width: 1350px) {
   #references .reference {
     margin-top: 15px;
+    margin-bottom: 15px; } }
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  #references .reference {
+    margin-top: 0;
     margin-bottom: 15px; } }
 @media screen and (max-width: 1350px) and (min-height: 1250px) {
   #references .reference_list {

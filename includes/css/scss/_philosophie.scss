@@ -67,7 +67,13 @@
 	}
 	.accordion_nav_points {
 		div {
-			color: #000;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 21.51px;
+			color: rgba(0, 0, 0, 0.5);
+			&.active_accord_item {
+				color: #000;
+			}
 		}
 	}
 	.accordion {
