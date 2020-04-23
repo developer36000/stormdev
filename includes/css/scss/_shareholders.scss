@@ -43,6 +43,10 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
+		@media screen and (max-width: 1366px) and (max-height: 768px) {
+			top: 60%;
+			width: 98%;
+		}
 		@media screen and (max-width: 1025px) {
 			width: 125%;
 		}
@@ -122,6 +126,9 @@
 				width: auto;
 				text-align: center;
 				padding-bottom: 106px;
+				@media screen and (max-width: 1366px) and (max-height: 768px) {
+					padding-bottom: 75px;
+				}
 				@media screen and (max-width: 768px) {
 					width: 0;
 				}

@@ -2370,6 +2370,10 @@ body.loaded {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; }
+    @media screen and (max-width: 1366px) and (max-height: 768px) {
+      .shareholder-bg img {
+        top: 60%;
+        width: 98%; } }
     @media screen and (max-width: 1025px) {
       .shareholder-bg img {
         width: 125%; } }
@@ -2428,6 +2432,9 @@ body.loaded {
     width: auto;
     text-align: center;
     padding-bottom: 106px; }
+    @media screen and (max-width: 1366px) and (max-height: 768px) {
+      #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
+        padding-bottom: 75px; } }
     @media screen and (max-width: 768px) {
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser {
         width: 0; } }
