@@ -253,7 +253,9 @@ video::-webkit-media-controls-enclosure {
     margin-top: 0;
     display: none; }
     #about-content h3.moba {
-      display: block; }
+      display: block;
+      font-size: 18px;
+      line-height: 1.2; }
     #about-content h3 + .sub_title {
       margin-top: 10px;
       margin-bottom: 25px; }
@@ -1924,7 +1926,7 @@ header.nav-header {
     @media screen and (max-width: 481px) {
       #facts_figures .facts-list {
         min-height: 42px;
-        padding-top: 14px; } }
+        padding-top: 4px; } }
     #facts_figures .facts-list:before {
       content: '';
       background: url("../images/mitdenkend.png") no-repeat 50% 50%;

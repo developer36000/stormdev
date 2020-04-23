@@ -309,6 +309,8 @@ video::-webkit-media-controls-enclosure {
 		display: none;
 		&.moba {
 			display: block;
+			font-size: 18px;
+			line-height: 1.2;
 		}
 		+ .sub_title {
 			margin-top: 10px;
@@ -2346,7 +2348,7 @@ header.nav-header {
 		}
 		@media screen and (max-width: 481px ) {
 			min-height: 42px;
-			padding-top: 14px;
+			padding-top: 4px;
 		}
 		&:before {
 			content: '';
