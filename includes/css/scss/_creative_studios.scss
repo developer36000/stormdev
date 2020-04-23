@@ -40,7 +40,7 @@
 	z-index: 99;
 	div {
 		display: inline-block;
-		padding: 0 1%;
+		padding: 0 2%;
 		cursor: pointer;
 		font-weight: bold;
 		color: #fff;
@@ -78,91 +78,93 @@
 .accordion .accordion_nav .path2 {
 	position: relative;
 }
-
-.accordion_nav .icon-next, .accordion_nav .icon-prev {
-	position: absolute;
-	top: 19%;
-	z-index: 999;
-	cursor: pointer;
+.accordion_nav {
+	.icon-next,
+	.icon-prev {
+		position: absolute;
+		top: 19%;
+		z-index: 999;
+		cursor: pointer;
+		&.icon-prev-inactive,
+		&.icon-next-inactive {
+			cursor: unset;
+		}
+	}
+	.icon-next {
+		right: 20%;
+		.path1:before {
+			content: "\e906";
+			color: rgb(255, 255, 255);
+			transition: opacity 0.2s;
+			-webkit-transition: opacity 0.2s;
+			-moz-transition: opacity 0.2s;
+			-o-transition: opacity 0.2s;
+		}
+		.path2:before {
+			content: "\e907";
+			color: rgb(29, 29, 27);
+			transition: opacity 0.2s;
+			-webkit-transition: opacity 0.2s;
+			-moz-transition: opacity 0.2s;
+			-o-transition: opacity 0.2s;
+		}
+	}
+	.icon-prev {
+		left: 20%;
+		.path1:before {
+			content: "\e90a";
+			color: rgb(255, 255, 255);
+			transition: opacity 0.2s;
+			-webkit-transition: opacity 0.2s;
+			-moz-transition: opacity 0.2s;
+			-o-transition: opacity 0.2s;
+		}
+		.path2:before {
+			content: "\e90b";
+			color: rgb(29, 29, 27);
+			transition: opacity 0.2s;
+			-webkit-transition: opacity 0.2s;
+			-moz-transition: opacity 0.2s;
+			-o-transition: opacity 0.2s;
+		}
+	}
 }
 
-.accordion_nav .icon-next.icon-next-inactive, .accordion_nav .icon-prev.icon-prev-inactive {
-	cursor: unset;
+
+
+.icon-prev-inactive {
+	.path1:before {
+		content: "\e904";
+		color: rgb(255, 255, 255);
+		opacity: 0.4;
+	}
+	.path2:before {
+		content: "\e905";
+		color: rgb(29, 29, 27);
+		opacity: 0.4;
+	}
 }
 
-.accordion_nav .icon-next {
-	right: 15%;
+
+.icon-next-inactive {
+	.path1:before {
+		content: "\e908";
+		color: rgb(255, 255, 255);
+		opacity: 0.4;
+		-webkit-transition: opacity 0.4s;
+		-moz-transition: opacity 0.4s;
+		-o-transition: opacity 0.4s;
+	}
+	.path2:before {
+		content: "\e909";
+		color: rgb(29, 29, 27);
+		opacity: 0.4;
+		-webkit-transition: opacity 0.4s;
+		-moz-transition: opacity 0.4s;
+		-o-transition: opacity 0.4s;
+	}
 }
 
-.accordion_nav .icon-prev {
-	left: 15%;
-}
-
-.icon-prev-inactive .path1:before {
-	content: "\e904";
-	color: rgb(255, 255, 255);
-	opacity: 0.4;
-}
-
-.icon-prev-inactive .path2:before {
-	content: "\e905";
-	color: rgb(29, 29, 27);
-	opacity: 0.4;
-}
-
-.icon-next .path1:before {
-	content: "\e906";
-	color: rgb(255, 255, 255);
-	transition: opacity 0.2s;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-}
-
-.icon-next .path2:before {
-	content: "\e907";
-	color: rgb(29, 29, 27);
-	transition: opacity 0.2s;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-}
-
-.icon-next-inactive .path1:before {
-	content: "\e908";
-	color: rgb(255, 255, 255);
-	opacity: 0.4;
-	-webkit-transition: opacity 0.4s;
-	-moz-transition: opacity 0.4s;
-	-o-transition: opacity 0.4s;
-}
-
-.icon-next-inactive .path2:before {
-	content: "\e909";
-	color: rgb(29, 29, 27);
-	opacity: 0.4;
-	-webkit-transition: opacity 0.4s;
-	-moz-transition: opacity 0.4s;
-	-o-transition: opacity 0.4s;
-}
-
-.icon-prev .path1:before {
-	content: "\e90a";
-	color: rgb(255, 255, 255);
-	transition: opacity 0.2s;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-}
-
-.icon-prev .path2:before {
-	content: "\e90b";
-	color: rgb(29, 29, 27);
-	transition: opacity 0.2s;
-	-webkit-transition: opacity 0.2s;
-	-moz-transition: opacity 0.2s;
-	-o-transition: opacity 0.2s;
-}
 
 /*Adjusts small Displays*/
 @media screen and (max-width: 1150px) {
@@ -519,11 +521,10 @@
 	width: 100%;
 	height: 100%;
 	background: #000;
-	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.9) 24%, rgba(0, 0, 0, 0) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(1%, rgba(0, 0, 0, 1)), color-stop(24%, rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0)));
-	background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.9) 24%, rgba(0, 0, 0, 0) 100%);
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.9) 24%, rgba(0, 0, 0, 0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.4) 24%, rgba(0, 0, 0, 0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), color-stop(1%, rgba(0, 0, 0, 1)), color-stop(24%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.4) 24%, rgba(0, 0, 0, 0) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0.4) 24%, rgba(0, 0, 0, 0) 100%);
 }
 
 /*Default ENDE*/
@@ -607,10 +608,9 @@
 #studios.accord_open .active_accord#studios_1 div.bg-box {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-	background: url('../images/concepts-full-bg.png'), -webkit-gradient(linear, left bottom, right top, from(#00335e), color-stop(#00537d), color-stop(#00738f), color-stop(#009393), to(#00b189));
-	background: url('../images/concepts-full-bg.png'), -webkit-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-	background: url('../images/concepts-full-bg.png'), -o-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-	background: url('../images/concepts-full-bg.png'), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
+	background: url('../images/development-full-bg.png'), -webkit-linear-gradient(225deg, #00B189 0%, #00335E 100%);
+	background: url('../images/development-full-bg.png'), -o-linear-gradient(225deg, #00B189 0%, #00335E 100%);
+	background: url('../images/concepts-full-bg.png'), linear-gradient(225deg, #00B189 0%, #00335E 100%);
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }
@@ -618,9 +618,9 @@
 #studios.accord_open .active_accord#studios_2 div.bg-box {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-	background: url('../images/creation-full-bg.png'), -webkit-linear-gradient(45deg, #ed1937 0%, #940031 100%);
-	background: url('../images/creation-full-bg.png'), -o-linear-gradient(45deg, #ed1937 0%, #940031 100%);
-	background: url('../images/creation-full-bg.png'), linear-gradient(45deg, #ed1937 0%, #940031 100%);
+	background: url('../images/creation-full-bg.png'), -webkit-linear-gradient(225deg, #940031 0%, #ED1937 100%);
+	background: url('../images/creation-full-bg.png'), -o-linear-gradient(225deg, #940031 0%, #ED1937 100%);
+	background: url('../images/creation-full-bg.png'), linear-gradient(225deg, #940031 0%, #ED1937 100%);
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }
@@ -628,9 +628,9 @@
 #studios.accord_open .active_accord#studios_3 div.bg-box {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-	background: url('../images/development-full-bg.png'), -webkit-linear-gradient(45deg, #6f008b 0%, #27007f 100%);
-	background: url('../images/development-full-bg.png'), -o-linear-gradient(45deg, #6f008b 0%, #27007f 100%);
-	background: url('../images/development-full-bg.png'), linear-gradient(45deg, #6f008b 0%, #27007f 100%);
+	background: url('../images/development-full-bg.png'), -webkit-linear-gradient(225deg, #6F008B 0%, #27007F 100%);
+	background: url('../images/development-full-bg.png'), -o-linear-gradient(225deg, #6F008B 0%, #27007F 100%);
+	background: url('../images/development-full-bg.png'), linear-gradient(225deg, #6F008B 0%, #27007F 100%);
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }
@@ -638,9 +638,9 @@
 #studios.accord_open .active_accord#studios_4 div.bg-box {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-	background: url('../images/pictures-full-bg.png'), -webkit-linear-gradient(45deg, #33009c 0%, #008ab8 100%);
-	background: url('../images/pictures-full-bg.png'), -o-linear-gradient(45deg, #33009c 0%, #008ab8 100%);
-	background: url('../images/pictures-full-bg.png'), linear-gradient(45deg, #33009c 0%, #008ab8 100%);
+	background: url('../images/pictures-full-bg.png'), -webkit-linear-gradient(225deg, #008BB8 0%, #33009C 100%);
+	background: url('../images/pictures-full-bg.png'), -o-linear-gradient(225deg, #008BB8 0%, #33009C 100%);
+	background: url('../images/pictures-full-bg.png'), linear-gradient(225deg, #008BB8 0%, #33009C 100%);
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }
@@ -648,9 +648,9 @@
 #studios.accord_open .active_accord#studios_5 div.bg-box {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-	background: url('../images/operations-full-bg.png'), -webkit-linear-gradient(45deg, #fad961 0%, #f76b1c 100%);
-	background: url('../images/operations-full-bg.png'), -o-linear-gradient(45deg, #fad961 0%, #f76b1c 100%);
-	background: url('../images/operations-full-bg.png'), linear-gradient(45deg, #fad961 0%, #f76b1c 100%);
+	background: url('../images/operations-full-bg.png'), -webkit-linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
+	background: url('../images/operations-full-bg.png'), -o-linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
+	background: url('../images/operations-full-bg.png'), linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
 	background-position: bottom left;
 	background-repeat: no-repeat;
 }

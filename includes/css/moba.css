@@ -397,31 +397,31 @@ video::-webkit-media-controls-enclosure {
 
 /*Accord Active*/
 #studios_1.active_accord .bg-box {
-  background: url(../images/concepts-full-bg.png), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
+  background: url("../images/concepts-full-bg.png"), linear-gradient(225deg, #00B189 0%, #00335E 100%);
   background-size: cover;
   background-position: 0 0;
   filter: none; }
 
 #studios_2.active_accord .bg-box {
-  background: url(../images/creation-full-bg.png), linear-gradient(45deg, #ed1937 0%, #940031 100%);
+  background: url(../images/creation-full-bg.png), linear-gradient(225deg, #940031 0%, #ED1937 100%);
   background-size: cover;
   background-position: 0 0;
   filter: none; }
 
 #studios_3.active_accord .bg-box {
-  background: url(../images/development-full-bg.png), linear-gradient(45deg, #6f008b 0%, #27007f 100%);
+  background: url(../images/development-full-bg.png), linear-gradient(225deg, #6F008B 0%, #27007F 100%);
   background-size: cover;
   background-position: 0 0;
   filter: none; }
 
 #studios_4.active_accord .bg-box {
-  background: url(../images/pictures-full-bg.png), linear-gradient(45deg, #33009c 0%, #008ab8 100%);
+  background: url(../images/pictures-full-bg.png), linear-gradient(225deg, #008BB8 0%, #33009C 100%);
   background-size: cover;
   background-position: 0 0;
   filter: none; }
 
 #studios_5.active_accord .bg-box {
-  background: url(../images/operations-full-bg.png), linear-gradient(45deg, #fad961 0%, #f76b1c 100%);
+  background: url(../images/operations-full-bg.png), linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
   background-size: cover;
   background-position: 0 0;
   filter: none; }
