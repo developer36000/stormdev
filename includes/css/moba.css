@@ -1568,7 +1568,8 @@ header.nav-header {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  width: inherit; }
+  width: 100%;
+  padding: 0 15px; }
 
 .responsive .pages-nav {
   display: block;
@@ -1598,7 +1599,7 @@ header.nav-header {
 
 @media screen and (max-width: 25em) {
   .responsive .link {
-    font-size: 0.75em; } }
+    font-size: 1.1em; } }
 @media screen and (max-width: 1000px) {
   /*Menu Position adjustments*/
   .responsive .nav-open div#fullpage.pages-stack {
