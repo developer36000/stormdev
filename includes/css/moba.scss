@@ -1729,8 +1729,9 @@ div.fullpage_block {
 header.nav-header {
 	padding: 0;
 	padding-bottom: 50px;
-	position: absolute;
-	top: 18%;
+	position: relative;
+	top: 90px;
+	margin-top: 10%;
 }
 
 .nav-header__title {
@@ -1931,7 +1932,11 @@ header.nav-header {
 	font-size: 2em;
 	position: absolute;
 	bottom: 10%;
-	@media screen and (max-height: 601px) {
+	@media screen and (max-width: 380px) {
+		bottom: 3%;
+	}
+		
+		@media screen and (max-height: 601px) {
 		bottom: 20px;
 	}
 }
