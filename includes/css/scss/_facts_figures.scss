@@ -119,6 +119,9 @@
 				flex: 1 0 50%;
 				margin-top: 6.7%;
 			}
+			@media screen and (max-width: 1024px) and (max-height: 768px) {
+				margin-top: 5%;
+			}
 			.separator {
 				box-sizing: border-box;
 				height: 139px;

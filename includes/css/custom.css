@@ -710,7 +710,7 @@ div.fullpage_block {
   @media screen and (max-width: 1366px) and (max-height: 768px) {
     .bp-header__title {
       font-size: 2.1em; } }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) and (max-height: 768px) {
     .bp-header__title {
       font-size: 1.8em; } }
 
@@ -971,6 +971,12 @@ body.loaded {
   #making-of .bp-header__title {
     color: #000;
     font-size: 2.86em; }
+    @media screen and (max-width: 1366px) and (max-height: 768px) {
+      #making-of .bp-header__title {
+        font-size: 2.1em; } }
+    @media screen and (max-width: 1024px) and (max-height: 768px) {
+      #making-of .bp-header__title {
+        font-size: 1.8em; } }
   #making-of h3 {
     font-size: 2.9em;
     color: #000;
@@ -1060,7 +1066,7 @@ body.loaded {
       @media screen and (max-width: 1366px) {
         #about .bp-header__title {
           font-size: 2.1em; } }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1024px) and (max-height: 768px) {
         #about .bp-header__title {
           font-size: 1.8em; } }
   #about h3 {
@@ -2660,6 +2666,9 @@ body.loaded {
       #facts_figures .figures-list .list-item {
         flex: 1 0 50%;
         margin-top: 6.7%; } }
+    @media screen and (max-width: 1024px) and (max-height: 768px) {
+      #facts_figures .figures-list .list-item {
+        margin-top: 5%; } }
     #facts_figures .figures-list .list-item .separator {
       box-sizing: border-box;
       height: 139px;
