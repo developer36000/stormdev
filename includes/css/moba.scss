@@ -2181,7 +2181,7 @@ header.nav-header {
 					height: 8px;
 					display: block;
 					background: transparent;
-					border: 3px solid #fff;
+					border: 2px solid #fff;
 					transition: all .3s;
 					border-radius: 50%;
 					position: absolute;
@@ -2240,7 +2240,7 @@ header.nav-header {
 						transform: translate(-50%, 0);
 						width: 100%;
 						@media screen and (max-width: 482px) {
-							width: 150%;
+							width: 170%;
 						}
 					}
 				}

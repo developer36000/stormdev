@@ -1790,7 +1790,7 @@ header.nav-header {
         height: 8px;
         display: block;
         background: transparent;
-        border: 3px solid #fff;
+        border: 2px solid #fff;
         transition: all .3s;
         border-radius: 50%;
         position: absolute;
@@ -1843,7 +1843,7 @@ header.nav-header {
           width: 100%; }
           @media screen and (max-width: 482px) {
             #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_image img {
-              width: 150%; } }
+              width: 170%; } }
       #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box {
         padding: 0 5px; }
         #shareholders_mobile.accord_open ul.accord_listing li.accord_chooser .accord_box h3 {
