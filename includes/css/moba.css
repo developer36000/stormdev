@@ -1420,8 +1420,9 @@ header.nav-header {
   padding: 0;
   padding-bottom: 50px;
   position: relative;
-  top: 90px;
-  margin-top: 10%; }
+  top: 0;
+  margin-top: 90px;
+  padding-top: 10%; }
 
 .nav-header__title {
   font-size: 2em;
@@ -1559,16 +1560,18 @@ header.nav-header {
   width: 100%;
   height: 100%;
   left: 0; }
+  .responsive .nav-open .pages-nav .pages-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 73%; }
 
 .moba-nav.ob {
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   padding: 0 15px; }
 
@@ -1592,14 +1595,11 @@ header.nav-header {
 
 .responsive .pages-nav__item--social {
   font-size: 2em;
-  position: absolute;
-  bottom: 10%; }
-  @media screen and (max-width: 380px) {
-    .responsive .pages-nav__item--social {
-      bottom: 3%; } }
-  @media screen and (max-height: 601px) {
-    .responsive .pages-nav__item--social {
-      bottom: 20px; } }
+  position: relative;
+  bottom: 0;
+  padding: 20px 0;
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
 @media screen and (max-width: 25em) {
   .responsive .link {
