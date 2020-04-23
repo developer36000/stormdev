@@ -33,11 +33,16 @@
 	position: absolute;
 	bottom: 68px;
 	left: 68px;
+	color: #676767;
+	div {
+		color: #676767;
+	}
 }
 
 .imprint #footer a,
 .datenschutz #footer a {
-	color: #666;
+	color: #676767;
+	text-transform: uppercase;
 }
 
 /*Data Prot*/
@@ -47,7 +52,7 @@
 	padding: 50px;
 	padding-bottom: 100px;
 	a {
-		color: #666;
+		color: #676767;
 	}
 	.bp-header {
 		position: static;
