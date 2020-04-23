@@ -710,6 +710,9 @@ div.fullpage_block {
   @media screen and (max-width: 1366px) and (max-height: 768px) {
     .bp-header__title {
       font-size: 2.1em; } }
+  @media screen and (max-width: 1024px) {
+    .bp-header__title {
+      font-size: 1.8em; } }
 
 .icon-play * {
   cursor: pointer; }
@@ -1054,6 +1057,12 @@ body.loaded {
     #about .bp-header__title {
       color: #000;
       font-size: 2.86em; }
+      @media screen and (max-width: 1366px) {
+        #about .bp-header__title {
+          font-size: 2.1em; } }
+      @media screen and (max-width: 1024px) {
+        #about .bp-header__title {
+          font-size: 1.8em; } }
   #about h3 {
     font-size: 2.9em;
     color: #000;
