@@ -1092,6 +1092,8 @@ body.loaded {
       @media screen and (max-width: 1366px) {
         #about #about-content img {
           max-width: 40%; } }
+  #about .moba {
+    display: none; }
   #about .right-column-text {
     display: inline-block;
     width: 31%;

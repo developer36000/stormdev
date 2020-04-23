@@ -285,14 +285,15 @@ video::-webkit-media-controls-enclosure {
 	padding-bottom: 15px;
 	h3 {
 		font-weight: 600;
-		font-size: 28px;
+		font-size: 27px;
 		color: #000;
 		padding-top: 0;
 		line-height: 37px;
 		margin-top: -46px;
 		margin-bottom: 0;
 		+ .sub_title {
-			margin-top: 5px;
+			margin-top: 10px;
+			margin-bottom: 25px;
 		}
 	}
 	.accord_text_button {
@@ -305,6 +306,14 @@ video::-webkit-media-controls-enclosure {
 #about-content {
 	h3 {
 		margin-top: 0;
+		display: none;
+		&.moba {
+			display: block;
+		}
+		+ .sub_title {
+			margin-top: 10px;
+			margin-bottom: 25px;
+		}
 	}
 	display: flex;
 	flex-direction: column;

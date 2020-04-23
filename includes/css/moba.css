@@ -229,7 +229,7 @@ video::-webkit-media-controls-enclosure {
   #plakat-text h3,
   #about-content h3 {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 27px;
     color: #000;
     padding-top: 0;
     line-height: 37px;
@@ -237,7 +237,8 @@ video::-webkit-media-controls-enclosure {
     margin-bottom: 0; }
     #plakat-text h3 + .sub_title,
     #about-content h3 + .sub_title {
-      margin-top: 5px; }
+      margin-top: 10px;
+      margin-bottom: 25px; }
   #plakat-text .accord_text_button,
   #about-content .accord_text_button {
     width: 100%;
@@ -249,7 +250,13 @@ video::-webkit-media-controls-enclosure {
   display: flex;
   flex-direction: column; }
   #about-content h3 {
-    margin-top: 0; }
+    margin-top: 0;
+    display: none; }
+    #about-content h3.moba {
+      display: block; }
+    #about-content h3 + .sub_title {
+      margin-top: 10px;
+      margin-bottom: 25px; }
   #about-content .right-column-text {
     order: 2; }
   #about-content picture {
