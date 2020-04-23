@@ -1485,6 +1485,7 @@ body.loaded {
 .accord_chooser#studios_1 .bg-box {
   background: url(../images/concepts-full-bg.png), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.2);
+  -ms-filter: grayscale(1) brightness(0.2);
   filter: grayscale(1) brightness(0.2);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
   transition: background 0.5s, -webkit-filter 0.5s;
@@ -1497,6 +1498,7 @@ body.loaded {
 .accord_chooser#studios_2 .bg-box {
   background: url(../images/creation-full-bg.png), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.5);
+  -ms-filter: grayscale(1) brightness(0.5);
   filter: grayscale(1) brightness(0.5);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
   transition: background 0.5s, -webkit-filter 0.5s;
@@ -1509,6 +1511,7 @@ body.loaded {
 .accord_chooser#studios_3 .bg-box {
   background: url(../images/development-full-bg.png), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.5);
+  -ms-filter: grayscale(1) brightness(0.5);
   filter: grayscale(1) brightness(0.5);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
   transition: background 0.5s, -webkit-filter 0.5s;
@@ -1521,6 +1524,7 @@ body.loaded {
 .accord_chooser#studios_4 .bg-box {
   background: url(../images/pictures-full-bg.png), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.2);
+  -ms-filter: grayscale(1) brightness(0.2);
   filter: grayscale(1) brightness(0.2);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
   transition: background 0.5s, -webkit-filter 0.5s;
@@ -1533,6 +1537,7 @@ body.loaded {
 .accord_chooser#studios_5 .bg-box {
   background: url(../images/operations-full-bg.png), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.3);
+  -ms-filter: grayscale(1) brightness(0.3);
   filter: grayscale(1) brightness(0.3);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
   transition: background 0.5s, -webkit-filter 0.5s;
@@ -1626,6 +1631,7 @@ body.loaded {
 /*Background Image*/
 #studios.accord_open .active_accord#studios_1 div.bg-box {
   -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
   filter: grayscale(0);
   background: url("../images/development-full-bg.png"), -webkit-linear-gradient(225deg, #00B189 0%, #00335E 100%);
   background: url("../images/development-full-bg.png"), -o-linear-gradient(225deg, #00B189 0%, #00335E 100%);
@@ -1635,6 +1641,7 @@ body.loaded {
 
 #studios.accord_open .active_accord#studios_2 div.bg-box {
   -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
   filter: grayscale(0);
   background: url("../images/creation-full-bg.png"), -webkit-linear-gradient(225deg, #940031 0%, #ED1937 100%);
   background: url("../images/creation-full-bg.png"), -o-linear-gradient(225deg, #940031 0%, #ED1937 100%);
@@ -1644,6 +1651,7 @@ body.loaded {
 
 #studios.accord_open .active_accord#studios_3 div.bg-box {
   -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
   filter: grayscale(0);
   background: url("../images/development-full-bg.png"), -webkit-linear-gradient(225deg, #6F008B 0%, #27007F 100%);
   background: url("../images/development-full-bg.png"), -o-linear-gradient(225deg, #6F008B 0%, #27007F 100%);
@@ -1653,6 +1661,7 @@ body.loaded {
 
 #studios.accord_open .active_accord#studios_4 div.bg-box {
   -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
   filter: grayscale(0);
   background: url("../images/pictures-full-bg.png"), -webkit-linear-gradient(225deg, #008BB8 0%, #33009C 100%);
   background: url("../images/pictures-full-bg.png"), -o-linear-gradient(225deg, #008BB8 0%, #33009C 100%);
@@ -1662,6 +1671,7 @@ body.loaded {
 
 #studios.accord_open .active_accord#studios_5 div.bg-box {
   -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
   filter: grayscale(0);
   background: url("../images/operations-full-bg.png"), -webkit-linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
   background: url("../images/operations-full-bg.png"), -o-linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
