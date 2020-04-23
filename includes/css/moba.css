@@ -617,7 +617,7 @@ video::-webkit-media-controls-enclosure {
       margin-bottom: 48px; }
       @media screen and (max-width: 480px) {
         #kontakt .kontakt_pre_text h2 {
-          font-size: 40px;
+          font-size: 34px;
           font-weight: 600;
           line-height: 48px; } }
   #kontakt .kontakt_text {
@@ -801,7 +801,7 @@ video::-webkit-media-controls-enclosure {
     font-size: 17px; }
 
   #imprint_section * {
-    font-size: 12px; } }
+    font-size: 10px; } }
 /*Page7*/
 #page-buy {
   display: none; }

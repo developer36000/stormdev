@@ -751,8 +751,8 @@ video::-webkit-media-controls-enclosure {
 			font-size: 40px;
 			margin-top: 0;
 			margin-bottom: 48px;
-			@media screen and (max-width:480px) {
-				font-size: 40px;
+			@media screen and (max-width: 480px) {
+				font-size: 34px;
 				font-weight: 600;
 				line-height: 48px;
 			}
@@ -992,7 +992,7 @@ video::-webkit-media-controls-enclosure {
 	}
 	
 	#imprint_section * {
-		font-size: 12px;
+		font-size: 10px;
 	}
 }
 
