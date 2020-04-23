@@ -233,7 +233,11 @@ video::-webkit-media-controls-enclosure {
     color: #000;
     padding-top: 0;
     line-height: 37px;
-    margin-top: -46px; }
+    margin-top: -46px;
+    margin-bottom: 0; }
+    #plakat-text h3 + .sub_title,
+    #about-content h3 + .sub_title {
+      margin-top: 5px; }
   #plakat-text .accord_text_button,
   #about-content .accord_text_button {
     width: 100%;
