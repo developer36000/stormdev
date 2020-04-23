@@ -966,7 +966,7 @@ body.loaded {
   #making-of h3 {
     font-size: 2.9em;
     color: #000;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     margin-top: 0; }
     @media screen and (max-width: 1024px) {
       #making-of h3 {
@@ -977,7 +977,8 @@ body.loaded {
     font-size: 18px;
     font-weight: 300;
     line-height: 28.51px;
-    margin-bottom: 60px; }
+    margin-top: 0;
+    margin-bottom: 7%; }
     @media screen and (max-width: 1366px) {
       #making-of .sub_title {
         margin-bottom: 30px; } }
@@ -993,14 +994,14 @@ body.loaded {
     height: 100%; }
     #making-of #make-it-off img {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 0;
       transform: translate(0%, -50%);
       -webkit-transform: translate(0%, -50%);
       -moz-transform: translate(0%, -50%);
       -ms-transform: translate(0%, -50%);
       -o-transform: translate(0%, -50%);
-      height: 95%;
+      height: 85%;
       /*max-width:50%;*/
       -o-object-fit: contain;
       object-fit: contain; }
@@ -1015,7 +1016,7 @@ body.loaded {
     width: 31%;
     position: absolute;
     top: 55%;
-    left: 50%;
+    left: 55%;
     -webkit-transform: translate(0%, -50%);
     -moz-transform: translate(0%, -50%);
     -ms-transform: translate(0%, -50%);
@@ -1051,7 +1052,7 @@ body.loaded {
   #about h3 {
     font-size: 2.9em;
     color: #000;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     margin-top: 0; }
     @media screen and (max-width: 1024px) {
       #about h3 {
@@ -1062,7 +1063,8 @@ body.loaded {
     font-size: 18px;
     font-weight: 300;
     line-height: 28.51px;
-    margin-bottom: 60px; }
+    margin-top: 0;
+    margin-bottom: 7%; }
     @media screen and (max-width: 1366px) {
       #about .sub_title {
         margin-bottom: 30px; } }
@@ -1078,14 +1080,14 @@ body.loaded {
     height: 100%; }
     #about #about-content img {
       position: absolute;
-      top: 50%;
+      top: 58%;
       right: 0;
       transform: translate(0%, -50%);
       -webkit-transform: translate(0%, -50%);
       -moz-transform: translate(0%, -50%);
       -ms-transform: translate(0%, -50%);
       -o-transform: translate(0%, -50%);
-      height: 95%;
+      height: 87%;
       /*max-width:50%;*/
       -o-object-fit: contain;
       object-fit: contain; }
@@ -1099,7 +1101,7 @@ body.loaded {
     display: none; }
   #about .right-column-text {
     display: inline-block;
-    width: 31%;
+    width: 35%;
     position: absolute;
     top: 55%;
     right: 50%;
