@@ -2114,6 +2114,12 @@ body.loaded {
     @media screen and (max-width: 1366px) {
       #kontakt .bewerbung {
         margin-top: 38px; } }
+    @media screen and (max-width: 1025px) {
+      #kontakt .bewerbung {
+        margin-top: 25px; } }
+    @media screen and (max-width: 768px) {
+      #kontakt .bewerbung {
+        margin-top: 38px; } }
   #kontakt .bewerbung_block {
     border-left: 1px solid #fff;
     margin-right: 35px;
@@ -2126,7 +2132,8 @@ body.loaded {
     line-height: 29px; }
     @media screen and (max-width: 1366px) {
       #kontakt .bewerbung_block {
-        margin-right: 23px; } }
+        margin-right: 23px;
+        padding-left: 24px; } }
   #kontakt .route_standort {
     margin-bottom: 19px;
     padding-bottom: 5px; }
@@ -2186,6 +2193,9 @@ body.loaded {
     @media screen and (max-width: 1366px) and (max-height: 768px) {
       #kontakt #imprint_section {
         bottom: 23px; } }
+    @media screen and (max-width: 1025px) {
+      #kontakt #imprint_section {
+        left: 30px; } }
     #kontakt #imprint_section a {
       color: #666; }
       #kontakt #imprint_section a.imprint {
