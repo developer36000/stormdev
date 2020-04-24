@@ -448,73 +448,83 @@
 /*Default*/
 /*Background Image*/
 .accord_chooser#studios_1 .bg-box {
-	background: url(../images/concepts-full-bg.png), #0a0a0a;
+	background: url('../images/concepts-full-bg.png'), #0a0a0a;
 	-webkit-filter: grayscale(1) brightness(0.2);
-	-ms-filter: grayscale(1) brightness(0.2);
 	filter: grayscale(1) brightness(0.2);
 	-webkit-transition: background 0.5s, -webkit-filter 0.5s;
-	transition: background 0.5s, -webkit-filter 0.5s;
 	-o-transition: background 0.5s, filter 0.5s;
 	transition: background 0.5s, filter 0.5s;
-	transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
-	background-position: 40% 0%;
+	background-position: 40% 0;
 	background-repeat: no-repeat;
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: url('../images/concepts-full-bg-gray.png'), #0a0a0a;
+		background-position: 40% 0;
+		opacity: 0.5;
+	}
 }
 
 .accord_chooser#studios_2 .bg-box {
-	background: url(../images/creation-full-bg.png), #0a0a0a;
+	background: url('../images/creation-full-bg.png'), #0a0a0a;
 	-webkit-filter: grayscale(1) brightness(0.5);
-	-ms-filter: grayscale(1) brightness(0.5);
 	filter: grayscale(1) brightness(0.5);
 	-webkit-transition: background 0.5s, -webkit-filter 0.5s;
-	transition: background 0.5s, -webkit-filter 0.5s;
 	-o-transition: background 0.5s, filter 0.5s;
 	transition: background 0.5s, filter 0.5s;
-	transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
 	background-position: 52% -150%;
 	background-repeat: no-repeat;
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: url('../images/creation-full-bg-gray.png'), #0a0a0a;
+		background-position: 52% -150%;
+		opacity: 0.5;
+	}
 }
 
 .accord_chooser#studios_3 .bg-box {
-	background: url(../images/development-full-bg.png), #0a0a0a;
+	background: url('../images/development-full-bg.png'), #0a0a0a;
 	-webkit-filter: grayscale(1) brightness(0.5);
-	-ms-filter: grayscale(1) brightness(0.5);
 	filter: grayscale(1) brightness(0.5);
 	-webkit-transition: background 0.5s, -webkit-filter 0.5s;
-	transition: background 0.5s, -webkit-filter 0.5s;
 	-o-transition: background 0.5s, filter 0.5s;
 	transition: background 0.5s, filter 0.5s;
-	transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
 	background-position: 2% -150%;
 	background-repeat: no-repeat;
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: url('../images/development-full-bg-gray.png'), #0a0a0a;
+		background-position: 2% -150%;
+		opacity: 0.5;
+	}
 }
 
 .accord_chooser#studios_4 .bg-box {
-	background: url(../images/pictures-full-bg.png), #0a0a0a;
+	background: url('../images/pictures-full-bg.png'), #0a0a0a;
 	-webkit-filter: grayscale(1) brightness(0.2);
-	-ms-filter: grayscale(1) brightness(0.2);
 	filter: grayscale(1) brightness(0.2);
 	-webkit-transition: background 0.5s, -webkit-filter 0.5s;
-	transition: background 0.5s, -webkit-filter 0.5s;
 	-o-transition: background 0.5s, filter 0.5s;
 	transition: background 0.5s, filter 0.5s;
-	transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
 	background-position: left;
 	background-repeat: no-repeat;
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: url('../images/pictures-full-bg-gray.png'), #0a0a0a;
+		background-position: left;
+		opacity: 0.5;
+	}
 }
 
 .accord_chooser#studios_5 .bg-box {
-	background: url(../images/operations-full-bg.png), #0a0a0a;
+	background: url('../images/operations-full-bg.png'), #0a0a0a;
 	-webkit-filter: grayscale(1) brightness(0.3);
-	-ms-filter: grayscale(1) brightness(0.3);
 	filter: grayscale(1) brightness(0.3);
 	-webkit-transition: background 0.5s, -webkit-filter 0.5s;
-	transition: background 0.5s, -webkit-filter 0.5s;
 	-o-transition: background 0.5s, filter 0.5s;
 	transition: background 0.5s, filter 0.5s;
-	transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
 	background-position: right;
 	background-repeat: no-repeat;
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		background: url('../images/operations-full-bg-gray.png'), #0a0a0a;
+		background-position: right;
+		opacity: 0.5;
+	}
 }
 
 @media screen and (min-height: 1200px) {
@@ -539,14 +549,15 @@
 /*Hover*/
 /*Background Image*/
 .accord_chooser#studios_1:hover .bg-box {
-	background: url(../images/concepts-full-bg.png), -webkit-gradient(linear, left bottom, right top, from(#00335e), color-stop(#00537d), color-stop(#00738f), color-stop(#009393), to(#00b189));
-	background: url(../images/concepts-full-bg.png), -webkit-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-	background: url(../images/concepts-full-bg.png), -o-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-	background: url(../images/concepts-full-bg.png), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
+	background: url('../images/concepts-full-bg.png'), -webkit-gradient(linear, left bottom, right top, from(#00335e), color-stop(#00537d), color-stop(#00738f), color-stop(#009393), to(#00b189));
+	background: url('../images/concepts-full-bg.png'), -webkit-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
+	background: url('../images/concepts-full-bg.png'), -o-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
+	background: url('../images/concepts-full-bg.png'), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
 	-webkit-filter: grayscale(0) brightness(1);
 	filter: grayscale(0) brightness(1);
 	background-position: 40% 0;
 	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 .accord_chooser#studios_2:hover .bg-box {
@@ -557,6 +568,7 @@
 	filter: grayscale(0) brightness(1);
 	background-position: 52% -150%;
 	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 .accord_chooser#studios_3:hover .bg-box {
@@ -567,6 +579,7 @@
 	filter: grayscale(0) brightness(1);
 	background-position: 2% -150%;
 	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 .accord_chooser#studios_4:hover .bg-box {
@@ -577,6 +590,7 @@
 	filter: grayscale(0) brightness(1);
 	background-position: left;
 	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 .accord_chooser#studios_5:hover .bg-box {
@@ -587,6 +601,7 @@
 	filter: grayscale(0) brightness(1);
 	background-position: right;
 	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 /*Background Overlay*/

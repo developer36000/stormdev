@@ -1511,69 +1511,79 @@ body.loaded {
 /*Default*/
 /*Background Image*/
 .accord_chooser#studios_1 .bg-box {
-  background: url(../images/concepts-full-bg.png), #0a0a0a;
+  background: url("../images/concepts-full-bg.png"), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.2);
-  -ms-filter: grayscale(1) brightness(0.2);
   filter: grayscale(1) brightness(0.2);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
-  transition: background 0.5s, -webkit-filter 0.5s;
   -o-transition: background 0.5s, filter 0.5s;
   transition: background 0.5s, filter 0.5s;
-  transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
-  background-position: 40% 0%;
+  background-position: 40% 0;
   background-repeat: no-repeat; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .accord_chooser#studios_1 .bg-box {
+      background: url("../images/concepts-full-bg-gray.png"), #0a0a0a;
+      background-position: 40% 0;
+      opacity: 0.5; } }
 
 .accord_chooser#studios_2 .bg-box {
-  background: url(../images/creation-full-bg.png), #0a0a0a;
+  background: url("../images/creation-full-bg.png"), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.5);
-  -ms-filter: grayscale(1) brightness(0.5);
   filter: grayscale(1) brightness(0.5);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
-  transition: background 0.5s, -webkit-filter 0.5s;
   -o-transition: background 0.5s, filter 0.5s;
   transition: background 0.5s, filter 0.5s;
-  transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
   background-position: 52% -150%;
   background-repeat: no-repeat; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .accord_chooser#studios_2 .bg-box {
+      background: url("../images/creation-full-bg-gray.png"), #0a0a0a;
+      background-position: 52% -150%;
+      opacity: 0.5; } }
 
 .accord_chooser#studios_3 .bg-box {
-  background: url(../images/development-full-bg.png), #0a0a0a;
+  background: url("../images/development-full-bg.png"), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.5);
-  -ms-filter: grayscale(1) brightness(0.5);
   filter: grayscale(1) brightness(0.5);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
-  transition: background 0.5s, -webkit-filter 0.5s;
   -o-transition: background 0.5s, filter 0.5s;
   transition: background 0.5s, filter 0.5s;
-  transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
   background-position: 2% -150%;
   background-repeat: no-repeat; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .accord_chooser#studios_3 .bg-box {
+      background: url("../images/development-full-bg-gray.png"), #0a0a0a;
+      background-position: 2% -150%;
+      opacity: 0.5; } }
 
 .accord_chooser#studios_4 .bg-box {
-  background: url(../images/pictures-full-bg.png), #0a0a0a;
+  background: url("../images/pictures-full-bg.png"), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.2);
-  -ms-filter: grayscale(1) brightness(0.2);
   filter: grayscale(1) brightness(0.2);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
-  transition: background 0.5s, -webkit-filter 0.5s;
   -o-transition: background 0.5s, filter 0.5s;
   transition: background 0.5s, filter 0.5s;
-  transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
   background-position: left;
   background-repeat: no-repeat; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .accord_chooser#studios_4 .bg-box {
+      background: url("../images/pictures-full-bg-gray.png"), #0a0a0a;
+      background-position: left;
+      opacity: 0.5; } }
 
 .accord_chooser#studios_5 .bg-box {
-  background: url(../images/operations-full-bg.png), #0a0a0a;
+  background: url("../images/operations-full-bg.png"), #0a0a0a;
   -webkit-filter: grayscale(1) brightness(0.3);
-  -ms-filter: grayscale(1) brightness(0.3);
   filter: grayscale(1) brightness(0.3);
   -webkit-transition: background 0.5s, -webkit-filter 0.5s;
-  transition: background 0.5s, -webkit-filter 0.5s;
   -o-transition: background 0.5s, filter 0.5s;
   transition: background 0.5s, filter 0.5s;
-  transition: background 0.5s, filter 0.5s, -webkit-filter 0.5s;
   background-position: right;
   background-repeat: no-repeat; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .accord_chooser#studios_5 .bg-box {
+      background: url("../images/operations-full-bg-gray.png"), #0a0a0a;
+      background-position: right;
+      opacity: 0.5; } }
 
 @media screen and (min-height: 1200px) {
   .accord_chooser .bg-box {
@@ -1593,14 +1603,15 @@ body.loaded {
 /*Hover*/
 /*Background Image*/
 .accord_chooser#studios_1:hover .bg-box {
-  background: url(../images/concepts-full-bg.png), -webkit-gradient(linear, left bottom, right top, from(#00335e), color-stop(#00537d), color-stop(#00738f), color-stop(#009393), to(#00b189));
-  background: url(../images/concepts-full-bg.png), -webkit-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-  background: url(../images/concepts-full-bg.png), -o-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
-  background: url(../images/concepts-full-bg.png), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
+  background: url("../images/concepts-full-bg.png"), -webkit-gradient(linear, left bottom, right top, from(#00335e), color-stop(#00537d), color-stop(#00738f), color-stop(#009393), to(#00b189));
+  background: url("../images/concepts-full-bg.png"), -webkit-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
+  background: url("../images/concepts-full-bg.png"), -o-linear-gradient(left bottom, #00335e, #00537d, #00738f, #009393, #00b189);
+  background: url("../images/concepts-full-bg.png"), linear-gradient(to right top, #00335e, #00537d, #00738f, #009393, #00b189);
   -webkit-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-position: 40% 0;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 1; }
 
 .accord_chooser#studios_2:hover .bg-box {
   background: url(../images/creation-full-bg.png), -webkit-linear-gradient(45deg, #ed1937 0%, #940031 100%);
@@ -1609,7 +1620,8 @@ body.loaded {
   -webkit-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-position: 52% -150%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 1; }
 
 .accord_chooser#studios_3:hover .bg-box {
   background: url(../images/development-full-bg.png), -webkit-linear-gradient(45deg, #6f008b 0%, #27007f 100%);
@@ -1618,7 +1630,8 @@ body.loaded {
   -webkit-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-position: 2% -150%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 1; }
 
 .accord_chooser#studios_4:hover .bg-box {
   background: url(../images/pictures-full-bg.png), -webkit-linear-gradient(45deg, #33009c 0%, #008ab8 100%);
@@ -1627,7 +1640,8 @@ body.loaded {
   -webkit-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-position: left;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 1; }
 
 .accord_chooser#studios_5:hover .bg-box {
   background: url(../images/operations-full-bg.png), -webkit-linear-gradient(45deg, #fad961 0%, #f76b1c 100%);
@@ -1636,7 +1650,8 @@ body.loaded {
   -webkit-filter: grayscale(0) brightness(1);
   filter: grayscale(0) brightness(1);
   background-position: right;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 1; }
 
 /*Background Overlay*/
 .accord_chooser#studios_1:hover .bg-box .bg-over {
@@ -2062,6 +2077,10 @@ body.loaded {
       @media screen and (max-width: 1230px) {
         #kontakt .center .branch_block:nth-child(3) {
           display: none; } }
+@media screen and (-ms-high-contrast: active) and (min-width: 1280px), screen and (-ms-high-contrast: none) and (min-width: 1280px) {
+  #kontakt .center .branch_block {
+    min-width: 75px; } }
+
       #kontakt .center .branch_block a {
         color: #fff; }
       @media screen and (max-width: 1450px) {
@@ -2181,6 +2200,10 @@ body.loaded {
     @media screen and (max-width: 1025px) {
       #kontakt .bewerbung_button {
         display: none !important; } }
+@media screen and (-ms-high-contrast: active) and (min-width: 1024px), screen and (-ms-high-contrast: none) and (min-width: 1024px) {
+  #kontakt .bewerbung_button {
+    min-width: 150px; } }
+
     #kontakt .bewerbung_button:before {
       content: '';
       position: absolute;
@@ -2610,6 +2633,9 @@ body.loaded {
   @media screen and (max-width: 1025px) {
     #facts_figures .facts-list {
       min-height: 85px; } }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #facts_figures .facts-list {
+      min-height: initial; } }
   #facts_figures .facts-list:before {
     content: '';
     background: url("../images/mitdenkend.png") no-repeat 50% 50%;
@@ -2623,6 +2649,10 @@ body.loaded {
     top: 0;
     left: 0;
     right: 0; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #facts_figures .facts-list:before {
+        min-height: 152px;
+        top: -27%; } }
     @media screen and (max-width: 1367px) {
       #facts_figures .facts-list:before {
         max-width: 762px; } }
@@ -2645,6 +2675,21 @@ body.loaded {
     @media screen and (max-width: 1024px) {
       #facts_figures .facts-list .list-item {
         font-size: 39px; } }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #facts_figures .facts-list .list-item {
+        flex-grow: 1; }
+        #facts_figures .facts-list .list-item:first-child {
+          text-align: left; } }
+    @media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
+      #facts_figures .facts-list .list-item:first-child {
+        text-align: center; } }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #facts_figures .facts-list .list-item:last-child {
+          text-align: right; } }
+    @media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
+      #facts_figures .facts-list .list-item:last-child {
+        text-align: center; } }
+
 #facts_figures .figures-list {
   display: flex;
   align-items: flex-start;

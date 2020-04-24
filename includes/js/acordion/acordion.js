@@ -15,6 +15,8 @@ $(document).ready(function() {
 		$('#creative_studios .accord_open').removeClass('accord_open');
 		$('#creative_studios .active_accord').removeClass('active_accord');
 		$('body').removeClass('studio_accord_open');
+		$('#creative_studios .bp-header__title').text('CREATIVE STUDIOS');
+		
 	});
 	/*Accord Click*/
 	$('.accord_chooser').on('click tap', function(event) {
@@ -35,6 +37,9 @@ $(document).ready(function() {
 			if(!$('#' + parentid + ' .active_accord').prev().hasClass('accord_chooser')){
 				$('#' + parentid + ' #prevbutton').addClass('icon-prev-inactive');
 			}
+		 
+		$(this).parents('.creative_studios').find('.bp-header__title').text('DIE CREATIVE STUDIOS');
+			
 	});
 	/*Next Button*/
 	$('.icon-next').on('click tap', function(event) {

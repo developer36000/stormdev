@@ -60,6 +60,9 @@
 		@media screen and (max-width: 1025px ) {
 			min-height: 85px;
 		}
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			min-height: initial;
+		}
 		&:before {
 			content: '';
 			background: url("../images/mitdenkend.png") no-repeat 50% 50%;
@@ -73,6 +76,10 @@
 			top: 0;
 			left: 0;
 			right: 0;
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				min-height: 152px;
+				top: -27%;
+			}
 			@media screen and (max-width: 1367px ) {
 				max-width: 762px;
 			}
@@ -95,6 +102,21 @@
 			}
 			@media screen and (max-width: 1024px ) {
 				font-size: 39px;
+			}
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				flex-grow: 1;
+				&:first-child {
+					text-align: left;
+					@media screen and (max-width: 1024px ) {
+						text-align: center;
+					}
+				}
+				&:last-child {
+					text-align: right;
+					@media screen and (max-width: 1024px ) {
+						text-align: center;
+					}
+				}
 			}
 		}
 	}
