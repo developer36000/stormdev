@@ -354,77 +354,106 @@ video::-webkit-media-controls-enclosure {
   display: none !important; }
 
 /*Accord Bg Boxes*/
-#studios_1 .bg-box {
-  background: url(../images/concepts-full-bg.png), #0a0a0a;
-  background-size: 100%;
-  background-position: 0px -250px;
-  filter: grayscale(1) brightness(0.15);
-  transition: filter 0.5s;
-  position: absolute; }
-
-#studios_2 .bg-box {
-  background: url(../images/creation-full-bg.png), #0a0a0a;
-  background-size: 100%;
-  background-position: 0px -250px;
-  transition: filter 0.5s;
-  position: absolute; }
-
-#studios_3 .bg-box {
-  background: url(../images/development-full-bg.png), #0a0a0a;
-  background-size: 100%;
-  background-position: 0px -250px;
-  transition: filter 0.5s;
-  position: absolute; }
-
-#studios_4 .bg-box {
-  background: url(../images/pictures-full-bg.png), #0a0a0a;
-  background-size: 100%;
-  background-position: 0px -250px;
-  filter: grayscale(1) brightness(0.15);
-  transition: filter 0.5s;
-  position: absolute; }
-
-#studios_5 .bg-box {
-  background: url(../images/operations-full-bg.png), #0a0a0a;
-  background-size: 100%;
-  background-position: 0px -250px;
-  filter: grayscale(1) brightness(0.15);
-  transition: filter 0.5s;
-  position: absolute; }
-
 .bg-box {
   filter: grayscale(1) brightness(0.4); }
 
-/*Accord Active*/
-#studios_1.active_accord .bg-box {
-  background: url("../images/concepts-full-bg.png"), linear-gradient(225deg, #00B189 0%, #00335E 100%);
-  background-size: cover;
-  background-position: 0 0;
-  filter: none; }
+#studios_1 {
+  /*Accord Active*/ }
+  #studios_1 .bg-box {
+    background: url("../images/concepts-full-bg.png"), #0a0a0a;
+    background-size: 100%;
+    background-position: 0px -250px;
+    filter: grayscale(1) brightness(0.15);
+    transition: filter 0.5s;
+    position: absolute; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #studios_1 .bg-box {
+        background: url("../images/concepts-full-bg-gray.png"), #0a0a0a;
+        background-position: 0px -250px;
+        opacity: 0.5; } }
+  #studios_1.active_accord .bg-box {
+    background: url("../images/concepts-full-bg.png"), linear-gradient(225deg, #00B189 0%, #00335E 100%);
+    background-size: cover;
+    background-position: 0 0;
+    filter: none; }
 
-#studios_2.active_accord .bg-box {
-  background: url(../images/creation-full-bg.png), linear-gradient(225deg, #940031 0%, #ED1937 100%);
-  background-size: cover;
-  background-position: 0 0;
-  filter: none; }
+#studios_2 {
+  /*Accord Active*/ }
+  #studios_2 .bg-box {
+    background: url("../images/creation-full-bg.png"), #0a0a0a;
+    background-size: 100%;
+    background-position: 0px -250px;
+    transition: filter 0.5s;
+    position: absolute; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #studios_2 .bg-box {
+        background: url("../images/creation-full-bg-gray.png"), #0a0a0a;
+        background-position: 0px -250px;
+        opacity: 0.5; } }
+  #studios_2.active_accord .bg-box {
+    background: url("../images/creation-full-bg.png"), linear-gradient(225deg, #940031 0%, #ED1937 100%);
+    background-size: cover;
+    background-position: 0 0;
+    filter: none; }
 
-#studios_3.active_accord .bg-box {
-  background: url(../images/development-full-bg.png), linear-gradient(225deg, #6F008B 0%, #27007F 100%);
-  background-size: cover;
-  background-position: 0 0;
-  filter: none; }
+#studios_3 {
+  /*Accord Active*/ }
+  #studios_3 .bg-box {
+    background: url("../images/development-full-bg.png"), #0a0a0a;
+    background-size: 100%;
+    background-position: 0px -250px;
+    transition: filter 0.5s;
+    position: absolute; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #studios_3 .bg-box {
+        background: url("../images/development-full-bg-gray.png"), #0a0a0a;
+        background-position: 0px -250px;
+        opacity: 0.5; } }
+  #studios_3.active_accord .bg-box {
+    background: url("../images/development-full-bg.png"), linear-gradient(225deg, #6F008B 0%, #27007F 100%);
+    background-size: cover;
+    background-position: 0 0;
+    filter: none; }
 
-#studios_4.active_accord .bg-box {
-  background: url(../images/pictures-full-bg.png), linear-gradient(225deg, #008BB8 0%, #33009C 100%);
-  background-size: cover;
-  background-position: 0 0;
-  filter: none; }
+#studios_4 {
+  /*Accord Active*/ }
+  #studios_4 .bg-box {
+    background: url("../images/pictures-full-bg.png"), #0a0a0a;
+    background-size: 100%;
+    background-position: 0px -250px;
+    filter: grayscale(1) brightness(0.15);
+    transition: filter 0.5s;
+    position: absolute; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #studios_4 .bg-box {
+        background: url("../images/pictures-full-bg-gray.png"), #0a0a0a;
+        background-position: 0px -250px;
+        opacity: 0.5; } }
+  #studios_4.active_accord .bg-box {
+    background: url("../images/pictures-full-bg.png"), linear-gradient(225deg, #008BB8 0%, #33009C 100%);
+    background-size: cover;
+    background-position: 0 0;
+    filter: none; }
 
-#studios_5.active_accord .bg-box {
-  background: url(../images/operations-full-bg.png), linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
-  background-size: cover;
-  background-position: 0 0;
-  filter: none; }
+#studios_5 {
+  /*Accord Active*/ }
+  #studios_5 .bg-box {
+    background: url("../images/operations-full-bg.png"), #0a0a0a;
+    background-size: 100%;
+    background-position: 0px -250px;
+    filter: grayscale(1) brightness(0.15);
+    transition: filter 0.5s;
+    position: absolute; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #studios_5 .bg-box {
+        background: url("../images/operations-full-bg-gray.png"), #0a0a0a;
+        background-position: 0px -250px;
+        opacity: 0.5; } }
+  #studios_5.active_accord .bg-box {
+    background: url("../images/operations-full-bg.png"), linear-gradient(225deg, #F76B1C 0%, #FAD961 100%);
+    background-size: cover;
+    background-position: 0 0;
+    filter: none; }
 
 /*Accord Adjusts*/
 #creative_studios .accord_text_pos {
