@@ -1144,6 +1144,9 @@ body.loaded {
         right: 39%;
         padding-left: 24px;
         top: 62%; } }
+    @media screen and (min-width: 1640px) and (max-height: 900px) {
+      #about .right-column-text {
+        right: 505%; } }
   #about .accord_text_button {
     color: #fff;
     background-color: #000;
