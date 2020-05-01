@@ -2587,6 +2587,9 @@ body.loaded {
       position: absolute;
       top: 58%;
       left: 50%; } }
+  @media screen and (min-width: 1640px) and (max-height: 900px) {
+    #facts_figures .container {
+      padding-top: 9%; } }
 #facts_figures .top-section-row {
   max-width: 1393px;
   width: 100%;
