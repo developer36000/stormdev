@@ -187,7 +187,7 @@ function end () {
     $('#loader').addClass('inactive');
 }
 
-
+checkCookie();
 
 /*Mobile Functions*/
 if ($(window).width() < 960) {
@@ -206,16 +206,15 @@ if ($(window).width() < 960) {
 }
 
 /* DSGVO Cookie */
-function checkCookie () {
+function checkCookie() {
     var cookieName = 'hasSeenCookieNotice';
     var hasSeenCookieNotice = Cookies.get(cookieName);
-    var popup = document.getElementById('cookies');
     if (!hasSeenCookieNotice || hasSeenCookieNotice === undefined) {
-        $(popup).addClass('show');
+	    $(document).find('#cookies').addClass('show');
     }
 
     $('.acceptCookies.accept').on('click', function () {
         Cookies.set(cookieName, true);
-        $(popup).removeClass('show');
+	    $(document).find('#cookies').removeClass('show');
     });
 }

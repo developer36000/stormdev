@@ -2371,12 +2371,6 @@ body.loaded {
   padding-right: 60px;
   text-align: center; }
 
-.imprint .bp-header {
-  position: static;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none; }
-
 .imprint #footer,
 .datenschutz #footer {
   position: absolute;
@@ -2768,8 +2762,10 @@ body.loaded {
   width: 100%;
   z-index: 9999;
   position: fixed;
-  bottom: 0;
+  bottom: -100%;
   left: 0; }
+  .popup-wrapper.show {
+    bottom: 0; }
 
 .popup {
   position: relative;
@@ -2781,12 +2777,10 @@ body.loaded {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: -135px;
+  bottom: 0;
   -webkit-transition: 1s bottom;
   -o-transition: 1s bottom;
   transition: 1s bottom; }
-  .popup.show {
-    bottom: 0; }
 
 .popup-text {
   width: 55%;

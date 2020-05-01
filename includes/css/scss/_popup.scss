@@ -3,8 +3,11 @@
 	width: 100%;
 	z-index: 9999;
 	position: fixed;
-	bottom: 0;
+	bottom: -100%;
 	left: 0;
+	&.show {
+		bottom: 0;
+	}
 }
 
 .popup {
@@ -17,13 +20,10 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	bottom: -135px;
+	bottom: 0;
 	-webkit-transition: 1s bottom;
 	-o-transition: 1s bottom;
 	transition: 1s bottom;
-	&.show {
-		bottom: 0;
-	}
 }
 
 .popup-text {
