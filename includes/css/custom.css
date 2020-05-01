@@ -2202,7 +2202,7 @@ body.loaded {
         display: none !important; } }
 @media screen and (-ms-high-contrast: active) and (min-width: 1024px), screen and (-ms-high-contrast: none) and (min-width: 1024px) {
   #kontakt .bewerbung_button {
-    min-width: 200px; } }
+    min-width: 260px; } }
 
     #kontakt .bewerbung_button:before {
       content: '';
