@@ -2629,7 +2629,7 @@ body.loaded {
       min-height: 85px; } }
   @media screen and (min-width: 1640px) and (max-height: 900px) {
     #facts_figures .facts-list {
-      min-height: 120px; } }
+      min-height: 110px; } }
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     #facts_figures .facts-list {
       min-height: initial; } }
@@ -2713,7 +2713,7 @@ body.loaded {
         margin-top: 5%; } }
     @media screen and (min-width: 1640px) and (max-height: 900px) {
       #facts_figures .figures-list .list-item {
-        margin-top: 3%; } }
+        margin-top: 4%; } }
     #facts_figures .figures-list .list-item .separator {
       box-sizing: border-box;
       height: 139px;
