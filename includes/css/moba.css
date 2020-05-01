@@ -910,7 +910,8 @@ video::-webkit-media-controls-enclosure {
 /*Data Prot*/
 #datenschutz_page {
   position: relative;
-  background-color: #000; }
+  background-color: #000;
+  margin-top: 90px; }
 
 #datenschutz_page .bp-header {
   position: relative; }
