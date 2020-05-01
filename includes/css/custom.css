@@ -2284,6 +2284,9 @@ body.loaded {
     @media screen and (max-width: 1366px) and (min-height: 760px) {
       #references .ref_block {
         margin-top: 0; } }
+    @media screen and (min-width: 1640px) and (max-height: 900px) {
+      #references .ref_block {
+        margin-top: 0; } }
     #references .ref_block p {
       max-width: 800px;
       margin: auto;
